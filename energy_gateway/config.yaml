@@ -2,7 +2,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration
 name: "Franzl Gateway"
 description: "Franzl Energie-Management — Optimiert PV, Batterie, Wallbox, Wärmepumpe"
-version: "1.0.0"
+version: "1.1.0"
 slug: "energy_gateway"
 url: "https://github.com/franzdinhobl/franzl-addons"
 # Prebuilt image: Home Assistant PULLS this from ghcr.io instead of building the
@@ -36,6 +36,9 @@ schema:
   activation_url: "url?"
 environment:
   GATEWAY_PORT: "8099"
+  # Mathematischer Optimierer (MILP/HiGHS, spec 28 §3) aktiv. Fällt bei
+  # Infeasibilität/Solver-Fehler automatisch auf die regelbasierte Engine zurück.
+  GATEWAY_MILP: "1"
 startup: "application"
 # Hot backup: the add-on keeps running. The raw PostgreSQL cluster files
 # (/data/postgres) would be inconsistent in a hot backup, so they are
