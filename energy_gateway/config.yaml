@@ -2,7 +2,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration
 name: "Franzl Gateway"
 description: "Franzl Energie-Management — Optimiert PV, Batterie, Wallbox, Wärmepumpe"
-version: "1.1.0"
+version: "1.1.1"
 slug: "energy_gateway"
 url: "https://github.com/franzdinhobl/franzl-addons"
 # Prebuilt image: Home Assistant PULLS this from ghcr.io instead of building the
@@ -15,7 +15,10 @@ arch:
   - aarch64
   - amd64
 homeassistant: "2024.1.0"
-init: true
+# MUST be false: the HA base images bundle s6-overlay v3, whose /init must run
+# as PID 1. With init:true Docker inserts its own init as PID 1 and s6 aborts
+# with "s6-overlay-suexec: fatal: can only run as pid 1".
+init: false
 map:
   - config:rw
   - share:rw
