@@ -1,3 +1,15 @@
+## 1.1.7
+
+- **Neu:** Code-only Aktivierung — du gibst nur den 9-stelligen Code ein, der
+  Rest (Haushalt-Anlage + Fernzugriff via Cloudflare-Tunnel) passiert
+  automatisch. Box spiegelt den Haushalt lokal und startet den Tunnel selbst.
+
+## 1.1.6
+
+- **Fix:** Ingress-Panel war ungestylt — CSS/Logo/Formular nutzten absolute
+  Pfade, die unter dem HA-Ingress-Pfad ins Leere liefen. Assets + Formular-Action
+  werden jetzt mit `X-Ingress-Path` korrekt verlinkt.
+
 ## 1.1.5
 
 - **Fix:** Setup-Mode startete nicht — das Ingress-Panel (Aktivierungscode) und
