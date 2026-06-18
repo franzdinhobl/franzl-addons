@@ -1,3 +1,11 @@
+## 1.1.4
+
+- **Fix:** Datenbank-Migrationen liefen beim Erststart nicht durch — mehrere
+  Tabellen (u. a. Fahrzeuge, Abos, Geräte-Befehle) und Spalten (Entity-Health,
+  OTA, Installer-Rolle) fehlten in der Migrations-Kette, ein veralteter Import
+  brach den Start ab. Die Migrationen wurden auf ein sauberes, vollständiges
+  Initial-Schema konsolidiert und end-to-end gegen PostgreSQL 16 verifiziert.
+
 ## 1.1.3
 
 - **Fix:** PostgreSQL startete beim ersten Boot nicht (`/run/postgresql`
