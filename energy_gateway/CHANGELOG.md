@@ -1,3 +1,11 @@
+## 1.2.5
+
+- **Neu (Steuerung wirklich angebunden):** Beim Hinzufügen eines Geräts wird
+  jetzt das erkannte **Hersteller-Profil mitgenommen** — damit weiß die Box, wie
+  das Gerät zu **schalten** ist (HA-Services / Modbus / nativer Treiber / OCPP),
+  und der Optimierer kann es tatsächlich steuern statt es nur zu beobachten.
+  Vorher wurden so angelegte Geräte als „nur Monitor" registriert.
+
 ## 1.2.4
 
 - **Neu (Erkennung von Grund auf):** Geräte werden jetzt **geräte-zentrisch**
