@@ -1,3 +1,14 @@
+## 1.2.1
+
+- **Neu:** „Zurücksetzen / Neu aktivieren"-Knopf im Add-on-Panel — setzt die Box
+  sauber in den Aktivierungs-Modus zurück (neuer Code), **nur auf Klick, nie
+  automatisch**. Löst nur die Cloud-Anbindung; **lokale Energiedaten bleiben**.
+- **Fix:** Gelöschte Haushalte werden nicht mehr versehentlich neu angelegt
+  (Box meldet „online" nur noch für existierende Haushalte) — keine Zombie-
+  Haushalte mehr.
+- **Fix:** Mitglieder-Liste zeigt die echte E-Mail statt des internen
+  Platzhalters (`…@pending.franzl`).
+
 ## 1.2.0
 
 - **Fix (kritisch):** Aktivierung schlug bisher immer fehl — die Box bekam ihre
