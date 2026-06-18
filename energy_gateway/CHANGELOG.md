@@ -1,3 +1,19 @@
+## 1.2.4
+
+- **Neu (Erkennung von Grund auf):** Geräte werden jetzt **geräte-zentrisch**
+  erkannt — die Box liest die Home-Assistant-Geräte-Registry (Hersteller/Modell)
+  und ordnet **ein Gerät = eine Kategorie** zu, statt entity-weise zu raten.
+  Folgen: ein Tesla erscheint **einmal als Fahrzeug** (nicht als „Klima" UND
+  „Batterie"); Fronius-Netzzähler + Ohmpilot werden über die 139 Profile
+  zuverlässig erkannt; Handy-/Sensor-Akkus werden **nicht** mehr als
+  Hausspeicher klassifiziert. Fällt ohne Registry auf das alte Verfahren zurück.
+- **Neu:** Ein in Home Assistant integriertes **Fahrzeug** (z. B. Tesla) speist
+  jetzt seinen **Ladestand** direkt in die Wallbox-Ladeplanung ein — ohne
+  separates Auto-Login. Der Optimierer plant die Ladung aus echtem SoC +
+  Kapazität.
+- **Neu:** Geräte lassen sich in der App umbenennen + der erkannte Typ ändern;
+  nicht zugeordnete Entitäten manuell zuweisen.
+
 ## 1.2.3
 
 - **Fix (kritisch):** Das Add-on durfte Home Assistant gar nicht auslesen — der
