@@ -1,3 +1,23 @@
+## 1.2.2
+
+- **Fix:** Tunnel-Status im Panel zeigte „nicht konfiguriert", obwohl der
+  Fernzugriff lief — er hängt jetzt am tatsächlich laufenden Tunnel (Token), nicht
+  an einem DB-Feld, und zeigt die Tunnel-Adresse an.
+- **Fix:** Geräte-Erkennung beim Einrichten lief ins Leere („Keine
+  Gateway-Adresse"), wenn die Box über den Tunnel verbunden war — die Erkennung
+  nutzt jetzt die aufgelöste Verbindung; man bleibt nie mehr im Screen hängen.
+- **Fix:** Mitglieder-Liste — du kannst dich nicht mehr versehentlich selbst
+  entfernen (Knopf verschwindet auf der eigenen Zeile), und jede Person wird mit
+  E-Mail statt generischem „Besitzer:in" angezeigt, damit Familienmitglieder
+  unterscheidbar sind.
+- **Fix:** Aktivierungs-Panel lud sich alle 5 Sekunden komplett neu (Log-Spam) —
+  jetzt nur noch, wenn der Code wirklich abläuft.
+- **Fix:** Reset löst zusätzlich die gespeicherte Tunnel-Adresse, damit nach dem
+  Neu-Aktivieren keine veraltete Adresse hängenbleibt.
+- Version wird im Add-on-Panel jetzt korrekt angezeigt (vorher immer „v1.0.0").
+- Reset-Knopf protokolliert deutlich sichtbar im Log (`=== BOX RESET requested ===`),
+  damit nachvollziehbar ist, ob er ausgelöst wurde.
+
 ## 1.2.1
 
 - **Neu:** „Zurücksetzen / Neu aktivieren"-Knopf im Add-on-Panel — setzt die Box
