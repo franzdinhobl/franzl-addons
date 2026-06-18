@@ -2,7 +2,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration
 name: "Franzl Gateway"
 description: "Franzl Energie-Management — Optimiert PV, Batterie, Wallbox, Wärmepumpe"
-version: "1.2.2"
+version: "1.2.3"
 slug: "energy_gateway"
 url: "https://github.com/franzdinhobl/franzl-addons"
 # Prebuilt image: Home Assistant PULLS this from ghcr.io instead of building the
@@ -15,6 +15,11 @@ arch:
   - aarch64
   - amd64
 homeassistant: "2024.1.0"
+# REQUIRED: grants access to the Home Assistant Core API via the Supervisor
+# proxy (http://supervisor/core/api/*) using SUPERVISOR_TOKEN. Without this the
+# proxy returns 401 and the gateway cannot read HA entities — device discovery
+# and all live energy data silently fail.
+homeassistant_api: true
 # MUST be false: the HA base images bundle s6-overlay v3, whose /init must run
 # as PID 1. With init:true Docker inserts its own init as PID 1 and s6 aborts
 # with "s6-overlay-suexec: fatal: can only run as pid 1".

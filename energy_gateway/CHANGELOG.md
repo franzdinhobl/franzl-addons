@@ -1,3 +1,17 @@
+## 1.2.3
+
+- **Fix (kritisch):** Das Add-on durfte Home Assistant gar nicht auslesen — der
+  Zugriff auf die HA-Core-API fehlte (`homeassistant_api`), HA antwortete mit
+  401. Folge: Geräte-Erkennung fand nichts und alle Live-Energiedaten blieben
+  leer. Berechtigung ergänzt — Erkennung + Energiedaten funktionieren jetzt.
+- **Neu:** Geräte lassen sich jetzt direkt in der Kunden-App hinzufügen
+  („Geräte"-Tab → „Geräte suchen") — Erkennung, Bestätigen und Registrieren
+  inkl. Zähler-Rolle, ohne Installer-App.
+- **Fix:** Aktivierungs-Panel wechselt nach erfolgreicher Aktivierung automatisch
+  zum Dashboard (vorher blieb ein offener Tab am Code hängen).
+- **Fix:** Mitglieder-Liste zeigt nie den internen Platzhalter
+  (`<id>@pending.franzl`) als Namen.
+
 ## 1.2.2
 
 - **Fix:** Tunnel-Status im Panel zeigte „nicht konfiguriert", obwohl der
