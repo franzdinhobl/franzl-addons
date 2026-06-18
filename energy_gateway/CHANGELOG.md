@@ -1,3 +1,13 @@
+## 1.2.6
+
+- **Fix:** Ein iPhone (HA-App mit Standort) wurde als „Fahrzeug" erkannt — jetzt
+  werden Handys/Wearables ausgeschlossen (Fahrzeug nur bei echter Auto-Integration).
+- **Fix:** Deutsch benannte Fronius-Geräte (Wechselrichter, Smartmeter, Ohmpilot)
+  landeten in „nicht erkannt" — Keywords + Profil-Matching (auch ohne Hersteller
+  in der HA-Registry, via Integration + Entity-Muster) erkennen sie jetzt.
+- **Fix:** Beim erneuten Scan werden bereits hinzugefügte Geräte nicht mehr
+  angeboten (kein doppeltes Hinzufügen).
+
 ## 1.2.5
 
 - **Neu (Steuerung wirklich angebunden):** Beim Hinzufügen eines Geräts wird
