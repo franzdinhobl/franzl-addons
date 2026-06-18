@@ -1,3 +1,17 @@
+## 1.2.0
+
+- **Fix (kritisch):** Aktivierung schlug bisher immer fehl — die Box bekam ihre
+  Zugangsdaten nie und blieb im Setup-Modus. Behoben: Auslieferung der
+  Credentials (service_account-Config-Form), robuster Aktivierungs-Poller (eine
+  Code-Quelle, registriert immer den angezeigten Code, sichtbare Logs) und
+  korrekter Wechsel in den Running-Mode nach der Aktivierung (Erkennung der
+  Zugangsdaten direkt auf der Platte, unabhängig vom init-config-Lauf).
+- **Neu:** Box-bestätigte Aktivierung — die Box meldet „online" zurück, die App
+  zeigt echten Fortschritt statt blindem Warten; fehlgeschlagene Versuche werden
+  automatisch aufgeräumt (keine Phantom-Haushalte mehr).
+- **Neu:** Mehrere Boxen pro Konto (Haushalts-Wechsler), „Box ersetzen" für
+  Hardware-Tausch, Multi-Home-Abo.
+
 ## 1.1.7
 
 - **Neu:** Code-only Aktivierung — du gibst nur den 9-stelligen Code ein, der
