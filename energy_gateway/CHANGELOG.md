@@ -1,3 +1,10 @@
+## 1.1.5
+
+- **Fix:** Setup-Mode startete nicht — das Ingress-Panel (Aktivierungscode) und
+  der `/setup/status`-Endpoint waren mit der aktuellen FastAPI/Starlette-Version
+  inkompatibel (TemplateResponse-Signatur + Response-Model). Lokal im echten
+  Container end-to-end verifiziert (Boot → Migrationen → Setup-Panel rendert).
+
 ## 1.1.4
 
 - **Fix:** Datenbank-Migrationen liefen beim Erststart nicht durch — mehrere
