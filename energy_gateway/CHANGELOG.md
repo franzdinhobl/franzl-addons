@@ -1,3 +1,18 @@
+## 1.2.8
+
+- **Neu (Steckdose/Schalter als Warmwasser- oder Pool-Heizung):** Wer einen
+  Heizstab über eine smarte Steckdose oder einen Shelly schaltet, kann diesen
+  jetzt als **Warmwasser- oder Pool-Heizung** nutzen — meist als Zusatzheizung.
+  Franzl plant sie standardmäßig **nur mit Sonnenstrom** (kein teurer Netzbezug).
+  In den Geräte-Details lässt sich der Verwendungszweck wählen; optional ein
+  **Temperaturfühler** (z. B. der Boiler-Fühler der Heizung) zuordnen — dann
+  schaltet Franzl bei der Zieltemperatur ab. Ohne Fühler gibt es nur Ein/Aus +
+  Nur-Sonne (keine wirkungslosen Regler).
+- **Fix (Temperatur im Optimierer):** Die gemessene Temperatur thermischer
+  Geräte kam intern nicht beim Optimierer an — dadurch konnte die Abschaltung
+  am Zielwert nicht greifen. Jetzt korrekt verdrahtet; die Live-Karte zeigt
+  Ist- und Ziel-Temperatur auch direkt über die Verbindung.
+
 ## 1.2.7
 
 - **Neu (Geräte im Netzwerk finden):** Geräte, die im Netzwerk hängen aber in
@@ -7,6 +22,19 @@
   App** ein (HA-Config-Flow wird durchgereicht). Vorher fand der Scan nur bereits
   in HA eingerichtete Geräte. Geräte mit ungewöhnlichem Einrichtungs-Dialog
   zeigen einen ehrlichen Hinweis statt einer halben Maske.
+  - Nur energierelevante Funde werden gezeigt — Drucker, Bluetooth-Beacons,
+    Fernseher/Lautsprecher u. ä. werden ausgeblendet.
+  - Einrichtungs-Fehler von Home Assistant werden in Klartext angezeigt (z. B.
+    „lokale API des Geräts ist deaktiviert" statt eines kryptischen Codes).
+  - Der Einrichtungs-Dialog zeigt jetzt Home Assistants **eigene Texte** —
+    Schritt-Beschreibung inkl. Anleitung, Feld-Beschriftungen und Fehlertexte
+    (in deiner App-Sprache), statt technischer Schlüssel.
+- **Fix (Batterie-Leistung):** Speicher, die getrennte **Lade-/Entlade-Sensoren**
+  liefern (z. B. Sonnen), zeigten nur den Ladestand (%), nicht die Leistung —
+  es wurde nur einer der beiden Sensoren übernommen. Jetzt werden beide
+  zusammengeführt (Laden +, Entladen −), die Leistung wird korrekt angezeigt.
+  Hinweis: bestehende Speicher einmal neu hinzufügen (Gerät löschen → erneut
+  scannen), damit die Zuordnung greift.
 
 ## 1.2.6
 
