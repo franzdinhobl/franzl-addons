@@ -1,3 +1,13 @@
+## 1.2.7
+
+- **Neu (Geräte im Netzwerk finden):** Geräte, die im Netzwerk hängen aber in
+  Home Assistant noch **nicht** eingerichtet sind, erscheinen jetzt im Scan unter
+  „Im Netzwerk gefunden" — Home Assistant entdeckt sie selbst (zeroconf/DHCP/
+  SSDP/Bluetooth/USB), und Franzl richtet sie per **„Einrichten" direkt aus der
+  App** ein (HA-Config-Flow wird durchgereicht). Vorher fand der Scan nur bereits
+  in HA eingerichtete Geräte. Geräte mit ungewöhnlichem Einrichtungs-Dialog
+  zeigen einen ehrlichen Hinweis statt einer halben Maske.
+
 ## 1.2.6
 
 - **Fix:** Ein iPhone (HA-App mit Standort) wurde als „Fahrzeug" erkannt — jetzt
