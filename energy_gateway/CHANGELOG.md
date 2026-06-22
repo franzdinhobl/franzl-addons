@@ -1,3 +1,16 @@
+## 1.2.9
+
+- **Fix (Wallbox-Aktionen — „Hat nicht geklappt"):** Die Sofort-Aktionen für die
+  Wallbox (Solar / Sofort laden / Stopp) lösten einen Server-Fehler (HTTP 500)
+  aus und wurden in der App fälschlich als „keine Verbindung" angezeigt. Ursache:
+  die Datenbank-Session wurde in den Wallbox-Endpoints direkt statt über die
+  FastAPI-Dependency geholt (`get_session()` statt `Depends(get_session)`) —
+  dadurch landete ein Generator-Objekt statt einer echten Session im Repository.
+  Behoben für alle Wallbox-Endpoints (Lademodus, Ziel-SoC, Fahrzeug-Verknüpfung).
+- **App:** Fehlgeschlagene Aktionen zeigen jetzt die echte Ursache an (z. B.
+  Server-Fehler vs. wirklich keine Verbindung), statt jeden Fehler pauschal als
+  „keine Verbindung" zu melden.
+
 ## 1.2.8
 
 - **Neu (Steckdose/Schalter als Warmwasser- oder Pool-Heizung):** Wer einen
