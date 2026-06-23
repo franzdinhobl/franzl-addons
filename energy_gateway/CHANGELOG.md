@@ -1,3 +1,18 @@
+## 1.2.11
+
+- **Neu (PV-Anlage konfigurierbar):** Die Solarprognose rechnete bisher für jeden
+  mit festen Annahmen (10 kWp, 30° Neigung, Süd-Ausrichtung) — falsch für jede
+  Ost/West- oder anders dimensionierte Anlage. Jetzt erfasst Franzl pro Zuhause
+  eine oder mehrere PV-Teilanlagen mit echter Leistung (kWp), Ausrichtung und
+  Neigung; Ost/West-Dächer werden als getrennte Teilanlagen summiert. Einstellbar
+  im Onboarding (mit „Ich habe eine PV-Anlage"-Auswahl) und unter Mehr →
+  Solaranlage, mit Erklär-Hilfen statt Fachbegriffen.
+- **Ehrlicher statt geraten:** Ohne hinterlegte Anlage (oder ohne Standort) zeigt
+  Franzl keine erfundene Prognose mehr, sondern bleibt ehrlich still — statt wie
+  bisher heimlich auf einen Wiener Standard-Standort zurückzufallen.
+- **Standort:** kommt weiterhin automatisch aus Home Assistant; eine Änderung an
+  der Anlage berechnet die Prognose sofort neu.
+
 ## 1.2.10
 
 - **Fix (Solarprognose wurde nie aktiviert):** Nach dem Onboarding blieb die
