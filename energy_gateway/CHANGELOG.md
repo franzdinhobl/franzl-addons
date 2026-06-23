@@ -1,3 +1,10 @@
+## 1.2.13
+
+- **Werkzeug (Werksreset im Image):** `reset-box.sh` ist jetzt fest im Add-on
+  enthalten. Ein vollständiger „von 0"-Reset (DB + Backup-Dumps + Cloud-Link +
+  Aktivierungscode) ist damit **ein einziger Befehl** im Container
+  (`reset-box.sh --yes`) statt das Skript hineinkopieren zu müssen.
+
 ## 1.2.12
 
 - **Robuster (Aktivierung atomar):** Bei der Aktivierung schreibt das Gateway die
