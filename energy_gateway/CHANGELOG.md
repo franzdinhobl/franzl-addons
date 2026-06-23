@@ -12,6 +12,11 @@
   bisher heimlich auf einen Wiener Standard-Standort zurückzufallen.
 - **Standort:** kommt weiterhin automatisch aus Home Assistant; eine Änderung an
   der Anlage berechnet die Prognose sofort neu.
+- **Fix (Aktivierungs-Panel — „Neuen Code generieren"):** Der Knopf war ein
+  klassisches Formular und navigierte das Panel auf die rohe JSON-Antwort
+  (`{"data":{"code":…}}`) statt den Code zu erneuern. Jetzt wird der Code per
+  Hintergrund-Anfrage neu erzeugt und das Panel frisch geladen (inkl. passendem
+  QR-Code für den neuen Code).
 
 ## 1.2.10
 
