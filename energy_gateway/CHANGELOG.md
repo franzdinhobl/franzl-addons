@@ -1,3 +1,14 @@
+## 1.2.12
+
+- **Robuster (Aktivierung atomar):** Bei der Aktivierung schreibt das Gateway die
+  Firebase-Zugangsdaten jetzt als **letzten** Schritt vor dem Neustart in den
+  Running-Modus — Tunnel-Token/-URL und Haushalts-Verknüpfung werden davor
+  gespeichert. Die Zugangsdaten-Datei ist der einzige Auslöser für den
+  Running-Modus; schlägt ein vorheriger Schritt fehl, bleibt die Box sauber im
+  Setup-Modus und versucht es erneut, statt halb auf „läuft" umzuspringen.
+  Schließt eine seltene Falle, bei der das Add-on im Aktivierungs-Bildschirm
+  hängen blieb.
+
 ## 1.2.11
 
 - **Neu (PV-Anlage konfigurierbar):** Die Solarprognose rechnete bisher für jeden
