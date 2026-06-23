@@ -1,3 +1,16 @@
+## 1.2.10
+
+- **Fix (Solarprognose wurde nie aktiviert):** Nach dem Onboarding blieb die
+  Solarprognose dauerhaft stumm, weil die Haushalts-Koordinaten nie gesetzt
+  wurden — die Prognose-Schleife übersprang jeden Haushalt ohne Standort
+  stillschweigend. Franzl holt den Standort jetzt automatisch aus Home Assistant
+  (`GET /api/config`) und trägt ihn nach; der Nutzer muss nichts eingeben. Das
+  wirkt auch rückwirkend für bestehende Haushalte und liefert die erste Prognose
+  direkt nach dem Start statt erst nach 30 Minuten. Steht HA auf 0/0, bleibt der
+  Standort bewusst leer.
+- **Intern:** `GATEWAY_VERSION` (Anzeige im Ingress-Panel + `/health`) war auf
+  1.2.6 stehengeblieben und wieder mit der Add-on-Version synchronisiert.
+
 ## 1.2.9
 
 - **Fix (Wallbox-Aktionen — „Hat nicht geklappt"):** Die Sofort-Aktionen für die
