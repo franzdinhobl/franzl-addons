@@ -1,3 +1,12 @@
+## 1.2.21
+
+- **Fix (Laden starten/Ladelimit ging nicht — 500):** Die HA-Ladesteuerung warf
+  `NameError: get_ha_client` (Import lag nur lokal) → 500 bei
+  `/vehicles/{id}/charge` und `/charge-limit`. Import auf Modulebene gezogen.
+- **Fix (Crash-Klasse):** `VehicleRepo.get_by_vin` nutzte `scalar_one_or_none`
+  und wäre bei zwei Fahrzeugen mit derselben VIN abgestürzt — gibt jetzt das
+  jüngste zurück (wie `get_by_device`).
+
 ## 1.2.20
 
 - **Auto laden steuern (Fahrzeug über Home Assistant):** Ist ein Auto in HA mit
