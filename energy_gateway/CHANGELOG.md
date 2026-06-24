@@ -1,3 +1,16 @@
+## 1.2.19
+
+- **Batterie-Leistung wird gefunden (Fronius SOLAR.net & Co.):** Discovery hängt
+  jetzt eine Netto-Speicherleistung (`*leistung_speicher*`/`*battery_power*`,
+  `device_class: power`) an das Batterie-Gerät, auch wenn sie unter dem
+  Wechselrichter-HA-Gerät liegt — Laden/Entladen erscheint endlich bei der
+  Batterie statt als PV verbucht zu werden (Vorzeichen wie im Hybrid-Profil
+  invertiert). Herstellerunabhängig.
+- **Doppeltes Fahrzeug legt nicht mehr die ganze Geräteliste lahm:**
+  `get_by_device` gibt bei mehreren Fahrzeugen an einer Wallbox das jüngste
+  zurück statt zu crashen; der Geräte-Snapshot isoliert pro Gerät — ein kaputtes
+  Gerät leert nie wieder die ganze Liste.
+
 ## 1.2.18
 
 - **Eine Box = ein Zuhause (kein Müll mehr):** Bei jeder Aktivierung räumt die
