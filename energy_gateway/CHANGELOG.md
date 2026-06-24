@@ -1,3 +1,13 @@
+## 1.2.20
+
+- **Auto laden steuern (Fahrzeug über Home Assistant):** Ist ein Auto in HA mit
+  Steuer-Entities integriert (Tesla via Tessie: Laden an/aus, Ladelimit,
+  Ladestrom), erkennt Franzl diese beim Hinzufügen automatisch und macht
+  **Laden starten/stoppen, Ladelimit und Ladestrom** steuerbar — ganz ohne
+  Hersteller-Cloud-Login. Die Wallbox-Capability `can_control_charging` schaltet
+  die Bedienelemente frei; die Charge-Endpoints (`/vehicles/{id}/charge`,
+  `/charge-limit`, `/charge-current`) bedienen den HA-Pfad.
+
 ## 1.2.19
 
 - **Batterie-Leistung wird gefunden (Fronius SOLAR.net & Co.):** Discovery hängt
