@@ -1,3 +1,12 @@
+## 1.2.17
+
+- **Land automatisch & korrekt:** Das Land (für den CO₂-Faktor) wird jetzt aus
+  Home Assistants eigener Konfiguration übernommen (`GET /api/config`, dasselbe
+  wie der Standort) statt aus der Zeitzone geraten — Letzteres lag falsch, sobald
+  die Box-Zeitzone nicht zum Standortland passt (z. B. AT-Haushalt mit
+  Zeitzone `Europe/Berlin`). Überschreibt nie eine manuelle Wahl; Zeitzone bleibt
+  nur letzter Fallback.
+
 ## 1.2.16
 
 - **Aufräumen:** Veraltete FastAPI-`regex`-Query-Parameter auf `pattern`
