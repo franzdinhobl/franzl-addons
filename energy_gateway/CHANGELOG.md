@@ -1,3 +1,11 @@
+## 1.2.16
+
+- **Aufräumen:** Veraltete FastAPI-`regex`-Query-Parameter auf `pattern`
+  umgestellt (Energie-Verlauf-Endpunkte) — entfernt zwei Deprecation-Warnungen
+  beim Start, keine Verhaltensänderung. Bündelt den aufgelaufenen Backend-Stand
+  (Capability-Grounding, entrauschtes Logging, Tagesplan-Rückblick,
+  Wallbox-Teaser) in ein auslieferbares Image.
+
 ## 1.2.15
 
 - **UX (ganzheitlicher Umbau):** Klare Trennung „Schauen / Jetzt tun /
