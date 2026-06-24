@@ -1,3 +1,16 @@
+## 1.2.15
+
+- **UX (ganzheitlicher Umbau):** Klare Trennung „Schauen / Jetzt tun /
+  Einstellen". Wallbox-Karte zeigt den Lademodus als Status + Tagesziel/
+  Mindestladung-Teaser (Umschalten im Aktion-Tab); Autopilot zog vom Home- in
+  den Mehr-Tab („Wie Franzl optimiert"); „Haus & Strom"-Sektion bündelt Tarif +
+  PV + Land; Onboarding fragt Land + Sprache; Karten-Fachbegriffe erklärt
+  (Legionellenschutz, SG-Ready, Batterie-Modus) und entschärft (Tier → „Mit
+  Auto-Daten"/„Standard", „Session" → „Geladen"). Read-only-Geräte zeigen keinen
+  internen Roh-Datendump mehr.
+- **Intern:** WS-Geräte-Snapshot trägt Wallbox-Tagesziel/Mindestladung;
+  `GATEWAY_VERSION` wieder mit der Add-on-Version synchronisiert.
+
 ## 1.2.14
 
 - **Ehrlicher (Geräte-Steuerung):** Franzl zeigt jetzt nur noch Bedienelemente
