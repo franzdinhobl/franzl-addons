@@ -1,3 +1,14 @@
+## 1.2.18
+
+- **Eine Box = ein Zuhause (kein Müll mehr):** Bei jeder Aktivierung räumt die
+  Box verwaiste Alt-Haushalte automatisch weg. Vorher legte „Zurücksetzen / Neu
+  aktivieren" (Soft-Reset, der die DB behält) bei der Re-Aktivierung einen
+  ZWEITEN Haushalt an — die Box meldete dann den falschen als primär, die App
+  verband sich mit einem toten Tunnel, und Firestore/Cloudflare sammelten Leichen
+  an. Jetzt bleibt nach jeder Aktivierung garantiert genau der eine aktivierte
+  Haushalt übrig (inkl. aller abhängigen Daten der alten — metadaten-getrieben,
+  deckt auch Tabellen ohne FK ab).
+
 ## 1.2.17
 
 - **Land automatisch & korrekt:** Das Land (für den CO₂-Faktor) wird jetzt aus
