@@ -1,3 +1,15 @@
+## 1.2.14
+
+- **Ehrlicher (Geräte-Steuerung):** Franzl zeigt jetzt nur noch Bedienelemente
+  für Geräte, die wirklich gesteuert werden können. Read-only-Geräte (z. B. ein
+  Fronius Ohmpilot, den der Fronius-Wechselrichter selbst regelt, oder ein
+  Speicher, den Home Assistant nur ausliest) erscheinen als reine Statusanzeige —
+  keine Schieberegler oder Schalter mehr, die ins Leere laufen. Der Tagesplan
+  plant ebenfalls nur noch steuerbare Geräte. Schlägt eine Steuerung trotzdem
+  fehl, wird das jetzt protokolliert (sichtbar im Log-Viewer), damit die
+  Erkennung gezielt verbessert werden kann. Experten/Installateure können die
+  Steuerbarkeit eines Geräts im Detail-Bildschirm manuell korrigieren.
+
 ## 1.2.13
 
 - **Werkzeug (Werksreset im Image):** `reset-box.sh` ist jetzt fest im Add-on
