@@ -1,3 +1,60 @@
+## 1.2.25
+
+Geräte-Steuerung neu fundiert: **ein Control erscheint nur, wenn es am echten
+Gerät verifiziert ist** — nie weil ein Markenprofil es behauptet (Spec 29).
+Damit funktioniert die Steuerung herstellerübergreifend statt nur „auf dem Papier".
+
+- **Steuer-Erkennung aus echten Metadaten statt Namen:** Eine Ladestrom-Grenze
+  wird jetzt an ihrem Typ erkannt — egal ob sie „dynamic_charger_limit",
+  „intensity" oder „Ladestrom" heißt. Custom-/HACS-Integrationen (Huawei, SMA,
+  Solax, Sungrow …) finden ihr Profil endlich.
+- **Keine toten Schalter mehr:** Bietet ein Gerät keine echte Steuer-Entität
+  (und keinen Direkt-Client), zeigt die App nur noch Status — kein Regler, der
+  ins Leere greift. Gilt für JEDES Gerät, auch bei schlampigem Profil.
+- **Modi werden auf die echten Geräte-Optionen abgebildet:** „Laden"/„Entladen"
+  trifft jetzt die real vorhandene Option (z. B. „Force Charge"), statt einen
+  festen Wert blind zu senden. Lüftung, Batterie-Modus und Batterie-Schalter
+  (Senec/AlphaESS) werden so herstellerübergreifend steuerbar.
+- **Manuelle Zuordnung (Experten-Modus):** Wo die Auto-Erkennung unsicher ist,
+  ordnest du eine Geräte-Rolle selbst der richtigen HA-Entität zu — mit Live-Wert
+  zur Kontrolle.
+- **Funktioniert-es-wirklich-Anzeige:** Jeder Steuerbefehl wird mitprotokolliert;
+  die App zeigt pro Gerät, ob die Steuerung im Alltag funktioniert, unzuverlässig
+  ist oder fehlschlägt — so lassen sich Probleme früh erkennen.
+- **Robustere Aktivierung:** ein seltener Fehler beim Aufräumen alter Haushalte
+  (fehlender Anzeigename) ist behoben.
+
+## 1.2.24
+
+Systemischer Audit (Onboarding · Steuerung · Tagesplan · Runtime) — `docs/qa/systemic-audit-2026-06-25.md`.
+
+- **Messwerte stimmen jetzt unabhängig von der Einheit:** Die Geräte-Erkennung
+  rechnet Energie- und Leistungssensoren einheits-richtig um — ein Zähler in
+  **Wh/MWh** landet nicht mehr 1000× zu groß im kWh-Feld, ergänzend zu kW/mW.
+- **Keine fragilen Helfer-Sensoren mehr unbemerkt gewählt:** Abgeleitete
+  HA-Helfer (Template-/`simple_*`-Sensoren) werden in der Geräte-Erkennung als
+  „abgeleitet" markiert, damit die echte Geräte-Entity bevorzugt wird; gewählte
+  Entities, die keinem Messwert zugeordnet werden konnten, werden ehrlich gemeldet.
+- **Fahrzeug-Ladestand wählt eine LIVE-Entity:** Schläft das Auto (Tesla/Tessie),
+  wird nicht mehr eine `unknown`-Entity angezeigt, wenn ein verfügbarer Wert da ist.
+- **Ladesteuerung lügt nicht mehr „Erfolg":** Ein Lade-Befehl (Start/Stopp,
+  Limit, Strom) gegen ein schlafendes Auto meldet jetzt ehrlich „Auto nicht
+  erreichbar — aufwecken" statt eines wirkungslosen Scheinerfolgs.
+- **Kein doppeltes Fahrzeug mehr:** Ein HA-Auto erneut hinzufügen aktualisiert das
+  bestehende statt ein Duplikat anzulegen.
+- **Tagesplan nie mehr kopf-/inhaltslos:** Läuft gerade nichts (z. B. alles im
+  Wohlfühlband), zeigt der Plan eine ehrliche Status-Zeile und eine Headline aus
+  dem nächsten geplanten Ereignis statt einer leeren Ansicht.
+- **„Degraded"-Fehlalarm behoben:** Der Loop-Watchdog nutzt jetzt pro Loop ein
+  passendes Zeitfenster und jeder Loop sendet ein Lebenszeichen — die Box meldet
+  nicht mehr fälschlich „degraded"/„stalled" im Normalbetrieb.
+- Dazu: native Fronius-Ohmpilot-Anbindung (Modbus) + verifizierte Batterie-
+  Vorzeichen-Kalibrierung (Sonnen/Tesla Powerwall).
+- **Native Geräte überleben IP-Wechsel (DHCP):** Ändert der Router die IP eines
+  nativ angebundenen Geräts (z. B. Fronius Ohmpilot), findet die Box es selbst
+  wieder — Suche im LAN nach dem stabilen Fingerprint (Seriennummer), neue IP
+  wird übernommen. Manueller Fallback: IP im Geräte-Detail setzen.
+
 ## 1.2.23
 
 - **Ehrlich bei fehlenden Live-Daten (unknown ≠ 0):** Ist die HA-Entity eines
