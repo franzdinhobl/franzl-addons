@@ -1,3 +1,12 @@
+## 1.2.27
+
+Hybrid-Wechselrichter (PV + Batterie + Netz in EINEM HA-Gerät) werden bei der
+Erkennung jetzt in **getrennte Geräte je Rolle** (Solar / Batterie / Netz)
+aufgeteilt — wie im HA-Energie-Dashboard. So zeigt das Solar-Gerät die echte
+PV-Leistung, die Batterie ihren Ladestand und das Netz Bezug/Einspeisung, statt
+alles in einem Gerät zu vermischen. Entity-getrieben (markenunabhängig); reine
+Solar-/Batterie-/Netz-Geräte bleiben unverändert.
+
 ## 1.2.26
 
 Hotfix: **alle Geräte werden wieder gespeichert.** Mehrere Sensoren, die zusammen
