@@ -1,3 +1,14 @@
+## 1.2.26
+
+Hotfix: **alle Geräte werden wieder gespeichert.** Mehrere Sensoren, die zusammen
+EINEN Messwert ergeben (Batterie Laden+Entladen, Netz Bezug+Einspeisung, mehrere
+PV-Strings/Phasen), kollidierten bei der Einrichtung und führten dazu, dass nur
+ein Teil der Geräte angezeigt wurde. Behoben:
+- Die Datenbank erlaubt diese **Summen-Sensoren** jetzt korrekt nebeneinander.
+- Bei **Hybrid-Wechselrichtern** (PV + Batterie + Netz in einem Gerät) kapern die
+  Batterie-/Netz-Sensoren nicht mehr den PV-Messwert — das Solar-Gerät zeigt
+  wieder die echte PV-Leistung.
+
 ## 1.2.25
 
 Geräte-Steuerung neu fundiert: **ein Control erscheint nur, wenn es am echten
