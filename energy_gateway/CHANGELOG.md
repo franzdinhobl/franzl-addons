@@ -1,3 +1,13 @@
+## 1.2.23
+
+- **Ehrlich bei fehlenden Live-Daten (unknown ≠ 0):** Ist die HA-Entity eines
+  Geräts gerade `unavailable` (z. B. ein Fronius-Ohmpilot, dessen Sensoren nicht
+  liefern), meldet Franzl jetzt Status **„offline"** statt „idle" bei „0 W". Die
+  App zeigt dann „—" und einen Offline-Punkt statt eines erfundenen 0-W-Werts,
+  und im Temperaturfühler den aktuellen Wert bzw. „—" statt nur „verbunden".
+- **Slider-Wertanzeige lesbar:** Die Wert-Tooltips an Schiebereglern waren
+  schwarz-auf-schwarz (unleserlich) — heller Textstil ergänzt (alle Slider).
+
 ## 1.2.22
 
 - **Mehr Marken steuerbar (Audit B):** Die Geräte-Erkennung mappt jetzt auch
