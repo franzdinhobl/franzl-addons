@@ -1,3 +1,18 @@
+## 1.2.22
+
+- **Mehr Marken steuerbar (Audit B):** Die Geräte-Erkennung mappt jetzt auch
+  `number`/`select`-Steuer-Entities auf die Felder, die der Optimierer wirklich
+  bedient — Wallbox-Ladestrom, Batterie-Modus, Lüftungs-Modus/-Stufe,
+  Warmwasser-Leistung — und ein HA-`climate`-Gerät steuert auch Wärmepumpe + Pool.
+  Damit sind viele Marken ohne Hersteller-Profil out-of-box steuerbar statt nur
+  ablesbar (gerätezentriert + Namens-Heuristik, konservativ).
+- **Keine toten Bedienelemente mehr (Audit C):** Ein Gerät gilt nur noch als
+  steuerbar, wenn wirklich ein bedienbares Steuer-Feld erkannt wurde — sonst
+  ehrlich nur Anzeige (kein Schieberegler, der ins Leere läuft).
+- **Netz-Leistung korrekt (Audit D):** Zähler mit getrennten Import-/Export-
+  Leistungssensoren werden jetzt zu einem signierten Netto-Wert verrechnet
+  (Export negativ) statt summiert — sonst war Autarkie/Verbrauch verfälscht.
+
 ## 1.2.21
 
 - **Fix (Laden starten/Ladelimit ging nicht — 500):** Die HA-Ladesteuerung warf
