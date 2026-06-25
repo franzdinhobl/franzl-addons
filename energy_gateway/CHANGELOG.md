@@ -1,3 +1,25 @@
+## 1.2.28
+
+**Geräte-Erkennung hört auf zu raten (Spec 30).** Die Aufteilung aus 1.2.27 hat
+in echten Fronius-Anlagen mehr kaputt gemacht als geholfen: das System-Gerät
+„SolarNet" wurde in Solar/Batterie/Netz zerlegt und duplizierte die echten Geräte
+(Wechselrichter, Batterie, Smartmeter) — die **Batterie zeigte 0 kW**, weil
+Ladestand und Leistung in getrennte Geräte zerrissen wurden. Jetzt:
+
+- **Ein HA-Gerät mit mehreren Rollen** (SolarNet-Aggregator) wird **nicht mehr
+  zerlegt**. Es ergänzt nur, was fehlt — die Batterie-Leistung wandert zum echten
+  Batterie-Gerät, sodass **Ladestand UND Leistung an einem Gerät** stehen.
+- **Kein Raten mehr**: eine Wallbox/ein Auto, deren Sensoren „charge/export" im
+  Namen haben, wird nie als Hausbatterie/Netz gelesen. Forecast- und selbstgebaute
+  Hilfssensoren (Template/Scrape) landen unter „Erweitert", nicht als echtes Gerät.
+- **Auto ↔ Wallbox nur noch auf Ansage**: ein Fahrzeug wird nicht mehr automatisch
+  an „die" Wallbox gehängt — du verknüpfst es selbst (oder lässt es offen).
+- Unsichere Vorschläge (z. B. zusammengeführte Batterie) sind mit **„bitte prüfen"**
+  markiert.
+
+Ersetzt die Rollen-Aufteilung aus 1.2.27. Abgesichert mit einem Test gegen einen
+echten (anonymisierten) Haushalt.
+
 ## 1.2.27
 
 Hybrid-Wechselrichter (PV + Batterie + Netz in EINEM HA-Gerät) werden bei der
