@@ -1,3 +1,31 @@
+## 1.2.31
+
+**Wallbox „offline" obwohl online + „Laden" tat nichts — behoben.** Eine OCPP-
+Wallbox (z. B. ABB Terra AC), die in HA voll erreichbar ist, wurde fälschlich als
+offline geführt, lud auf Knopfdruck nicht, zeigte keine kW und meldete trotzdem
+„Mach ich". Wurzel: ein einzelnes dauerhaft `unavailable`-Sensor-Entity kippte das
+ganze Gerät auf offline — und das schaltete im Hintergrund die Steuerung ab.
+
+- **Ehrlicher Online-Status**: Ein Gerät gilt nur als offline, wenn *kein* Entity
+  mehr antwortet — ein einzelner toter Nebensensor (Leistung) kippt es nicht mehr,
+  und der Status erholt sich selbst wieder auf „online" (vorher blieb er für immer
+  offline).
+- **Echte kW**: Bei Wallboxen wird die tatsächlich gelieferte Leistung
+  (`power_active_import`) bevorzugt statt eines oft leeren Setpoints
+  (`power_offered`).
+- **Ehrlicher Lade-Status**: Der Stecker-/Ladezustand (z. B. „Verbunden · Auto
+  pausiert") wird angezeigt statt „offline" — inkl. „Kein Auto verbunden". Der
+  Status-Sensor wird korrekt erkannt (nicht der Stecker-Zähler).
+- **„Laden"/„Stopp" wirkt wirklich**: Der OCPP-Lade-Schalter wird mitgeschaltet,
+  und die App meldet das *echte* Ergebnis (angenommen / kein Auto / fehlgeschlagen)
+  statt blind „Mach ich".
+- **„Geräte neu erkennen" ergänzt fehlende Fähigkeiten**: ein Rescan übernimmt jetzt
+  auch neu erkennbare Felder (Lade-Status, Lade-Schalter), nicht nur bestehende.
+
+## 1.2.30
+
+(intern: erste Fassung der Wallbox-Korrekturen — durch 1.2.31 ersetzt)
+
 ## 1.2.29
 
 **Falsch erkannt? In wenigen Klicks korrigierbar (Spec 30, Korrektur-UI).** Auto-
