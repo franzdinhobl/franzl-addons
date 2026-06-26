@@ -1,3 +1,19 @@
+## 1.2.29
+
+**Falsch erkannt? In wenigen Klicks korrigierbar (Spec 30, Korrektur-UI).** Auto-
+Erkennung ist nie zu 100 % markenübergreifend — darum ist jetzt jede Fehl-Erkennung
+ohne Löschen-und-neu reparierbar:
+
+- **Fehlendes Feld ergänzen**: der Zuordnungs-Dialog zeigt jetzt alle Felder, die
+  ein Gerät haben sollte (z. B. Batterie-Leistung) — fehlt eines, kann man es direkt
+  zuordnen, nicht nur bestehende ändern.
+- **Sensor von einem anderen Gerät wählen**: Kandidaten sind nicht mehr auf das eine
+  HA-Gerät beschränkt — der passende Sensor (z. B. die Batterie-Leistung am
+  Wechselrichter) ist mit Live-Wert wählbar und als „anderes Gerät" markiert.
+- **Geräte-Typ ändern**: im Geräte-Detail (Experten-Modus) lässt sich ein
+  fehlklassifiziertes Gerät auf den richtigen Typ umstellen — die Sensoren werden
+  automatisch neu zugeordnet.
+
 ## 1.2.28
 
 **Geräte-Erkennung hört auf zu raten (Spec 30).** Die Aufteilung aus 1.2.27 hat
