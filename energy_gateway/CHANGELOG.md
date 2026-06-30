@@ -1,3 +1,18 @@
+## 1.2.66
+
+**Ehrlicher Tagesplan + konsistenter Auto-Ladestand (Folge-Fix zu 1.2.65).**
+
+- **Tagesplan-Schlagzeile bei vollem Auto:** Auch der MILP-Planer (Live-Engine)
+  benannte ein Auto über seinem Ladelimit nur mit „off" → die Home-Schlagzeile las
+  sich als „Ich pausiere dein Auto — gerade nicht nötig". Jetzt sagt der Plan
+  ehrlich „… — schon auf 92 %, Ladelimit (80 %) erreicht" (MILP + regelbasiert).
+- **Ein Ladestand überall:** Der angezeigte Auto-SoC kam aus der DB, die nur für
+  API-Autos (Tesla Fleet/VW) nachgeführt wird — bei einem HA-Entity-Auto lag der
+  Wert fest (z. B. 90 %), während der Live-Regler den HA-Sensor las (92 %). Folge:
+  zwei verschiedene Prozentwerte auf einem Screen (Karte/Geräte-Tab vs. Begründung).
+  Der Snapshot liest den SoC jetzt live aus der HA-Entität (wie schon das Ladelimit),
+  sodass Karte, Geräte-Tab und Begründung denselben Wert zeigen.
+
 ## 1.2.65
 
 **Solar-Wallbox lud nicht mehr trotz Überschuss — Wurzel: invertierte Ziel-Erkennung.**
