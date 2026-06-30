@@ -1,3 +1,19 @@
+## 1.2.65
+
+**Solar-Wallbox lud nicht mehr trotz Überschuss — Wurzel: invertierte Ziel-Erkennung.**
+Eine `solar_only`-Wallbox mit eingeschaltetem Bereitschafts-Floor („Immer einsatzbereit",
+mindest 40 %) aber ausgeschaltetem Tagesziel (komfort 0) wurde fälschlich als
+Kühl-/invertierte Konfiguration erkannt (Werte-Ordnung 40 > 0). Folge: die MINDEST-
+Sicherheitsstufe feuerte bei JEDEM SoC ≥ 40 % (auch bei 90 %!) und erzwang Netzladen mit
+voller Leistung — und verdrängte dabei die gesamte Live-PV-Überschuss-Regelung.
+
+- **Fix:** Ziel-Inversion gilt nur noch für `climate` (Kühlbetrieb). SoC-Geräte
+  (Wallbox/Batterie) sind immer „höher = besser". `DeviceTargets` trägt jetzt die
+  Kategorie; Controller, Planner und MILP erkennen die Richtung kategorie-sicher.
+- **Ehrlicher Tagesplan bei vollem Auto:** Ist das Auto auf/über seinem eigenen Ladelimit
+  (z. B. 90 % bei Limit 80 %), sagt der Plan jetzt „Ladelimit erreicht" statt „kein
+  Überschuss", während der PV-Überschuss (Auto voll + Hausakku voll) ehrlich ins Netz geht.
+
 ## 1.2.61
 
 **Solar-Start/Stopp markenuniversell abgeschlossen.** Aufbauend auf 1.2.60 die
