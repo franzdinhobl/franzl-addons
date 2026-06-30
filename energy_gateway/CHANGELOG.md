@@ -1,3 +1,16 @@
+## 1.2.69
+
+**Audit-Restposten geschlossen.** Die vier im 1.2.68-Report zurückgestellten Findings:
+
+- **Netz-geladener Akku korrekt zugeordnet** (Migration `0011`): die Aggregation rechnet jetzt
+  die aus dem Netz geladene Akku-Energie heraus (`battery_charge_grid_kwh` in
+  hourly/daily + Totals `battery_charge_solar_kwh`/`_grid_kwh`). Die „Woher/Wohin"-Karte zeigt
+  nur noch SOLAR-geladene Energie unter „Erzeugung → in den Speicher", nicht mehr Netzstrom.
+- **Modus-Chip live**: `charge_mode`/`battery_mode` reisen jetzt im per-Tick-`device_update` mit,
+  sodass externe Moduswechsel propagieren.
+- **Standalone-Fahrzeug-SoC** aktualisiert sich am Aktion-Tab alle 60 s (statt nur beim Öffnen).
+- **Kein erfundenes „0 W"** mehr für offline Geräte (Home-Status-Karte zeigt „—").
+
 ## 1.2.68
 
 **App-weiter Live-Zustand-Audit — systematischer Fix (29 Findings).** Ein Multi-Agent-
