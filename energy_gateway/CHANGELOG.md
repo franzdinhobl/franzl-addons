@@ -1,3 +1,21 @@
+## 1.2.61
+
+**Solar-Start/Stopp markenuniversell abgeschlossen.** Aufbauend auf 1.2.60 die
+restlichen Lücken geschlossen, damit Solar für JEDE Auto-Anbindung sauber
+start/stoppt und ehrlich bleibt:
+
+- **Tier-A-Cloud-Autos (Tesla Fleet) starten/stoppen jetzt autonom**: Der
+  Solar-Loop ruft `start_charging`/`stop_charging` über die Vendor-API
+  (`_sync_vendor_car_charging`, deduped/backoff). `set_charge_current` allein
+  startet ein stehendes Tesla NICHT — vorher setzte Solar nur die Ampere und das
+  Auto lud trotzdem nie. Gilt zusätzlich zum HA-Schalter-Pfad aus 1.2.60.
+- **Ehrlicher Stopp, wenn das Auto voll ist**: Der Controller bekommt jetzt den
+  Live-SoC + das Ladelimit des verknüpften Autos (aus dem Batch-States-Cache,
+  frisch — Limit-Änderung wirkt sofort) und stoppt im Solar-Modus mit „Auto bei
+  X %, Ladelimit Y % erreicht" statt fälschlich „Ich lade Z kW" bei 0 W zu melden.
+- **Solar-Start ohne Verzögerung**: schon in 1.2.60, hier mit abgedeckt — der
+  erste Ladebeginn wird nicht mehr vom Re-Assert-Throttle gehalten.
+
 ## 1.2.60
 
 **Solar-Modus startet/stoppt jetzt wirklich — das verknüpfte Auto wird autonom
