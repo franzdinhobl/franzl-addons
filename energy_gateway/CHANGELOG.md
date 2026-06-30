@@ -1,3 +1,17 @@
+## 1.2.71
+
+**Installer-/Onboarding-/Mehr-Audit (19 Findings).** Zweiter App-weiter Audit auf den bisher
+ungeprüften Flächen (Mehr/Settings, Onboarding, komplette Installer-App). Backend-Teil:
+- **Fleet-Diagnose ehrlich:** `GET /installer/fleet` liefert jetzt `offline_device_count`,
+  `has_unset_meter_roles`, `has_readonly_inverters` — die Installer-Fleet-Karte konnte diese
+  Triage-Signale vorher nie anzeigen (Offline-Badge/Zähler-/Wechselrichter-Warnungen tot).
+
+Der Rest sind App-Fixes (greifen beim nächsten App-Build): stille Speicher-Fehler → ehrliche
+Fehlermeldung (Überschuss-Reihenfolge, Away-Modus, Routinen, Post-Join, Rescan); kein fabriziertes
+„Free" für zahlende Pro-Nutzer bei Box-offline; Installer-Setup-Crash (Presets aus echten Geräte-
+IDs statt Discovery-Liste); Diagnose-Health auf das richtige `/health`; ehrliche Verifizierungs-/
+Ziel-Anzeigen; Tarif-Preis-Validierung. Report: `docs/qa/remaining-surfaces-audit-2026-06-30.md`.
+
 ## 1.2.70
 
 **`power_w` ehrlich nullable (unknown ≠ 0).** Ist die Live-Leistung eines Geräts nicht
