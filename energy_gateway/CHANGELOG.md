@@ -1,3 +1,28 @@
+## 1.2.60
+
+**Solar-Modus startet/stoppt jetzt wirklich — das verknüpfte Auto wird autonom
+ladebereit gemacht.** Bisher regelte der Solar-Überschuss-Loop nur die
+Wallbox-Stromstärke, fasste aber den eigenen Laden-Schalter des Autos (z. B.
+Tesla via Tessie) nie an — das tat nur der „Jetzt laden"/„Stopp"-Tap. Folge:
+Überschuss da, Wallbox auf 10 A gestellt, Auto aber deaktiviert → 0 W, der
+Überschuss floss ins Netz (Entscheidung „Ich lade 7,2 kW" bei real 0 W).
+
+- **Eine geteilte Auto-Koordination** (`devices/car_link.py`,
+  `set_linked_car_charging`): schaltet den Laden-Schalter des verknüpften
+  HA-Autos AN (weckt es bei Bedarf) bzw. AUS — deduped + Backoff, geteilt vom
+  `/mode`-Tap (`force=True`, sofort) und vom autonomen 2-s-Loop
+  (überschuss-getaktet). Tap und Loop teilen denselben Dedup-State, streiten also
+  nie um den Schalter.
+- **Autonomer Executor kann das Auto endlich erreichen**: Der Hintergrund-Loop
+  baute den `ActionExecutor` ohne `vehicle_registry`/`tier_manager` → das
+  verknüpfte Auto wurde nie aufgelöst, weder Strom- noch Schalter-Sync liefen
+  autonom (nur über den Tap). Jetzt wie im `/mode`-Pfad verdrahtet.
+- **Solar-START ist sofort**: Der Erst-Ladebeginn wird nicht mehr bis zu 2 min
+  vom Re-Assert-Throttle gehalten (START ist nun wie STOPP eine prompte
+  Transition).
+- **Kein `receiveTimeout` mehr beim Moduswechsel**: Der Replan im `/mode` ist
+  zeitlich begrenzt (4 s) — eine träge HA blockiert die Antwort nicht mehr.
+
 ## 1.2.31
 
 **Wallbox „offline" obwohl online + „Laden" tat nichts — behoben.** Eine OCPP-
