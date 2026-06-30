@@ -1,3 +1,10 @@
+## 1.2.70
+
+**`power_w` ehrlich nullable (unknown ≠ 0).** Ist die Live-Leistung eines Geräts nicht
+lesbar (Entity unavailable), liefert der Snapshot jetzt `null` statt einer erfundenen `0 W`;
+die App zeigt „—". Schließt den letzten Audit-Edge-Case (#30) — auch online-Geräte mit
+totem Power-Sensor. Dart `DeviceSnapshot.powerW` nullable (Arithmetik via `?? 0`, Anzeige „—").
+
 ## 1.2.69
 
 **Audit-Restposten geschlossen.** Die vier im 1.2.68-Report zurückgestellten Findings:
