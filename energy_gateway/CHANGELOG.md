@@ -1,3 +1,24 @@
+## 1.2.73
+
+**Steuerungs- & „Dein Tag"-Ehrlichkeit + IDM-Warmwasser.** Großer Durchlauf, damit die App nur
+sagt, was real passiert:
+- **Warmwasser-/Pool-Temperatur kommt jetzt am Gerät an.** Der Executor schrieb für Warmwasser/Pool
+  bisher keinen Sollwert (nur Watt/Relais); jetzt geht der konfigurierte Komfort-Sollwert real ans
+  HA-`water_heater`/`number`-Entity (DHW-Floor 40° erzwungen). Außerdem ein Verify-Bug behoben:
+  Sollwerte galten bisher als „nicht bestätigt" (Verify prüfte den Modus statt der Temperatur).
+- **IDM Navigator: Warmwasser-Solltemperatur nativ** über Modbus-Register 1032 (offizielle
+  IDM-Doku), für IDM-Wärmepumpen ohne Home Assistant.
+- **„Dein Tag" erzählt verifizierten Vollzug statt Absicht:** ein „erledigt" entsteht erst, wenn der
+  Befehl wirklich durchging; die Jetzt-Zeile nennt nur Aktivität bei gemessener Leistung
+  („… heizt gerade nicht — warm genug" / „nicht beobachtbar"); der Teaser zeigt keine geplante
+  Zukunfts-Aktion als „jetzt" mehr.
+- **Solarprognose-Stundenfehler behoben:** die lokal gespeicherte Forecast-Zeit wurde an zwei
+  Stellen doppelt in Lokalzeit umgerechnet → Prognosekurve/Planung um den Zeitzonen-Offset
+  verschoben. Auch die ML-Korrektur paart Prognose↔Ist jetzt auf derselben Stunde.
+- **Rückblick entspammt:** ein kurzer Wolken-Wechsel solar↔Netz schreibt keinen Phantom-Eintrag mehr
+  (Hysterese).
+- Plus Optimierer-Härtung + die Backend-Anteile des laufenden UI-Sweeps.
+
 ## 1.2.72
 
 **Installer: native Geräte-IP im Netzwerk suchen (ISU-04).** Das Setup-Schema markiert ein
