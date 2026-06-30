@@ -1,3 +1,24 @@
+## 1.2.68
+
+**App-weiter Live-Zustand-Audit — systematischer Fix (29 Findings).** Ein Multi-Agent-
+Audit fand eine durchgängige Fehlerklasse: die Geräte-Karten zeigten LIVE-Begründungen
+neben EINGEFRORENEN Zahlen, und Schlagzeile/Tagesplan kamen aus dem 15-Min-Forecast statt
+der Live-Entscheidung. Behoben (Backend):
+
+- **Per-Tick-Broadcast generalisiert:** der `device_update` trägt jetzt für JEDE Kategorie
+  (vorher nur Wallbox) die Live-Messwerte — Thermik (`current_temp_c`/`boost_active`),
+  Batterie (`battery_soc_pct`), read-only Solar/Grid/Batterie (Leistung+Status), Auto-SoC
+  auch im Leerlauf. Throttling pro Gerät verhindert einen Delta-Sturm. → „Ladestrom 0 A",
+  „Stopp-Toggle eingefroren", „Batterie zeigt nie SoC" behoben.
+- **Tagesplan/Schlagzeile sagt die Live-Wahrheit:** die aktuelle Stunde überlagert jetzt die
+  Live-Controller-Entscheidung (reaktiver PV-Überschuss) statt des Forecast-Slots → keine
+  „Ich pausiere dein Auto — zu teuer" mehr, während es aus Sonne lädt.
+- **Ehrlichkeit bei offline:** ein offline/nicht-erreichbares Gerät wird NICHT mehr als
+  heizend/ladend erzählt (Tagesplan + Schlagzeile); Snapshot-Key-Fixes (native Thermik-Temp
+  `temp_c`/`temperature`, Batterie-SoC), sensorlose Off-Begründung ohne „(?°C)".
+
+(App-Welle separat: Haus/Auto-Doppelzählung, Offline-Schlagzeile, Prognose-kWh-Integral.)
+
 ## 1.2.67
 
 **Live-Messwerte erreichen die Geräte-Karten (systematisch).** Der per-Tick
