@@ -1,3 +1,15 @@
+## 1.2.67
+
+**Live-Messwerte erreichen die Geräte-Karten (systematisch).** Der per-Tick
+`device_update` über WebSocket trug bisher NUR Aktion/Status/Begründung — die
+gemessenen Werte (Ladestrom, Leistung, Auto-SoC, Auto-Ladelimit, Stecker-Status)
+kamen ausschließlich im vollen Snapshot (nur beim Verbinden/Reconnect). Folge: die
+Karte zeigte eine LIVE-Begründung („Ich lade dein Auto mit 7,3 kW") neben
+EINGEFRORENEN Zahlen („Ladestrom 0 A", „wartet"), und der Ladelimit-Slider folgte
+einer Änderung in der Hersteller-App nicht. Jetzt trägt der `device_update` die
+Live-Messwerte mit (Client merged sie partiell über den letzten Stand), sodass
+Ladestrom, Leistung, SoC, Ladelimit und Stecker-Status bei jedem Tick aktuell sind.
+
 ## 1.2.66
 
 **Ehrlicher Tagesplan + konsistenter Auto-Ladestand (Folge-Fix zu 1.2.65).**
