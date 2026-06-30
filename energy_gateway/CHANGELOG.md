@@ -1,3 +1,12 @@
+## 1.2.72
+
+**Installer: native Geräte-IP im Netzwerk suchen (ISU-04).** Das Setup-Schema markiert ein
+scanbares Host-Feld jetzt markenneutral mit `scan_probe` (= Profil-ID, abgeleitet aus
+`host_resolver._PROBES`). Der Installer-„Natives Gerät hinzufügen"-Dialog zeigt daneben einen
+„Im Netzwerk suchen"-Button, der `POST /devices/{hid}/scan-native` aufruft und die IP automatisch
+einträgt — statt sie vom Gerät abzulesen. Aktuell scanbar: Fronius Ohmpilot (HTTP). Spiegelt den
+bestehenden Kunden-App-Upgrade-Flow.
+
 ## 1.2.71
 
 **Installer-/Onboarding-/Mehr-Audit (19 Findings).** Zweiter App-weiter Audit auf den bisher
