@@ -1,3 +1,15 @@
+## 1.2.76
+
+**Warmwasser/Thermik: der eingestellte Wert gilt jetzt überall (Ziel-Modell aufgeräumt).**
+Ein Thermik-Gerät hat genau zwei Werte — die **Min/Max des Bands, das du im UI einstellst**; dazwischen
+wird optimiert. Der Optimierer las bisher an einigen Stellen noch einen **alten, separaten
+„Boost"-Wert** aus einem Uralt-Feld (Anlage-Default 60 °C beim Warmwasser), das die aktuelle UI gar
+nicht mehr schreibt → er heizte am eingestellten Max (z.B. 55 °C) vorbei Richtung 60. Der Boost-Wert
+ist für Thermik jetzt **ersatzlos gestrichen**: die Überschuss-Heizung stoppt am **Band-Max**, die
+Karte zeigt das Band-Max, und beim Anlegen werden keine Fake-Defaults mehr gesetzt. Ein Regel-Test
+nagelt fest, dass kein alter Wert je wieder das Ziel überschreibt. (Wallbox behält ihren echten
+Boost-Wert = Ladelimit.)
+
 ## 1.2.73
 
 **Steuerungs- & „Dein Tag"-Ehrlichkeit + IDM-Warmwasser.** Großer Durchlauf, damit die App nur
