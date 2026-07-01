@@ -1,3 +1,19 @@
+## 1.2.80
+
+**„Dein Tag"-Jetzt-Zeile folgt in ruhigen Momenten dem echten Stromfluss.**
+Wenn gerade nichts aktiv gesteuert wird (kein PV-Überschuss, kein Ziel zu erzwingen), erzählt die
+Jetzt-Zeile jetzt ehrlich, **woher dein Haus gerade den Strom bezieht** — aus der gemessenen
+Wirklichkeit, nicht geraten:
+- Akku trägt das Haus → „Keine Sonne gerade — dein Haus läuft aus dem Akku. Alles versorgt."
+- wenig Sonne + Akku → „…aus Akku und Restsonne."
+- Netzbezug → „…dein Haus läuft aus dem Netz."
+- Sonne deckt/überschüssig → „Die Sonne deckt gerade dein Haus." / „…es bleibt sogar Überschuss."
+
+Das ersetzt die faktische, aber wenig hilfreiche Zeile „Dein Auto ist verbunden, nimmt gerade aber
+keinen Strom.", wenn das Auto ohnehin nichts tut. Sobald wirklich etwas läuft (Laden/Heizen), zeigt
+die Zeile wieder das Gerät. Große Verbraucher sieht man automatisch, weil sich damit der Fluss (Netz/
+Verbrauch) ändert. Ohne Netzzähler bleibt es bei der Geräte-/Ruhe-Zeile (keine Fluss-Behauptung).
+
 ## 1.2.79
 
 **Meldungs-Durchgang: restliche unehrliche/leere Formulierungen bereinigt.**
