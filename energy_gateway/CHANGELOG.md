@@ -1,3 +1,15 @@
+## 1.2.79
+
+**Meldungs-Durchgang: restliche unehrliche/leere Formulierungen bereinigt.**
+- **Volles Auto sagt nicht mehr „wartet".** Ein angestecktes Auto, das sein Ladelimit erreicht hat,
+  zeigt jetzt „geladen" statt „wartet" (es wartet auf nichts — es ist fertig).
+- **Kein „Ich pausiere dein Auto — Auto bei 85% …" mehr:** ein Grund, der schon ein vollständiger
+  Satz ist (Live-Controller), steht für sich; nur Planner-Fragmente bekommen den „Ich pausiere"-Rahmen.
+- **Ruhe-Schlagzeile ehrlich:** „Gerade läuft alles ruhig — alles ist versorgt." statt „… und warte
+  auf den besten Moment." (Letzteres versprach eine Aktion, die evtl. nie kommt.)
+- **Keine „?"-Platzhalter mehr** für Laien: fehlt eine Deadline/Preis, wird die Klausel weggelassen
+  („Geplant — bereit" statt „… bereit bis ?").
+
 ## 1.2.78
 
 **„Dein Tag" & Franzls Tipp: keine erfundenen Gründe, keine hohlen Meldungen mehr.**
