@@ -1,3 +1,25 @@
+## 1.2.77
+
+**Lese-/Steuer-Transport aufgeräumt + Ohmpilot lässt jetzt die Max-Temperatur setzen.**
+Ein markenübergreifendes Prinzip: pro Gerät sind **Lesen** und **Steuern** getrennt — gelesen wird
+zuerst aus der offiziellen Hersteller-Integration in Home Assistant (die das Gerät ohnehin abfragt),
+nativ nur, wo HA es nicht kann.
+- **Kein Poll-Stress mehr auf fragilen Geräte-Servern.** `read_device_state` liest jetzt HA-first
+  pro Primärfeld (Thermik→Temperatur, Batterie→SoC, sonst Leistung): hat die HA-Integration den Wert,
+  wird der native Client NICHT mehr nur zum Anzeigen gepollt. Konkret der Fronius Ohmpilot — sein
+  eigenes kleines Webserverchen wurde alle 15 s abgefragt und ging dabei immer wieder in die Knie;
+  jetzt kommen Temperatur/Leistung aus den Fronius-Sensoren, der Ohmpilot wird nur noch zum **Steuern**
+  angesprochen.
+- **Selbstgebaute HA-Helfer werden nie mehr fälschlich als Gerät gebunden.** Ein hand-gebauter
+  `switch.<x>_boost` (Template), Skripte, `input_boolean`/Automationen tauchen bei der Einrichtung
+  nicht mehr als Steuer- oder Sensor-Entity eines Geräts auf (ein normaler Nutzer hat sie nicht).
+- **Ohmpilot: Maximal-Temperatur ist jetzt einstellbar** (nicht mehr nur Boost an/aus). Der im UI
+  gesetzte Band-Max wird beim Speichern **exakt** (auf 0,1 °C, nicht gerundet) an den Ohmpilot
+  geschrieben — über dessen lokale `set.cgi`, wobei ALLE anderen Einstellungen (Legionellenschutz,
+  Mindesttemperaturen) unangetastet zurückgeschrieben werden. Live am echten Gerät verifiziert
+  (idempotenter Echo-Write + reale Änderung, nur die Max-Temperatur ändert sich). So heizt der
+  Ohmpilot auf genau den Wert, den du einstellst — statt auf sein eigenes, abweichendes Cap.
+
 ## 1.2.76
 
 **Warmwasser/Thermik: der eingestellte Wert gilt jetzt überall (Ziel-Modell aufgeräumt).**
