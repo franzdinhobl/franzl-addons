@@ -1,3 +1,23 @@
+## 1.2.78
+
+**„Dein Tag" & Franzls Tipp: keine erfundenen Gründe, keine hohlen Meldungen mehr.**
+Der Optimierer sagt jetzt überall den ECHTEN Grund, statt einen zu raten — abgeleitet aus den Daten,
+die die Entscheidung ohnehin getroffen hat.
+- **Kein falsches „warm genug" mehr.** Wenn das Warmwasser gerade nicht heizt, weil im Solar-Modus
+  kein PV-Überschuss da ist, sagt „Dein Tag" das auch so („Warte auf Sonnenüberschuss") — statt
+  fälschlich „warm genug" zu behaupten. „Auf Zieltemperatur" nur, wenn die Temperatur das Ziel
+  wirklich erreicht hat. Betrifft Controller-Default, Planner-Aus-Zeiten und die Jetzt-Zeile.
+- **Kaputte/irreführende Formulierungen raus:** „— Aus — kein PV-Überschuss" und „Pausiert —
+  Pausiert —" (doppelte Wörter), Pool „zu teuer *oder* warm genug" (zwei Gründe), Wärmepumpe „Wartet
+  auf ? — dann günstiger" (leerer Platzhalter).
+- **Wallbox ehrlich:** manuell gestoppt heißt „manuell gestoppt" (nicht „Strom zu teuer"); im
+  Solar-Modus ohne Überschuss heißt es „Kein Sonnenüberschuss" (die Wallbox lädt dann nie aus dem
+  Netz, „zu teuer" war Unsinn).
+- **Franzls Tipp gibt wieder echte Tipps.** Der tote Winkel „Nachmittag, Sonne lässt nach" fiel auf
+  das nichtssagende „Alles im grünen Bereich — nichts zu timen"; jetzt schaut der Tipp voraus
+  (morgen/günstige Stunden). Wo es wirklich keinen Zeitvorteil gibt, sagt er das ehrlich
+  („Verschieben bringt gerade nichts — nutz Strom, wann's dir passt") statt einer Leerfloskel.
+
 ## 1.2.77
 
 **Lese-/Steuer-Transport aufgeräumt + Ohmpilot lässt jetzt die Max-Temperatur setzen.**
