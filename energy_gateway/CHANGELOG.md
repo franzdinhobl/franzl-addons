@@ -1,3 +1,11 @@
+## 1.2.82
+
+**Fix: „Steuerbar machen" für Hybrid-Wechselrichter-Batterien (z. B. Fronius GEN24).**
+Der Verbindungstest beim Einrichten schlug fälschlich mit „Gerät hat nicht geantwortet" fehl,
+wenn der native Zugang nur die Batterie liefert (PV kommt weiter über Home Assistant) —
+jetzt wird eine unbekannte PV-Leistung ehrlich als „unbekannt" behandelt statt den Test
+abstürzen zu lassen.
+
 ## 1.2.81
 
 **Großer Optimierer- und Geräte-Verlässlichkeits-Release.** Ein vollständiger Audit der
