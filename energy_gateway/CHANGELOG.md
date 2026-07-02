@@ -1,3 +1,47 @@
+## 1.2.81
+
+**Großer Optimierer- und Geräte-Verlässlichkeits-Release.** Ein vollständiger Audit der
+Optimierer-Pipeline (Eingänge → Planung → Ausführung) und eine Doku-Verifikation aller
+Hersteller-Anbindungen — vieles davon war „verdrahtet, aber wirkungslos" und ist jetzt echt.
+
+**Optimierer:**
+- **Was Franzl einschaltet, schaltet er auch wieder ab.** Relais-Heizstäbe, Smart-Plugs und
+  Batterie-Vorgaben werden am Fenster-Ende aktiv beendet statt still liegengelassen. Was DU
+  eingeschaltet hast, fasst Franzl nie an.
+- **Deine Eingriffe schlagen den Plan — überall.** Pause/Aus/Urlaub gewinnen in Planung UND
+  Live-Regelung; ein späterer Einmal-Wunsch (z. B. „heute noch Warmwasser") übersteuert ein
+  Aus-Fenster bis zur Deadline. Wallbox-Pause ist absolut.
+- **Der Plan denkt über Mitternacht hinaus:** „bereit bis 06:00" nutzt jetzt das günstige
+  Nachttal statt abends teuer vorzuladen (rollierender 24-Stunden-Horizont).
+- **Sofort-Laden, Frei-Modus und Mindestladung wirken jetzt auch im präzisen Planer** (vorher
+  fiel er dafür still auf die einfache Logik zurück); unerfüllbare Wünsche werden ehrlich als
+  „nicht vollständig erreichbar" erzählt.
+- **Live-Prioritäten laufen auch ohne Plan:** Mindestladung, Solar-Überschussladen und
+  Frei-Modus brauchen keinen frischen Plan mehr; ein veralteter Plan wird erkannt (/health).
+- **Batterie: Franzl überstimmt dein Speicher-System nur noch bei echtem Mehrwert.** Im
+  Eigenverbrauch regelt der Wechselrichter selbst; aktiv steuert Franzl nur Arbitrage (Opt-in)
+  und die neue **Entlade-Sperre** („Zurückhalten" für teurere Abendstunden) — am Fronius GEN24
+  live an echter Hardware verifiziert, mit eingebautem Failsafe.
+- Wallbox-Elektrik (Phasen/Max-Ampere) ist jetzt einstellbar (Experten-Karte) und wird im
+  Planer wirklich respektiert; Hausanschluss-Limit + Reserve neu konfigurierbar.
+
+**Fahrzeuge:**
+- Tesla-Kommandos laufen über EINEN signierten Pfad; der Kommando-Proxy ist als Add-on-Option
+  `tesla_command_proxy_url` konfigurierbar. Ein schlafendes Auto wird nicht mehr alle zwei
+  Minuten unnötig geweckt.
+
+**Geräte-Anbindungen (Doku-Verifikation aller 19 Hersteller-Clients):**
+- 13 Anbindungen gegen die offizielle Hersteller-Doku korrigiert — u. a. Kostal (Messwerte +
+  Entlade-Sperre statt versehentlicher Dauer-Sperre), SMA (echtes SMA-Register-Profil), Nibe
+  S-Serie (komplett korrigierte Register), IDM (Status-Read funktioniert jetzt), KEBA
+  (Antworten kommen jetzt wirklich an), Heidelberg/Mennekes/ABL (korrekte Zustände, sichere
+  Pausen-Semantik), openWB Pro/NRGkick (echte API-Felder), go-e (Fehler werden erkannt).
+- Wallbox-Watchdogs laufen jetzt zuverlässig mit, solange Franzl eine Vorgabe hält.
+- Steuer-Pfade ohne belegbare Freigabe-Semantik bleiben bewusst gesperrt statt riskiert.
+
+**App-Hinweis:** Die zugehörige App-Version bringt den „Modbus am Wechselrichter aktivieren"-
+Leitfaden im „Steuerbar machen"-Flow und Zeitzonen-korrekte Wunsch-/Urlaubs-Zeiten.
+
 ## 1.2.80
 
 **„Dein Tag"-Jetzt-Zeile folgt in ruhigen Momenten dem echten Stromfluss.**
