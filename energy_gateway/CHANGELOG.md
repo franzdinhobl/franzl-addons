@@ -1,3 +1,11 @@
+## 1.2.83
+
+**Fix: PV-Überschuss fürs Auto — Hausakku hat den Überschuss nicht mehr weg.**
+Der Überschuss wird jetzt korrekt als „Sonne minus Hausverbrauch" berechnet (vorher fälschlich
+nur der Netz-Export, der Auto, Warmwasser und Akku schon abgezogen hatte). Steht das Auto in der
+Überschuss-Reihenfolge über der Batterie, bekommt es die Sonne zuerst — der Akku lädt dann aus dem
+Rest, ganz von selbst. Betrifft Solar-Laden der Wallbox und das Aufheizen von Warmwasser/Heizung.
+
 ## 1.2.82
 
 **Fix: „Steuerbar machen" für Hybrid-Wechselrichter-Batterien (z. B. Fronius GEN24).**
