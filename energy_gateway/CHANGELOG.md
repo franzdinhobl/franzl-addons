@@ -1,3 +1,12 @@
+## 1.2.84
+
+**Fix: Wallbox-Laden über OCPP (z. B. ABB Terra AC) funktioniert jetzt wirklich.**
+Der Ladestrom wird jetzt per OCPP-Ladeprofil gesetzt (`set_charge_rate`, TxProfile) statt
+über den „Maximalstrom"-Regler — den manche Ladegeräte (ABB Terra AC) ablehnen, weshalb gar
+kein Strom angeboten wurde und das Auto trotz „lädt"-Anzeige nichts zog. Zusätzlich liest Franzl
+das echte Ladelimit des Autos jetzt live aus (statt es auf 100 % zu schätzen), damit er nicht
+gegen ein bereits erreichtes Limit „lädt". Betrifft nur OCPP-Ladegeräte; andere bleiben unverändert.
+
 ## 1.2.83
 
 **Fix: PV-Überschuss fürs Auto — Hausakku hat den Überschuss nicht mehr weg.**
