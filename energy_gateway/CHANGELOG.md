@@ -1,3 +1,11 @@
+## 1.2.85
+
+**Fix: Wallbox blieb auf 0 A „hängen" — Auto lud nie, obwohl „lädt" angezeigt wurde.**
+Ein alter, überschriebener Steuer-Pfad hatte im Ladegerät ein dauerhaftes 0-Ampere-Limit
+hinterlegt, das jede spätere Ladefreigabe auf 0 deckelte (Tesla meldete dann „kein Strom /
+Wallbox nicht bereit"). Franzl räumt dieses Limit jetzt beim Ladestart automatisch weg —
+danach fließt der Strom normal. Live verifiziert an einem echten ABB Terra AC.
+
 ## 1.2.84
 
 **Fix: Wallbox-Laden über OCPP (z. B. ABB Terra AC) funktioniert jetzt wirklich.**
