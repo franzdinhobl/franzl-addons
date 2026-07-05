@@ -1,3 +1,13 @@
+## 1.2.86
+
+**Smarter laden: Wallbox zuerst, Auto-API nur wenn nötig.**
+Zum Ladestart bietet Franzl den Strom jetzt zuerst über die Wallbox an — moderne Autos starten
+darauf von selbst, ganz ohne Fahrzeug-Befehl. Nur wenn das Auto nach kurzer Wartezeit trotz
+angebotenem Strom nichts nimmt (z. B. im Auto-App gestoppt), schickt Franzl EINEN gezielten
+Start-Befehl an die Fahrzeug-API. Das spart unnötige App-/Cloud-Aufrufe und beendet die
+Fehlversuche. Außerdem ehrlicher: solange das Auto nichts zieht, steht „dein Auto nimmt gerade
+nichts" statt „lädt X kW".
+
 ## 1.2.85
 
 **Fix: Wallbox blieb auf 0 A „hängen" — Auto lud nie, obwohl „lädt" angezeigt wurde.**
