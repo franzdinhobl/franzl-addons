@@ -1,3 +1,38 @@
+## 1.2.88
+
+**Mehr Geräte steuerbar: Easee-Wallbox & Huawei-Batterie über ihre HA-Dienste.**
+- **Easee-Wallbox lädt jetzt gesteuert:** Die Easee-Integration bietet keine
+  schreibbare Strom-Entität — der Ladestrom wird nur über einen Dienst gesetzt,
+  der die Wallbox an ihrer Geräte-ID adressiert. Franzl spricht diesen jetzt an
+  (0–32 A, 0 A = Pause), damit Easee-Boxen am PV-Überschuss teilnehmen statt nur
+  zuzuschauen.
+- **Huawei-Batterie: präzises Laden/Entladen für Arbitrage:** Statt nur den
+  Betriebsmodus umzuschalten, kann Franzl die Huawei-/LUNA2000-Batterie jetzt mit
+  einer Ziel-Leistung laden/entladen (und danach sauber ans Wechselrichter-EMS
+  zurückgeben). Fällt automatisch auf den Modus-Schalter zurück, wenn die
+  Geräte-ID fehlt.
+- Beide Steuerwege sind gegen die offizielle Integrations-Doku verifiziert; ohne
+  auflösbare Geräte-ID wird ehrlich nichts gesendet (kein Blindkommando).
+
+## 1.2.87
+
+**Feinregelung Solarladen: unter 6 A übers Auto, ehrliche Pause, Sicherungs-Deckel bleibt.**
+Drei Verbesserungen beim PV-Überschussladen:
+- **Unter 6 A laden:** Die Wallbox kann (3-phasig) nicht unter ~4,1 kW. Bei wenig Sonne fährt
+  Franzl jetzt das verknüpfte Auto direkt auf den kleineren Strom herunter, statt auf dem
+  Wallbox-Minimum zu kleben oder abzubrechen — so wird auch der letzte Sonnen-Rest genutzt.
+- **Ehrliche Pause statt Netz/Akku anzapfen:** Reicht die Sonne nicht mehr und der Hausakku
+  müsste einspringen, pausiert Franzl das Auto sofort — statt es 10 Minuten „am Minimum" weiter
+  aus Akku/Netz zu speisen.
+- **Sicherungs-Deckel bleibt respektiert:** Das Zurücksetzen eines hängengebliebenen 0-A-Limits
+  passiert jetzt nur noch, wenn die echte Leistungsmessung „hängt" — ein legitim gesetzter
+  Installations-/Sicherungs-Deckel wird nicht mehr überschrieben.
+- **Pause richtig stoppen (behebt nächtliche „Set charging profile failed"-Warnungen):** Manche
+  OCPP-Ladegeräte (z. B. ABB Terra AC) lehnen ein 0-Ampere-Ladeprofil ab — Franzl schickte es
+  trotzdem alle 2 Minuten (Warnungs-Spam, und die Wallbox pausierte in Wahrheit nicht). Jetzt
+  pausiert Franzl über den Lade-Schalter (Transaktion stoppen), und nur dann, wenn wirklich
+  geladen wird — hat das Auto schon selbst gestoppt, bleibt es still.
+
 ## 1.2.86
 
 **Smarter laden: Wallbox zuerst, Auto-API nur wenn nötig.**
