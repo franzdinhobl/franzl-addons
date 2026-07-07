@@ -1,3 +1,32 @@
+## 1.2.91
+
+**Laden spricht Ampere — und die Karte zeigt sofort, was passieren soll.**
+Beim Ladestart zeigt die Wallbox-Karte jetzt sofort das Ziel („Ziel 6 A") mit ehrlichem
+„Ladestrom 0 A", bis der Zähler wirklich Strom meldet — man sieht: es soll geladen werden, es
+fließt nur noch nichts. Franzls Text behauptet dabei nichts mehr („Ich starte das Laden mit
+Sonnenüberschuss"); erst ab echtem Fluss heißt es „Ich lade dein Auto mit 6 A Sonnenüberschuss"
+— mit der GEMESSENEN Stromstärke, in Ampere statt kW (auch „am Minimum (6 A)" und „Ich biete
+X A an"). Die Ersparnis wird konsequent nur noch für real fließenden Strom gutgeschrieben.
+Außerdem folgen Ladelimit- und Ladestrom-Regler jetzt externen Änderungen (Tesla-App, andere
+Session) statt auf dem zuletzt gezogenen Wert zu kleben.
+
+**Du siehst jetzt, dass dein Befehl ankommt.**
+Jeder Tap auf ein Bedien-Element (Laden, Stopp, Jetzt heizen …) zeigt direkt am getippten Knopf
+einen kleinen Fortschritt: Kreisel solange der Befehl unterwegs ist, dann ✓ (angekommen) oder ✗
+(fehlgeschlagen, mit Grund). Und die tiefere Wahrheit gleich mit: Das Gateway prüft jeden
+User-Befehl am Gerät nach — schlägt diese Verifikation fehl, erscheint ehrlich „Befehl kam nicht
+an" direkt auf der Karte (und verschwindet, sobald ein Befehl wieder bestätigt wird).
+
+**Der Tagesplan-Rückblick behauptet keine unbestätigten Erfolge mehr.**
+Manche Steuerwege (z. B. herstellereigene Dienste ohne Rücklesewert) liefern nur ein „Befehl
+angenommen" — kein Beweis, dass wirklich geschaltet wurde. Solche Einträge standen im Rückblick
+trotzdem als erledigt. Jetzt heißt es dort ehrlich „gesendet, konnte ich nicht bestätigen";
+sobald der Zähler echten Fluss misst, wird der Eintrag automatisch zum bestätigten „erledigt"
+hochgestuft. Batterie-Zwangsladen (Huawei) wird zusätzlich gegen die gemessene Batterieleistung
+gegengeprüft. Und in den Geräte-Details verschwinden Fehler nicht mehr stillschweigend —
+fehlgeschlagenes Verknüpfen/Entfernen (Fahrzeug, Zähler-Rolle, Fühler) zeigt jetzt eine
+Fehlermeldung und stellt den vorherigen Zustand wieder her.
+
 ## 1.2.90
 
 **Neu: „Batterie zuerst, bis X %" — Sonnen-Vorrang mit Puffer.**
