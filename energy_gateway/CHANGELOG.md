@@ -1,3 +1,13 @@
+## 1.2.89
+
+**Ohmpilot zuverlässiger angebunden (ohne ihn öfter anzusprechen).**
+Der Fronius Ohmpilot hat einen langsamen, empfindlichen eigenen Webserver — vereinzelt lief die
+Verbindung in einen Timeout (u. a. schlug der stündliche Max-Temperatur-Abgleich fehl). Franzl
+baut die Verbindung jetzt jedes Mal frisch auf (statt eine alte offenzuhalten) und versucht es bei
+einem Aussetzer genau EINMAL erneut. Die Abfrage-Häufigkeit bleibt unverändert schonend
+(Lesewerte kommen über Home Assistant, Steuerbefehle nur alle paar Minuten) — der Fix macht die
+seltenen Zugriffe nur zuverlässiger, nicht häufiger.
+
 ## 1.2.88
 
 **Mehr Geräte steuerbar: Easee-Wallbox & Huawei-Batterie über ihre HA-Dienste.**
