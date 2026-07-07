@@ -1,3 +1,56 @@
+## 1.2.90
+
+**Neu: „Batterie zuerst, bis X %" — Sonnen-Vorrang mit Puffer.**
+In der Überschuss-Reihenfolge (Mehr-Tab) kann die Batterie jetzt eine Grenze bekommen: Bis z. B.
+60 % füllt sie sich zuerst — als Puffer fürs Haus. Ab da lässt sie Auto, Warmwasser & Co den
+Vortritt: Die bekommen die Sonne direkt, die Batterie lädt fertig, sobald die anderen versorgt
+sind. Franzl erklärt die Übergabe ehrlich („Die Batterie hat ihre 60 % — dein Auto geht jetzt
+vor."). Ohne Grenze bleibt alles wie bisher; bei unbekanntem Batteriestand wird nie umgeschaltet.
+
+**Ersparnis zeigt jetzt den echten Sonnen-Wert (auch bei Fixpreis-Tarif).**
+Bisher zählte die Ersparnis nur Preisunterschiede — bei einem Fixpreis-Tarif stand da immer 0 €,
+obwohl jede selbst verbrauchte Sonnen-kWh real Geld spart (Netzbezug ersetzt statt für wenige Cent
+eingespeist). Jetzt wird genau diese Differenz (Strompreis − Einspeisevergütung) gutgeschrieben —
+im Tagesplan, in den Berichten und live beim Solar-Laden/Aufheizen. Ehrlich bleibt's: Ein Gerät,
+das messbar nichts zieht, verdient auch nichts.
+
+**Ehrlichere Live-Texte beim Aufheizen.**
+„Ich heize dein Wasser mit 3,7 kW Sonne" behauptete einen Fluss, den der Zähler manchmal
+widerlegte (Boiler am eigenen Temperatur-Limit, 0 W). Jetzt nennt Franzl nur noch GEMESSENE
+Leistung („mit 2,9 kW Sonne"); solange nichts gemessen fließt, heißt es ehrlich „mit Sonne
+(bis zu 3,7 kW frei)". Und statt „53 → 53 °C" steht da jetzt „fast 53 °C".
+
+**Karten zeigen echte Zustände statt interner Codes.**
+Sobald Franzl ein Gerät aktiv steuerte, stand auf den Karten das rohe interne Kürzel („off",
+„charge", „solar") statt eines ehrlichen Zustands. Jetzt zeigt der Status immer den GEMESSENEN
+Gerätezustand in verständlicher Sprache — was Franzl gerade vorhat, steht separat als Hinweis
+daneben und wird nicht mehr als Zustand behauptet, bevor der Befehl bestätigt ist. Außerdem:
+Die Tagesplan-Live-Zeile zeigt kein „Auto 0,0 kW" mehr, wenn gar kein Auto angesteckt ist
+(wartendes Auto heißt ehrlich „wartet"); nach dem Lade-Stopp bleiben keine Geister-Werte stehen
+(Ziel, Auto-Strom-Regler und der „Tagesziel pausiert"-Hinweis folgen live); und bei mehreren
+Batteriespeichern ist der Haushalts-Ladestand jetzt kapazitätsgewichtet statt zufällig.
+
+**Warmwasser & Heizung: Temperatur endlich auf der Aktion-Karte.**
+Die thermischen Karten (Ohmpilot, Wärmepumpe, Pool) zeigten nur „Bereit" und einen Knopf — jetzt
+stehen Ist-Temperatur und dein Komfort-Band groß darauf („Wasser 53 °C · Band 45–55 °C"), auch im
+Ruhezustand. Beim aktiven Heizen kommt die gemessene Leistung als kleine Zeile dazu. Und überall,
+wo Strom EINGESTELLT wird, heißt es jetzt einheitlich „Mit X A laden" — „Ladestrom" ist für den
+gemessenen Wert reserviert (ein Wort, eine Bedeutung; Ampere statt kW im Lade-Kontext).
+
+**Wallbox-Karte: Ladestrom & Ziel groß — und ehrlich.**
+Die relevanten Live-Werte (Ladestrom, Zielstrom) stehen jetzt groß auf der Aktion-Karte; kW ist
+nur noch eine kleine Kontextzeile. Franzls Erklär-Box erscheint nur noch, wenn es etwas zu
+erklären gibt (kein Ladebedarf, warte auf Sonne, Auto nimmt nichts) — beim normalen Laden sagen
+die Zahlen alles. Und das „Ziel" kommt jetzt von den tatsächlich kommandierten Auto-Ampere
+(dieselbe Zahl wie in der Tesla-App), nicht mehr von der Wallbox-Entity, die auf OCPP-Ladegeräten
+konstant den Nennstrom meldet (live: „Ziel 16 A", während das Auto mit 5–6 A geregelt wurde).
+
+**Nachvollziehbarer Optimierer: Plan wird gespeichert.**
+Der aktuelle 24-h-Plan wird jetzt stundengenau gespeichert (7 Tage rückwirkend eingefroren) und
+ist pro Haushalt abrufbar — damit lässt sich erstmals sauber prüfen: Was war für 14:00 geplant,
+was wurde ausgeführt, was wurde gemessen? Zusätzlich meldet der Optimierer seinen mathematischen
+Plan-Güte-Wert im Health-Status.
+
 ## 1.2.89
 
 **Ohmpilot zuverlässiger angebunden (ohne ihn öfter anzusprechen).**
