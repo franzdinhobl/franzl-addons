@@ -1,3 +1,16 @@
+## 1.2.92
+
+**Frischere Live-Werte beim Laden — Franzl stellt den Zähler-Takt der Wallbox ein.**
+OCPP-Wallboxen melden Ladestrom und Leistung nur in einem einstellbaren Takt — die
+Home-Assistant-Integration setzt ihn bei jeder Verbindung auf ihren Standard (60 Sekunden)
+zurück. Franzl gleicht das jetzt automatisch ab: einmal pro Stunde wird der ECHTE Wert am
+Ladegerät gelesen und nur dann auf 30 Sekunden gesenkt, wenn er höher steht — ein schnellerer
+Wert (vom Installateur oder aus der Integration) wird respektiert und nie verlangsamt.
+Ehrlich bleibt's: Meldet das Ladegerät „erst nach Neustart aktiv", wird das so protokolliert
+statt als erledigt behauptet; Nicht-OCPP-Wallboxen werden gar nicht erst angesprochen.
+Abschaltbar pro Gerät (`ocpp_meter_sync: false`), Ziel-Takt einstellbar
+(`ocpp_meter_interval_s`, Minimum 10 s).
+
 ## 1.2.91
 
 **Laden spricht Ampere — und die Karte zeigt sofort, was passieren soll.**
