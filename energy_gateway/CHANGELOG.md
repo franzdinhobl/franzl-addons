@@ -1,3 +1,35 @@
+## 1.2.93
+
+**Marken-Ehrlichkeit: läuft es bei dir, läuft es auch bei anderen — oder Franzl sagt's.**
+Vor den ersten echten Tests mit fremden Anlagen hab ich alles durchgesehen, was auf meiner
+eigenen Box gut läuft, auf einer anderen Marke nach simpler Installation aber still gebrochen
+oder falsch gewesen wäre.
+
+- **Wärmepumpe & Klima erreichen jetzt wirklich ihre Wunschtemperatur.** Der Zeitplan-Regler
+  schreibt sein Temperaturband jetzt auch an die Anlage — vorher stellte Franzl nur an/aus und
+  die Solltemperatur kam nie an (nur Warmwasser/Pool waren davon verschont). SG-Ready-Wärmepumpen
+  ohne verdrahtete Relais werden ehrlich nur angezeigt, nicht mit einem toten Regler versehen.
+- **Ehrliche Ersparnis.** Der Arbitrage-Modus (billig aus dem Netz laden, teuer entladen) wird nur
+  noch bei Batterien angeboten, die das wirklich können (Sonnen/Huawei/Senec/AlphaESS) — sonst
+  hätte der Plan Euro-Ersparnis für etwas gutgeschrieben, das die Hardware gar nicht ausführt.
+  Auch die Berichte zeigen kein erfundenes „0 € gespart" / „0 % autark" mehr, wenn es dafür keine
+  Datengrundlage gibt.
+- **Mehr Wallboxen steuerbar.** Easee und Zaptec lassen sich wieder direkt in der App bedienen;
+  der Ampere-Regler erscheint nur, wo die Wallbox den Strom auch wirklich feinregeln kann; 1- oder
+  3-phasig ist jetzt wählbar (falsche Annahme verschenkte bei 1-phasigen Boxen Sonne).
+- **Zähler-Rolle wird beim Einrichten klar gefragt.** Ein Sensor am Wechselrichter misst deine
+  Erzeugung, einer am Netzanschluss den Bezug — das kann die App nicht raten, also fragt sie es
+  jetzt am Live-Wert (statt still „Netzzähler" anzunehmen und Autarkie/Überschuss zu verfälschen).
+- **Akku-Richtung in einem Tap.** Zeigt die App „entlädt", obwohl dein Akku gerade lädt (oder
+  umgekehrt)? Ein Tipp im Akku-Detail dreht das Vorzeichen um — und meine automatische Kalibrierung
+  kämpft nie gegen deine Entscheidung.
+- **Sonnen lokal steuerbar** (IP + Auth-Token) und **Kostal findet sich nach einem IP-Wechsel im
+  Netz selbst wieder.** HT/NT-Tarif ist beim Einrichten jetzt vollständig (Fenster + Wochenende).
+
+Außerdem: die Zuhause-Zeile erfindet keine „keine Sonne"-Meldung mehr für Häuser ohne PV, und
+sicherheitsseitig fällt die Grid-Zähler-Anbindung nicht mehr still auf eine ungeprüfte
+TLS-Verbindung zurück.
+
 ## 1.2.92
 
 **Frischere Live-Werte beim Laden — Franzl stellt den Zähler-Takt der Wallbox ein.**
