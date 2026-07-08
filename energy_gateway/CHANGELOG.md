@@ -1,3 +1,12 @@
+## 1.2.95
+
+**Automatische Updates — und mehr Kontrolle über dein Zuhause.**
+Ich halte mich, Home Assistant und das Betriebssystem ab jetzt selbst aktuell — im Hintergrund,
+meist nachts. Du musst nie mehr in Home Assistant. Sichtbar und steuerbar unter Mehr → System
+(Version, Auto-Update-Schalter, Wartungsfenster). Neu außerdem: ein klares Rollenmodell
+(ein:e Eigentümer:in + beliebig viele Verwalter:innen pro Zuhause) und Zuhause-Teilen per
+Einladungs-Link.
+
 ## 1.2.93
 
 **Marken-Ehrlichkeit: läuft es bei dir, läuft es auch bei anderen — oder Franzl sagt's.**

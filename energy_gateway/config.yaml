@@ -2,7 +2,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration
 name: "Franzl Gateway"
 description: "Franzl Energie-Management — Optimiert PV, Batterie, Wallbox, Wärmepumpe"
-version: "1.2.94"
+version: "1.2.95"
 slug: "energy_gateway"
 url: "https://github.com/franzdinhobl/franzl-addons"
 # Prebuilt image: Home Assistant PULLS this from ghcr.io instead of building the
@@ -25,6 +25,12 @@ homeassistant_api: true
 # scan can seed its /24 sweep — the add-on container sits on the docker bridge
 # (172.30.x), so it can't learn the real LAN subnet any other way.
 hassio_api: true
+# Supervisor role for managing the platform: trigger HA Core / HA OS updates and
+# reload the add-on store. `manager` is the verified MINIMUM for /core/update,
+# /os/update and /store/* (Supervisor security middleware) — NOT admin (least
+# privilege). The add-on's own auto_update self-enroll already works at the
+# default role; this is only for driving HA's own updates. See spec 31 §2.1.
+hassio_role: manager
 # MUST be false: the HA base images bundle s6-overlay v3, whose /init must run
 # as PID 1. With init:true Docker inserts its own init as PID 1 and s6 aborts
 # with "s6-overlay-suexec: fatal: can only run as pid 1".
