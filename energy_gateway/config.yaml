@@ -2,7 +2,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration
 name: "Franzl Gateway"
 description: "Franzl Energie-Management — Optimiert PV, Batterie, Wallbox, Wärmepumpe"
-version: "1.2.96"
+version: "1.2.97"
 slug: "energy_gateway"
 url: "https://github.com/franzdinhobl/franzl-addons"
 # Prebuilt image: Home Assistant PULLS this from ghcr.io instead of building the
@@ -64,12 +64,21 @@ startup: "application"
 # excluded — instead backup-pre.sh writes a consistent pg_dump to
 # /data/backup/ which init-db restores automatically on a fresh cluster.
 # Local daily rotation dumps (/data/backups) are excluded too (redundant).
+#
+# token_secret is the Fernet key that decrypts stored vendor credentials
+# (VW portal password, Tesla refresh tokens in vehicles.api_credentials_enc /
+# api_*_token_enc). It is EXCLUDED so a backup archive carries only ciphertext —
+# a leaked/copied backup cannot decrypt anyone's car passwords. Consequence: a
+# backup restored onto a *fresh* box regenerates the key, so the encrypted blobs
+# no longer decrypt and the affected cars must be re-linked once (handled
+# gracefully: crypto callers treat an undecryptable blob as "needs re-link").
 backup: hot
 backup_pre: /usr/local/bin/backup-pre.sh
 backup_post: /usr/local/bin/backup-post.sh
 backup_exclude:
   - "postgres/**"
   - "backups/**"
+  - "token_secret"
 ingress: true
 ingress_port: 8099
 panel_icon: "mdi:solar-power-variant"
