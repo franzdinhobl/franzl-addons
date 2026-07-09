@@ -1,3 +1,23 @@
+## 1.2.98
+
+**Wallbox-Ehrlichkeit: dein Auto, dein Ladegerät, richtig angezeigt.**
+Vier Dinge, die beim Testen mit zwei Wallboxen + zwei Autos schieflagen — jetzt sauber:
+
+- **Eine zweite, über Home Assistant gesteuerte Wallbox (z. B. NRGKick) taucht wieder auf.**
+  Sie wurde beim Start fälschlich als „nur lesen" abgestempelt, weil sie auch einen direkten
+  Netzwerk-Anschluss anbietet, den sie gar nicht braucht — jetzt bleibt sie steuerbar und ein
+  falsch gesetzter Zustand heilt sich beim nächsten Start selbst.
+- **„Kein Auto verbunden", obwohl das Auto steckt — behoben.** Manche Wallboxen hatten ihren
+  echten Steckerzustand nicht angebunden, sodass Franzl aus „0 W" fälschlich auf „kein Auto"
+  schloss (obwohl das Auto nur voll/pausiert war). Der echte Stecker-Status wird jetzt
+  automatisch verbunden — auch für schon eingerichtete Wallboxen.
+- **Ladestrom-Regler geht wieder bis zum Wallbox-Maximum.** Ein verknüpftes Auto (Tesla)
+  konnte den Regler fälschlich auf z. B. 5 A deckeln, während real 15 A flossen. Jetzt führt
+  die Wallbox-Grenze, und die Auto-Feinregelung wird nur noch fürs Laden **unter** 6 A genutzt.
+  Das „Ziel" zeigt nie mehr weniger an als tatsächlich fließt.
+- **Solar-Pause sieht nicht mehr aus wie ein Defekt.** Pausiert Franzl mangels Sonne, wird das
+  Ladeziel jetzt sauber auf 0 zurückgesetzt statt ein altes „15 A" stehenzulassen.
+
 ## 1.2.95
 
 **Automatische Updates — und mehr Kontrolle über dein Zuhause.**
