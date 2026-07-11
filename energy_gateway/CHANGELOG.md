@@ -1,3 +1,24 @@
+## 1.2.99
+
+**Kein Blindflug mehr: Solar-Laden pausiert ehrlich, wenn der Netzzähler ausfällt.**
+Anlass war ein echter Vorfall: Der Router hatte dem Wechselrichter eine neue IP gegeben,
+Home Assistant verlor den Netzzähler — und das „Solarladen" lief stundenlang mit voller
+Leistung aus Batterie und Netz weiter. Vier Fixes:
+
+- **Solar-Modus pausiert, statt blind zu laden.** Liefert dein Netzzähler keine Daten
+  (Integration gestört, IP geändert), lade ich nicht mehr stur nach Prognose-Volllast,
+  sondern pausiere und sage warum: „Netzzähler liefert nicht — ich kann den Überschuss
+  nicht messen."
+- **Du bekommst eine Push-Nachricht, wenn der Netzzähler ausfällt** (nach 15 Minuten,
+  höchstens 1× pro Tag) — inklusive Hinweis, wo ich deine Geräte im Netzwerk jetzt
+  gefunden habe (z. B. „Fronius: 10.0.0.11"), damit du die Integration in Home
+  Assistant schnell reparieren kannst.
+- **„Jetzt laden mit X kW" wird nie mehr überschrieben.** Dein eingestellter Wert
+  deckelt ab sofort jede automatische Entscheidung — vorher konnte die Mindestladung
+  deinen 10-A-Wunsch still mit Volllast übersteuern.
+- **Ehrlicher Batteriewert:** Kann ein Wechselrichter die Batterie-Leistung nicht
+  liefern, zeige ich „unbekannt" statt fälschlich „0 W" zu speichern.
+
 ## 1.2.98
 
 **Wallbox-Ehrlichkeit: dein Auto, dein Ladegerät, richtig angezeigt.**
