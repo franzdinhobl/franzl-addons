@@ -1,3 +1,12 @@
+## 1.2.100
+
+**Korrektur-Build: Laden startet nach einer Pause wieder zuverlässig.**
+1.2.99 wurde versehentlich mit einem zurückgesetzten Teilstand gebaut — dadurch fehlte
+der Fix, mit dem das Laden nach einer von mir ausgelösten Pause (z. B. Wolken im
+Solar-Modus) wieder von selbst startet. Ohne ihn blieb die Wallbox nach einer Pause
+hängen, bis das Kabel neu angesteckt wurde. 1.2.100 enthält alles aus 1.2.99 plus
+diesen Wiederanlauf-Fix. Bitte direkt aktualisieren.
+
 ## 1.2.99
 
 **Kein Blindflug mehr: Solar-Laden pausiert ehrlich, wenn der Netzzähler ausfällt.**
