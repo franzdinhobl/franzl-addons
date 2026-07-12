@@ -1,3 +1,18 @@
+## 1.2.102
+
+**Feinschliff der Wallbox-Regelung + stabilere Datenbank.**
+- Nach einem Lade-Stopp zählt der kurz nachlaufende Zähler-Messwert nicht mehr
+  als „lädt noch" — damit greift die 5-Minuten-Wartezeit vor dem Neustart jetzt
+  lückenlos (vorher konnte eine Wolke in Einzelfällen doch einen 2-Minuten-
+  Neustart auslösen).
+- Auch Boiler, Pool und Steckdosen-Heizer schalten jetzt mit Mindestabstand
+  (5 Minuten zwischen Aus und Wieder-Ein) — schont die Relais bei wechselhaftem
+  Wetter, genau wie an der Wallbox.
+- Ein Auto, das gerade nichts annimmt, füllt den Tagesplan nicht mehr mit
+  Wiederholungszeilen.
+- Ein seltener Datenbank-Konflikt zwischen zwei internen Abläufen (einmalig am
+  12.07. aufgetreten) ist konstruktiv ausgeschlossen.
+
 ## 1.2.101
 
 **Ruhigere Wallbox-Regelung: weniger Funkverkehr, kein Schaltungs-Flattern, kein Hängenbleiben.**
