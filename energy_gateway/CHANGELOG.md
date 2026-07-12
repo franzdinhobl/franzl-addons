@@ -1,3 +1,13 @@
+## 1.2.103
+
+**Wichtig: Solar-Laden rechnet manuelles Laden jetzt richtig ein.**
+- Lädt ein Auto manuell mit voller Leistung („Frei laden"), zählt dieser Bezug
+  nicht mehr als verteilbarer Überschuss — vorher konnte das zweite Auto im
+  Solar-Modus dadurch weiterladen und die Hausbatterie leerziehen.
+- „Jetzt heizen" räumt sich nach Ablauf wieder auf: der Warmwasser-Boost-Modus
+  blieb bisher dauerhaft „aktiv" hängen, sobald der 2-Stunden-Boost vorbei war
+  (die App zeigte dann fälschlich „Stopp" statt „Jetzt heizen").
+
 ## 1.2.102
 
 **Feinschliff der Wallbox-Regelung + stabilere Datenbank.**
