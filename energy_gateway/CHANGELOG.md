@@ -1,3 +1,13 @@
+## 1.2.107
+
+**Solar-Laden startet erst, wenn es sich lohnt.**
+Ein neuer Ladestart braucht jetzt spürbaren Überschuss (mit feinregelbarem
+Auto ab ~2,1 kW, sonst ab ~4,8 kW) — vorher habe ich in der Abenddämmerung
+noch 1-2-Ampere-Ladungen gestartet, die nach wenigen Minuten wieder
+pausierten (unnötige Schaltungen und Handy-Meldungen für ein paar Wattstunden).
+Läuft das Laden bereits, regle ich wie gewohnt bis ganz hinunter mit, bevor
+ich stoppe — es wird also keine Sonne verschenkt.
+
 ## 1.2.106
 
 **Keine Lade-Unterbrechungs-Meldungen im Minutentakt mehr.**
