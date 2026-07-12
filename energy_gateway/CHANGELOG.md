@@ -1,3 +1,14 @@
+## 1.2.106
+
+**Keine Lade-Unterbrechungs-Meldungen im Minutentakt mehr.**
+Nach einem von mir ausgelösten Lade-Stopp starte ich frühestens nach
+5 Minuten wieder — jetzt garantiert an der Stelle, an der das Kommando die
+Wallbox verlässt. Vorher konnte ein nachlaufender Zähler-Messwert die
+Wartezeit austricksen (Stopp und 58 Sekunden später wieder Start), und jede
+solche Paarung schaltete das Schütz und schickte dir eine „Laden
+unterbrochen"-Meldung der Tesla-App aufs Handy. Ein Tipp in der Franzl-App
+wartet natürlich nie.
+
 ## 1.2.105
 
 **Ehrlichere Worte im Offen-Modus.**
