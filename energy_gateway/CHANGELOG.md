@@ -1,3 +1,11 @@
+## 1.2.105
+
+**Ehrlichere Worte im Offen-Modus.**
+Die Begleittexte sagen jetzt, was der Offen-Modus wirklich tut: Ich halte die
+Wallbox freigegeben, den Ladestrom regelst du an der Wallbox oder in der
+Hersteller-App — ich behaupte keine „volle Leistung" mehr, die ich weder
+erzwinge noch gemessen habe.
+
 ## 1.2.104
 
 **„Frei laden" respektiert deine Einstellungen aus der Hersteller-App.**
