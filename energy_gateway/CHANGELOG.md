@@ -1,3 +1,12 @@
+## 1.2.104
+
+**„Frei laden" respektiert deine Einstellungen aus der Hersteller-App.**
+Stellst du die Ladestromstärke direkt in der Wallbox-App (z. B. NRGkick) oder
+in Home Assistant ein, lasse ich sie jetzt in Ruhe — vorher habe ich sie im
+Frei-Modus binnen 2 Minuten wieder auf Vollstrom gestellt. Nur ein
+hängengebliebenes 0 A (alte Pause) korrigiere ich weiterhin, damit jedes
+angesteckte Auto sicher lädt. Stoppen willst du? Dafür ist der Pause-Modus da.
+
 ## 1.2.103
 
 **Wichtig: Solar-Laden rechnet manuelles Laden jetzt richtig ein.**
