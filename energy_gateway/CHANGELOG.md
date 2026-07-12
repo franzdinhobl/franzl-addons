@@ -1,3 +1,19 @@
+## 1.2.101
+
+**Ruhigere Wallbox-Regelung: weniger Funkverkehr, kein Schaltungs-Flattern, kein Hängenbleiben.**
+- Ich schicke Wallbox-Kommandos nur noch, wenn sich wirklich etwas ändern soll —
+  vorher habe ich unveränderte Werte alle 2 Minuten neu geschrieben (eine Nacht
+  am vollen Auto: über 300 unnötige Kommandos). Jetzt lese ich erst nach und
+  schreibe nur bei Abweichung; App-Tipps wirken weiterhin sofort.
+- Bei wechselhaftem Wetter warte ich nach einem Lade-Stopp jetzt 5 Minuten,
+  bevor ich wieder starte — vorher konnte ein Wolkenmorgen das Wallbox-Schütz
+  im Minutentakt schalten (unnötiger Verschleiß, hängende Ladefreigaben).
+- Wenn ein Abschalt-Kommando fehlschlägt (z. B. Wallbox kurz nicht erreichbar),
+  versuche ich es jetzt automatisch erneut — vorher konnte die Wallbox dann
+  dauerhaft freigegeben bleiben.
+- Ehrlichere Energie-Charts: Stunden, in denen ein Messwert komplett fehlte
+  (z. B. Home-Assistant-Ausfall), zeigen jetzt eine Lücke statt einer falschen 0.
+
 ## 1.2.100
 
 **Korrektur-Build: Laden startet nach einer Pause wieder zuverlässig.**
