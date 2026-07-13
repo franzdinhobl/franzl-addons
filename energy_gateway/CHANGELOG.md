@@ -1,3 +1,37 @@
+## 1.2.108
+
+**Ich sage dir immer, was WIRKLICH los ist — und warum.**
+Großer Ehrlichkeits-Durchgang durch Home- und Energie-Tab: Jede Zeile im
+Tagesplan nennt jetzt die echte Ursache statt einer Vermutung. Ein pausiertes
+Auto heißt „Pausiert — von dir" (früher konnte da fälschlich „fertig
+geladen" stehen), ein volles Auto „Ladelimit erreicht", ein Auto das nichts
+annimmt bekommt die ehrliche Stall-Erklärung. Beim Wolkenloch behaupte ich
+kein „mit Sonnenstrom" mehr, wenn der Strom messbar teils aus dem Netz kommt,
+und ein unbestätigtes Kommando trägt „gesendet" statt „erledigt ✓".
+
+**Gleiche Wörter überall, keine Fachbegriffe mehr.**
+Geräte-, Aktion- und Home-Tab sprechen jetzt dasselbe Status-Vokabular
+(eine leere Wallbox heißt überall „Kein Auto verbunden" — und sie
+verschwindet nicht mehr aus der „Gerade jetzt"-Liste, sondern sagt es).
+Rohe Technik-Wörter wie „unavailable" oder „paused_by_car" erreichen die
+App nicht mehr. Die Kopfzeilen-Pille zeigt den echten Zustand (Gerät
+offline, Verbindung wackelig, Hinweise) statt einem fixen „Alles läuft".
+
+**Ehrliche Kurven und Zahlen im Energie-Tab.**
+Die „Heute"-Kurve nutzt den gemessenen Netzbezug — Abende aus dem Akku sind
+nicht mehr rot als „aus Netz" gefärbt, Messlücken sind echte Lücken statt
+erfundener Null-Einbrüche, und „Eingespeist" hat eine eigene, klar
+unterscheidbare Farbe. Die Woher/Wohin-Bilanz zählt netzgeladenen
+Speicherstrom nicht mehr doppelt. Friert die Verbindung ein, merke ich das
+jetzt binnen ~1 Minute und verbinde neu, statt alte Werte als aktuell zu
+zeigen.
+
+**VW-Ladestand wieder frisch.**
+Ein VW konnte tagelang einen alten Ladestand zeigen (87 % bei echten
+100 %) — ich lese jetzt den neuesten Datenkanal und stemple den Ladestand
+mit seiner Messzeit, damit bei zwei Autos an einer Wallbox das richtige
+gewinnt.
+
 ## 1.2.107
 
 **Solar-Laden startet erst, wenn es sich lohnt.**
