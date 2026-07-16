@@ -1,3 +1,20 @@
+## 1.2.111
+
+**Sonnenüberschuss heißt jetzt wirklich Überschuss — auch im Tagesplan.**
+Der Planer rechnete bisher mit der rohen Solar-Prognose: Standen morgens
+0,7 kW Erzeugung in der Vorhersage, galt das als „Überschuss", und ein
+3-kW-Heizstab wurde eingeschaltet — der Strom kam dann größtenteils aus dem
+Netz, erzählt als „Sonnenstrom". Jetzt zieht der Planer den gemessenen
+Hausverbrauch ab, und ein Überschuss-Verbraucher wird nur noch eingeplant,
+wenn die Sonne ihn wirklich ganz tragen kann.
+
+**Zusatzheizungen schalten nur noch am Messwert.**
+Heizstab, „Nur Sonne"-Heizer und Überschuss-Zeitfenster folgen keinem
+Prognose-Plan mehr: Sie starten erst, wenn der Netzzähler den Überschuss
+live bestätigt — genau wie das Überschussladen der Wallbox. Der Plan zeigt
+weiterhin die Vorschau für den Tag; geschaltet wird nach der Wirklichkeit.
+„Jetzt heizen" bleibt unverändert dein Befehl und läuft sofort.
+
 ## 1.2.108
 
 **Ich sage dir immer, was WIRKLICH los ist — und warum.**
