@@ -1,3 +1,15 @@
+## 1.2.112
+
+**Meine Solar-Prognose lernt jetzt aus deiner Anlage.**
+Die Wettervorhersage von Forecast.Solar lag für manche Anlagen dauerhaft
+daneben — an einem wolkenlosen Tag habe ich 38 kWh angesagt, deine Anlage
+hat 60 kWh erzeugt. Ab jetzt merke ich mir, was ich vorhergesagt habe und
+was wirklich rauskam, und korrigiere die Prognose damit selbst: nach ein
+paar Tagen um den gemessenen Faktor, nach zwei Wochen mit einem Modell, das
+auch Tageszeit-Muster kennt. Die Korrektur überlebt Updates und startet für
+jede Anlage individuell — änderst du deine PV-Flächen oder den Standort,
+lerne ich ehrlich von vorn.
+
 ## 1.2.111
 
 **Sonnenüberschuss heißt jetzt wirklich Überschuss — auch im Tagesplan.**
