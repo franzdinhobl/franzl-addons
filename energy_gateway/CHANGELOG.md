@@ -1,3 +1,38 @@
+## 1.2.113
+
+**Ich funke nur noch, wenn es etwas zu sagen gibt.**
+Ein volles Auto zieht von selbst keinen Strom — trotzdem habe ich bisher
+brav „Abschalten" an die Wallbox geschickt, notfalls die ganze Nacht gegen
+eine schlafende Box (und dich mit einer Störungsmeldung geweckt). Damit ist
+Schluss: Ein Auto am Ladelimit wird erzählt („Ladelimit erreicht"), nicht
+beschaltet — in jedem Modus. Und im Modus „Offen" schalte ich gar nichts
+mehr: Die Box gehört dort dir, ich schaue nur zu.
+
+**Der Batterie-Vorrang hält jetzt wirklich.**
+„Batterie zuerst, bis X %" konnte bisher vom Auto ausgetrickst werden: Sein
+eigener Ladestrom zählte als „Überschuss", die Batterie ging leer aus. Jetzt
+reserviere ich unterhalb deiner Schwelle die volle Laderate für die
+Batterie — das Auto ist dran, sobald sie versorgt ist, und die Karte sagt
+ehrlich „Die Sonne lädt erst die Batterie".
+
+**Fremde Verbraucher sind kein Sonnenüberschuss.**
+Heizt der Warmwasserstab in seinem eigenen Programm (z. B. dem
+wöchentlichen Legionellen-Lauf), habe ich das bisher als verteilbaren
+Überschuss gezählt — und das Auto „mit Sonne" geladen, während real die
+Batterie zahlte. Jetzt zählt nur noch, was ich selbst steuere. Das beendet
+auch das Start/Stopp-Geflatter mit einer Tesla-Benachrichtigung pro Runde.
+
+**Ehrlichere Karten.** Ein heizender Warmwasserstab heißt jetzt „Heizt"
+(nicht „Bereit") und zeigt seine Leistung groß; das Wallbox-Ziel springt
+nicht mehr zwischen zwei Werten; lädt der Mindest-Ladestand dein Auto,
+obwohl „Solar" gewählt ist, erklärt die Karte warum; und Änderungen am
+Auto-Ladestrom kommen prompt an, auch wenn die Cloud des Autos trödelt.
+
+**Robustheit unter der Haube.** Geräte-Rückfall-Wartezeiten überleben jetzt
+einen Neustart, Einheiten-Wechsel einer Integration (kW→W) heilen sich
+selbst, dauerhaft stumme Sensoren erscheinen in der Diagnose, und ein
+hängendes Gerät bremst die Kommandos der anderen nicht mehr aus.
+
 ## 1.2.112
 
 **Meine Solar-Prognose lernt jetzt aus deiner Anlage.**
