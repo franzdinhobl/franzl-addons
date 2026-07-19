@@ -1,3 +1,20 @@
+## 1.2.114
+
+**Noch einmal gründlich ausgemistet: Ich wiederhole mich nicht mehr.**
+Ein Tiefen-Audit hat dreizehn Stellen gefunden, an denen ich Befehle oder
+Anfragen wiederholt habe, die nichts ändern — die größte: Eine
+Mindest-Ladung hat ihr unverändertes Kommando jede Minute neu an die
+Wallbox geschickt und dabei sogar die Schutzmechanismen gegen
+Schütz-Flattern umgangen. Jetzt gilt überall dasselbe Prinzip: Gesendet
+wird nur, was einen echten Zustand ändert — Batterie-Sollwerte,
+Wärmepumpen-Befehle und Wallbox-Limits werden gehalten statt gehämmert,
+ein schlafendes Auto wird nie durch eine Routine-Wiederholung geweckt,
+und beim VW-Portal melde ich mich einmal an statt sechsmal pro Stunde
+(das dürfte auch die nächtlichen Aussetzer der VW-Daten beheben).
+Außerdem: Störungsmeldungen bleiben auch über einen Neustart hinweg auf
+höchstens eine pro Tag, und ein fehlgeschlagenes Batterie-Kommando wird
+ehrlich als Fehler gemeldet statt still als Erfolg verbucht.
+
 ## 1.2.113
 
 **Ich funke nur noch, wenn es etwas zu sagen gibt.**
