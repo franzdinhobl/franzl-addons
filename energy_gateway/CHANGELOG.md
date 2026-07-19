@@ -1,3 +1,16 @@
+## 1.2.115
+
+**Ich stoppe das Laden jetzt so, wie es dein Auto mag.**
+Wenn eine Wolke den Sonnenüberschuss schluckt und ich das Laden pausiere,
+habe ich bisher einfach der Wallbox den Strom abgedreht — dein Auto hat
+das als unerwartete Unterbrechung gemeldet und dich mit „Ladevorgang
+unterbrochen" angepingt. Jetzt bitte ich zuerst das Auto selbst, das Laden
+zu beenden (wie ein Stopp in der Hersteller-App — ganz ohne Alarm), und
+schalte erst danach die Wallbox ab. Das funktioniert bei jedem Auto, das
+mir einen eigenen Stopp-Schalter anbietet; alle anderen verhalten sich
+exakt wie bisher. Die Pause selbst bleibt immer Sache der Wallbox —
+zuverlässig wie gehabt, nur eben ohne Schreck-Nachricht aufs Handy.
+
 ## 1.2.114
 
 **Noch einmal gründlich ausgemistet: Ich wiederhole mich nicht mehr.**
