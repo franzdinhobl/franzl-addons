@@ -1,3 +1,20 @@
+## 1.2.116
+
+**Ich rede nur noch, wenn ich etwas zu sagen habe — und ich schaue hin, statt zu raten.**
+Vier Dinge sind sauberer geworden. Erstens: Wenn ich deiner Wallbox eine
+Ladeleistung vorgebe, wiederhole ich diese Vorgabe nicht mehr im
+Zwei-Minuten-Takt. Stattdessen messe ich nach — nimmt dein Auto mehr, als ich
+erlaubt habe, hat die Wallbox meine Vorgabe vergessen, und ich reagiere sofort
+statt nach Ablauf einer Wartezeit. Das ist weniger Funkverkehr und trotzdem
+schnellere Reaktion. Zweitens: Eine Wallbox „lädt" bei mir erst, wenn wirklich
+Ladestrom fließt. Ein angestecktes, volles Auto zieht nur ein paar Watt für
+seine Elektronik — das habe ich bisher als Ladevorgang angezeigt, obwohl kein
+Auto so langsam laden kann. Drittens: Leistung, die ich gar nicht freigeben
+kann, verspreche ich niemandem mehr. Eine garantierte Mindest-Ladung oder ein
+von dir gestartetes „Jetzt heizen" gebe ich nicht her — also zähle ich sie
+nicht mehr als verfügbaren Sonnenüberschuss für andere Geräte. Und viertens:
+Die Gerätesuche läuft nur noch, wenn du sie auch nutzen darfst.
+
 ## 1.2.115
 
 **Ich stoppe das Laden jetzt so, wie es dein Auto mag.**
