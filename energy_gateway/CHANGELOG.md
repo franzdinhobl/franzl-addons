@@ -1,3 +1,15 @@
+## 1.2.119
+
+**Mein Gesundheits-Bericht an die Cloud kam nie an — jetzt tut er es.**
+Beim Verifizieren der neuen Zuverlässigkeits-Statistik habe ich entdeckt, dass
+mein halbstündlicher Status-Bericht an die Cloud (Geräteanzahl, Fehlerpegel,
+Abo-Status, jetzt auch die Marken-Statistik) seit Langem still fehlschlug —
+ein Datenbank-Zugriff im falschen Kontext, und die Fehlermeldung wurde auf
+leisester Stufe verschluckt. Sichtbar war davon nichts: Die Box lief normal,
+nur die Cloud wusste weniger über sie als gedacht. Der Zugriff ist repariert,
+und wenn dieser Bericht künftig fehlschlägt, steht es laut im Protokoll statt
+flüsternd.
+
 ## 1.2.118
 
 **„Bis 6 Uhr auf 80 %" gilt jetzt wirklich — und ich rechne nur, was stimmt.**
