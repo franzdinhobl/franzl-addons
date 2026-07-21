@@ -1,3 +1,13 @@
+## 1.2.120
+
+**Das Fundament für die neue App-Version liegt bereit.**
+Die nächste App-Version bringt einen überarbeiteten Energie-Tab und eine
+detailliertere Solar-Prognose — dieses Update trägt die Server-Seite dafür
+aus, damit die neue App sie beim Erscheinen sofort vorfindet. Außerdem ist
+der alte Sparen-Komfort-Regler auch serverseitig ausgebaut: Er hat nie in
+meine Planung eingegriffen (die rechnet immer kostenoptimal innerhalb
+deiner Komfort-Vorgaben), also täuscht er auch keine Wirkung mehr vor.
+
 ## 1.2.119
 
 **Mein Gesundheits-Bericht an die Cloud kam nie an — jetzt tut er es.**
