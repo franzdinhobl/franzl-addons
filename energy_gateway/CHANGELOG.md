@@ -1,3 +1,24 @@
+## 1.2.118
+
+**„Bis 6 Uhr auf 80 %" gilt jetzt wirklich — und ich rechne nur, was stimmt.**
+Das Tagesziel deiner Wallbox („Regelmäßig laden bis zu einer Uhrzeit") ist ab
+jetzt ein Versprechen: Ich nutze zuerst die Sonne, und was bis zur Deadline
+fehlt, lade ich in den günstigsten Stunden davor aus dem Netz — bei
+Börsenstrom-Tarifen typischerweise im Nachttal. Vorher konnte dieses Ziel im
+Solar-Modus schlicht nicht liefern, wenn die Sonne nicht rechtzeitig schien.
+Ohne gesetztes Ziel bleibt „Nur Sonne" strikt wie bisher. Dazu habe ich meine
+Planungs-Rechnung an drei Stellen geerdet: Ein Warmwasserspeicher braucht fürs
+Aufheizen die Energie eines Tanks, nicht die eines ganzen Gebäudes (vorher
+plante ich das Neunfache und reservierte dafür stundenlang Netz-Fenster); die
+Batterie entlädt im Arbitrage-Modus nur noch so viel, wie dein Haus gerade
+verbraucht (mehr wäre Verlust-Export, den ich dir als Ersparnis angerechnet
+hätte); und „günstige Stunde" sage ich nur noch, wenn die Stunde wirklich
+günstiger ist als einfach sofort zu laden. Außerdem melde ich jetzt täglich
+eine anonyme Zuverlässigkeits-Statistik pro Gerätemarke (wie viele meiner
+Befehle ankamen — keine Messwerte, keine Zeiten, keine Namen), damit
+Gerätefehler auffallen, bevor sie dich treffen; Details und Widerspruchsrecht
+stehen in der Datenschutzerklärung, Ziffer 6a.
+
 ## 1.2.117
 
 **Was dir gehört, fasse ich nicht an — und was ich einschalte, schalte ich auch wieder ab.**
