@@ -1,3 +1,28 @@
+## 1.2.117
+
+**Was dir gehört, fasse ich nicht an — und was ich einschalte, schalte ich auch wieder ab.**
+Der wichtigste Fix zuerst: Steht deine Wallbox auf „Offen" oder „Jetzt laden",
+gehört die Ladung dir — ich führe darüber keine eigene Buchhaltung mehr und
+schicke ihr nie wieder einen Stopp-Befehl hinterher (zuletzt kam der 16
+Sekunden nach einem „Jetzt laden"-Tipp, weil ich fälschlich glaubte, ICH hätte
+die Ladung gestartet). Im Rückblick erzähle ich den Offen-Modus jetzt so, wie
+er ist — „dein Auto lädt, sobald es will" — statt ihn mir als eigene Leistung
+anzurechnen; bei zwei Autos steht dabei, welches gemeint ist, und eine
+Stromquelle behaupte ich nur noch, wenn wirklich Energie geflossen ist.
+Dasselbe Prinzip gilt jetzt auch fürs Heizen: Eine Wärmepumpe oder Klimaanlage,
+die ich für Sonnenüberschuss hochgefahren habe, stelle ich danach zuverlässig
+zurück — vorher konnte sie auf meinem Boost sitzen bleiben und nachts am Netz
+weiterheizen. Dabei respektiere ich das Schaltlimit des Kompressors, und ein
+einmal angestoßenes Warmwasser-Extra breche ich sauber ab statt es auslaufen zu
+lassen. Bei dynamischen Tarifen rechne ich ehrlicher: Ein alter Börsenpreis
+zählt nicht mehr als aktueller, die Ersparnis-Rechnung der Batterie
+berücksichtigt jetzt auch ihre Ladeverluste, Strom aus dem Netz gibt es für
+Zusatzverbraucher nur noch, wenn du eine Preisgrenze gesetzt hast — und stirbt
+der Preis-Feed, sage ich dir das, statt still weiterzurechnen. E3DC-Speicher
+kann ich jetzt vor teuren Stunden am Entladen hindern. Und einen alten
+Test-Zugang, über den sich meine Regelung mit erfundenen Werten füttern ließ,
+habe ich entfernt.
+
 ## 1.2.116
 
 **Ich rede nur noch, wenn ich etwas zu sagen habe — und ich schaue hin, statt zu raten.**
