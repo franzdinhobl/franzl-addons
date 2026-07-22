@@ -1,3 +1,15 @@
+## 1.2.122
+
+**Ruhige Regelung auch, wenn ein Gerät vom Netz fällt.**
+Als heute Abend der Ohmpilot vom WLAN verschwand, haben sich zwei meiner
+internen Buchhalter (der Geräte-Gesundheits-Wächter und der Regel-Takt) beim
+Vermerken der Ausfälle gelegentlich gegenseitig blockiert — ein Regel-Takt
+fiel dann aus und der nächste übernahm 15 Sekunden später. Kein Schaden,
+aber unnötig: Die beiden schreiben jetzt in einer festen Reihenfolge und
+kommen sich nicht mehr in die Quere. Am Gerät selbst ändere ich nichts —
+ein nicht erreichbares Gerät bekommt weiterhin genau einen sanften
+Verbindungsversuch pro Stunde, nie mehr.
+
 ## 1.2.121
 
 **Zwei Feinschliffe aus dem ersten Beobachtungstag.**
