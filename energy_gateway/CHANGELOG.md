@@ -1,3 +1,17 @@
+## 1.2.121
+
+**Zwei Feinschliffe aus dem ersten Beobachtungstag.**
+Beim Sonnen-Laden unter wechselhaften Wolken habe ich das Ladestrom-Ziel des
+Autos bei jedem ±1-A-Wackler sofort nachgezogen — ein Cloud-Befehl pro Minute
+für nichts. Kleine Erhöhungen sitze ich jetzt ein paar Minuten aus (Absenkungen
+kommen weiterhin sofort, dein Auto zieht nie mehr als der Überschuss hergibt);
+erst wenn die Sonne wirklich zurück ist, hebe ich das Ziel an. Und bei einer
+Wolken-Pause, bei der dein Auto schon sauber über seinen eigenen Schalter
+gestoppt wurde, wiederhole ich einen unbestätigten Wallbox-Stopp nicht mehr
+minutenlang: Manche Wallboxen (live erwischt: ABB) parken die Ladesitzung dann
+nur und bestätigen den Stopp nie — es fließt aber längst kein Strom mehr, also
+ist die Pause erreicht und ich lasse es gut sein.
+
 ## 1.2.120
 
 **Das Fundament für die neue App-Version liegt bereit.**
