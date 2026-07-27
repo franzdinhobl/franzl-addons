@@ -1,3 +1,35 @@
+## 1.3.0
+
+**Ein eigener Schlüssel für dein Zuhause.**
+Bisher haben alle Franzl-Gateways denselben General-Schlüssel für die
+Cloud-Verbindung benutzt. Ab jetzt bekommt jedes Zuhause bei der Aktivierung
+seinen eigenen: Ich kann damit nur noch die Daten DEINES Haushalts
+synchronisieren — nichts anderes, und beim Tausch des Gateways wird der alte
+Schlüssel automatisch ungültig. Den General-Schlüssel lösche ich von der
+Platte, sobald der neue nachweislich funktioniert; aus Backups halte ich ihn
+ab sofort ganz heraus. Nebeneffekt: Die Anmeldung der App bei mir prüfe ich
+jetzt lokal (offline-fähig) statt für jede Anfrage bei Google nachzufragen —
+das macht jede Bedienung einen Tick schneller.
+
+**Die Batterie bekommt nur noch, was sie wirklich aufnehmen kann.**
+Bei der Überschuss-Verteilung habe ich für die Hausbatterie bisher notfalls
+einen Pauschalwert eingeplant — der konnte alles unter ihr (etwa dein Auto)
+aushungern. Jetzt lerne ich ihre echte Laderate aus der Messung, lese das
+Typenschild, wo das Gerät eines hergibt, und eine volle Batterie reserviert
+gar nichts mehr — der Überschuss läuft an ihr vorbei zu den nächsten
+Verbrauchern statt ins Netz.
+
+**Mindestladung mit deinem Tempo.**
+Wenn ich dein Auto auf den Mindest-Stand bringe, galt bisher: Vollgas. Der
+Ladestrom-Regler in der App greift jetzt auch hier — du kannst die
+Grundladung drosseln, ohne den Solar-Modus zu verlassen.
+
+**Robusterer Box-Tausch und reparierte Installateur-Einladung.**
+Ein abgebrochener Gateway-Tausch lässt dein bisheriges Gateway jetzt sauber
+weiterlaufen (inklusive Fernzugriff, den ich mir bei Bedarf selbst
+zurückhole), und die Einladung, mit der dir dein Installateur dein Zuhause
+übergibt, funktioniert jetzt zuverlässig und ist 30 Tage gültig.
+
 ## 1.2.122
 
 **Ruhige Regelung auch, wenn ein Gerät vom Netz fällt.**
