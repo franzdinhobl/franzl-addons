@@ -1,3 +1,12 @@
+## 1.3.1
+
+**Nachbesserung an der neuen Aktivierung.**
+Mit dem Schlüssel-Umbau aus 1.3.0 wartete meine Aktivierungs-Schleife noch
+auf ein Feld, das die Cloud bewusst nicht mehr mitschickt — eine frische
+Aktivierung wäre damit hängen geblieben. Jetzt schließe ich die Aktivierung
+mit dem neuen Zuhause-Schlüssel ab; bestehende, bereits aktivierte Gateways
+waren nie betroffen.
+
 ## 1.3.0
 
 **Ein eigener Schlüssel für dein Zuhause.**
