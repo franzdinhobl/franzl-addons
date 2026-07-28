@@ -1,3 +1,23 @@
+## 1.4.1
+
+**Dein Zugangsschlüssel steht nicht mehr in der Adresse.**
+
+Wenn die App sich mit mir verbindet, weist sie sich mit einem Schlüssel aus,
+der eine Stunde gilt. Der stand bisher mitten in der Verbindungsadresse — und
+Adressen werden unterwegs überall automatisch mitprotokolliert. Er landete
+dadurch in Logdateien auf der Box und bei dem Dienst, über den dein
+Fernzugriff läuft. Wer so ein Log weitergibt, etwa an den Support, gibt einen
+funktionierenden Schlüssel mit weiter, ohne es zu merken.
+
+Jetzt holt sich die App vorher ein Wegwerf-Ticket: es gilt 30 Sekunden, lässt
+sich nur ein einziges Mal verwenden und verrät nichts über dich. Der
+eigentliche Schlüssel wandert dorthin, wo er hingehört und nicht
+mitgeschrieben wird. Wer das Ticket später in einem Log findet, hält etwas
+längst Verfallenes in der Hand.
+
+Ältere App-Versionen verbinden sich unverändert weiter — der alte Weg bleibt
+so lange offen, bis alle umgestellt sind.
+
 ## 1.4.0
 
 **Ich heize jetzt vorausschauend — und lade dein Auto sauberer an der Sonne.**
