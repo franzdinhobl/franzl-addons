@@ -1,3 +1,33 @@
+## 1.4.2
+
+**Wenn dein Strompreis sich stündlich ändert, kannst du mich jetzt endlich
+dafür einspannen.**
+
+Bisher gab es im Aktion-Tab nur „Solar" — und das hilft dir nichts, wenn du
+keine Photovoltaik hast. Übrig blieben Laden und Stop: zwei Knöpfe, mit denen du
+alles selbst machst. Ich stand daneben und habe zugesehen. Das war schlicht eine
+Lücke.
+
+Jetzt gibt es **„Günstig"**. Damit lade ich dein Auto in den billigsten Stunden
+des Tages. Darunter sagst du mir in einer Zeile, worauf ich hinarbeiten soll:
+**bis wann das Auto voll sein muss.** Das ist ein Versprechen, kein Versuch — was
+bis dahin fehlt, hole ich aus dem Netz, aber aus den günstigsten Stunden davor.
+Um sieben in der Früh losfahren heißt: um sieben ist es da.
+
+Wer will, stellt zusätzlich eine **Preisgrenze** ein: fällt der Strom darunter,
+lade ich mit. Dazu sage ich dir gleich ehrlich, was das nicht kann — allein ist
+das keine Garantie. Fällt der Preis nie unter deine Grenze, lade ich auch nicht.
+Deshalb steht die Uhrzeit oben und die Grenze darunter, nicht umgekehrt.
+
+**Hast du Sonne UND einen flexiblen Tarif, bleibt alles, wie du es kennst:**
+„Solar" lädt weiter mit deinem Überschuss und holt sich nur, was bis zu deiner
+Uhrzeit fehlt. Die Preisgrenze gilt dort trotzdem — damit nehme ich dir das
+billige Nachttal mit, wenn die Sonne längst weg ist.
+
+Noch etwas, das dir vorher womöglich aufgefallen ist: eine Wallbox ohne
+eingestelltes Tagesziel meldete gelegentlich „Ziel erreicht", obwohl es gar kein
+Ziel gab. Das sagt sie nicht mehr.
+
 ## 1.4.1
 
 **Dein Zugangsschlüssel steht nicht mehr in der Adresse.**
