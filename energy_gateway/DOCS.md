@@ -1,4 +1,4 @@
-# Energy Gateway
+# Franzl Gateway
 
 Intelligentes Energiemanagement für dein Zuhause — optimiert PV-Anlage, Batterie, Wallbox und Wärmepumpe herstellerübergreifend.
 
@@ -19,7 +19,7 @@ und keine DB-Konfiguration nötig.
 2. Installiere das **Franzl Gateway** Add-on und **starte** es. Das Add-on wird
    als vorgebautes Image geladen (kein lokales Kompilieren); die eingebaute
    Datenbank wird beim ersten Start automatisch angelegt
-3. Im Seitenmenü erscheint "Energy Gateway" — öffne das Panel
+3. Im Seitenmenü erscheint der Eintrag "Franzl" — öffne das Panel
 4. Dort wird ein **9-stelliger Aktivierungscode** angezeigt
 5. Lade die **Franzl App** aus dem App Store / Play Store
 6. Erstelle einen Account und gib den Aktivierungscode ein
@@ -46,7 +46,7 @@ Das Gateway erkennt automatisch alle Geräte, die in Home Assistant eingerichtet
 
 ## So funktioniert's
 
-Das Energy Gateway läuft lokal auf deinem Home Assistant — keine Cloud für die Steuerung nötig. Es liest die Messwerte deiner Geräte, berechnet den optimalen Energiefluss und steuert Batterie, Wallbox und Wärmepumpe automatisch.
+Das Franzl Gateway läuft lokal auf deinem Home Assistant — keine Cloud für die Steuerung nötig. Es liest die Messwerte deiner Geräte, berechnet den optimalen Energiefluss und steuert Batterie, Wallbox und Wärmepumpe automatisch.
 
 Die App zeigt dir in Echtzeit:
 - Aktuelle Erzeugung, Verbrauch und Netzeinspeisung
@@ -117,7 +117,7 @@ dann liegt die Datensicherung beim externen Datenbankserver.
 - Starte einen erneuten Scan in der App
 
 ### Add-on startet nicht
-- **Zuerst das Add-on-Log lesen** (Einstellungen → Add-ons → Energy Gateway →
+- **Zuerst das Add-on-Log lesen** (Einstellungen → Add-ons → Franzl Gateway →
   Protokoll) — dort steht die konkrete Fehlerursache
 - **Port 8099 belegt**: Läuft ein anderes Add-on oder ein anderer Dienst auf
   Port 8099? Dann diesen Dienst stoppen oder umkonfigurieren und das Add-on
@@ -129,7 +129,7 @@ dann liegt die Datensicherung beim externen Datenbankserver.
   Datenbank und Zugangsdaten stimmen und erreichbar sind
 
 ### Aktivierungscode erscheint nicht
-- Öffne das Energy-Gateway-Panel im HA-Seitenmenü und **lade es neu** —
+- Öffne das Franzl-Panel im HA-Seitenmenü und **lade es neu** —
   das Panel aktualisiert sich auch selbst alle paar Sekunden
 - Der Code ist 15 Minuten gültig; nach Ablauf wird **automatisch** ein neuer
   Code generiert — alternativ "Neuen Code generieren" klicken
@@ -138,7 +138,7 @@ dann liegt die Datensicherung beim externen Datenbankserver.
 - Erscheint gar nichts: Add-on-Log prüfen (siehe "Add-on startet nicht")
 
 ### Aktivierungscode abgelaufen
-- Öffne das Energy Gateway Panel in Home Assistant
+- Öffne das Franzl-Panel in Home Assistant
 - Klicke auf "Neuen Code generieren"
 - Gib den neuen Code in der App ein
 
@@ -146,8 +146,9 @@ dann liegt die Datensicherung beim externen Datenbankserver.
 - Stelle sicher, dass dein Handy im **selben WLAN/Netzwerk** ist wie die Box —
   Gast-WLANs und getrennte VLANs verhindern die automatische Erkennung (mDNS)
 - Manche Router/Firewalls blockieren mDNS (Multicast) — dann die IP-Adresse
-  manuell in der App eingeben (z.B. `http://192.168.1.100:8099`)
-- Prüfe, ob das Add-on läuft (Einstellungen → Add-ons → Energy Gateway)
+  manuell in der App eingeben: nur die Adresse, ohne `http://` und ohne Port
+  (z.B. `192.168.1.100`) — den Port hängt die App selbst an
+- Prüfe, ob das Add-on läuft (Einstellungen → Add-ons → Franzl Gateway)
 
 ### Datenbank-Probleme
 - Bei einer beschädigten oder leeren Datenbank stellt das Add-on beim Start
