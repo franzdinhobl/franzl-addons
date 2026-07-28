@@ -1,3 +1,16 @@
+## 1.4.3
+
+**Ein Hinweis, den ich nie geben konnte, funktioniert jetzt.**
+
+Wenn ein Gerät im Netzwerk ständig seine Adresse wechselt, sollte ich dir das
+sagen — bei so einem Gerät hilft nur ein fester Eintrag in deinem Router, und
+ohne den verliere ich es immer wieder. Diese Meldung war seit ihrem Einbau
+kaputt: die Prüfung brach jedes Mal sofort ab, noch bevor sie irgendetwas
+ansehen konnte. Aufgefallen ist das erst im Logbuch einer laufenden Box.
+
+Jetzt läuft sie. Für dich ändert sich nichts, außer dass du diesen Hinweis
+bekommst, wenn er zutrifft.
+
 ## 1.4.2
 
 **Wenn dein Strompreis sich stündlich ändert, kannst du mich jetzt endlich
