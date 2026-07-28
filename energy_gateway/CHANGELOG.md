@@ -1,3 +1,38 @@
+## 1.4.0
+
+**Ich heize jetzt vorausschauend — und lade dein Auto sauberer an der Sonne.**
+
+Bisher habe ich Warmwasser und Heizung nur nachgeregelt: fällt die Temperatur
+unter dein Minimum, heize ich — zu dem Preis, der gerade gilt. Jetzt behandle
+ich dein Wohlfühl-Band als das, was es ist: ein Speicher. Ich lerne aus dem
+Alltag, wie schnell deiner auskühlt und wann bei euch warmes Wasser gebraucht
+wird, und lege die Wärme dann hin, wo der Strom günstig ist. Wie viel ich
+vorlege, rechne ich aus statt zu raten — was zu früh eingelagert wird, kühlt
+schließlich wieder weg.
+
+Das zahlt sich nur bei einem zeitvariablen Tarif aus; mit einem Fixpreis
+verhalte ich mich exakt wie vorher. Und ich fange erst an, wenn ich deinen
+Speicher wirklich vermessen habe — bis dahin bleibt alles beim Alten. In
+meiner Testreihe über zwei Wochen waren es rund ein Drittel weniger Kosten bei
+gleicher Energiemenge und deutlich weniger Zeit unter deiner Wunschtemperatur.
+
+**Beim Sonnenladen habe ich drei Dinge geradegerückt:**
+
+- Wenn die Sonne langsam nachlässt, habe ich das Ladeziel manchmal zu hoch
+  stehen lassen — die Differenz kam dann aus dem Hausakku, während ich
+  „Sonnenüberschuss" behauptet habe. Das passiert nicht mehr.
+- Ein Hausspeicher, der nichts mehr aufnimmt (weil er an einer Grenze steht,
+  die ich nicht sehen kann), hat dem Auto die Sonne weggerechnet und es
+  ständig an- und abgeschaltet. Jetzt merke ich mir, dass er nichts nimmt, bis
+  er nachweislich wieder lädt.
+- Nach einer Wolke warte ich nicht mehr unnötig lange mit dem Wiederanfahren,
+  wenn die Vorhersage sagt, dass die Sonne bleibt.
+
+Dazu Kleinkram: Im Rückblick stand bei fast jeder Ladung „nicht reagiert",
+obwohl geladen wurde — das lag an den ersten Sekunden, in denen ein Auto noch
+nichts zieht. Und an OCPP-Wallboxen hänge ich meine Ladevorgabe jetzt
+ausdrücklich an die laufende Ladesitzung, weil manche Boxen sie sonst ablehnen.
+
 ## 1.3.1
 
 **Nachbesserung an der neuen Aktivierung.**
