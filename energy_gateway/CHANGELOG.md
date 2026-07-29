@@ -1,3 +1,38 @@
+## 1.5.0
+
+**Deine Preisgrenze und dein Hausakku verstehen sich jetzt.**
+
+Wenn du fürs Auto eine Preisgrenze gesetzt hast („lade, wenn Strom unter X
+Cent kostet"), stellt sich nachts eine Frage, die man nicht mit einer
+Faustregel beantworten kann: Darf der Hausakku mithelfen — oder soll ich ihn
+festhalten und lieber vom Netz kaufen? Die ehrliche Antwort hängt am nächsten
+Tag. Füllt die Sonne den Akku morgen ohnehin wieder (und der Rest würde
+exportiert), ist seine Energie nur die Einspeisevergütung wert — dann ist
+Mithelfen die günstigste Entscheidung der Nacht. Kommt kein Nachschub, wird
+jede entnommene Kilowattstunde am teuren Morgen nachgekauft — dann halte ich
+ihn fest. Genau das rechne ich jetzt für jede Stunde durch, mit deiner
+Solar-Prognose, deinen Preisen und dem Speicherstand in einem Rechenwerk.
+In der Zwei-Wochen-Simulation gewinnt diese Rechnung in beiden Jahreszeiten —
+bei identischer geladener Energie. Wir haben es davor auf unserer eigenen
+Anlage mit echtem Börsenstrom getestet.
+
+Dazu kauft die Preisgrenze jetzt die **günstigsten** Stunden unter deiner
+Grenze statt einfach der ersten — auch ohne Hausakku ein paar Cent pro Nacht.
+
+**Zwei Ehrlichkeits-Fixes im Rückblick.** Eine Ladung über die Preisgrenze
+stand bisher für immer als „nicht reagiert" da, obwohl messbar Energie floss —
+ich habe dem falschen Beweis geglaubt (der Ersparnis statt dem Zähler). Und
+kurze Sonnen-Einsätze (ein Boiler, der 15 Minuten Überschuss heizt) bekamen
+ihre Ersparnis nie gutgeschrieben — die Buchung tastete nur einmal pro Stunde
+ab, und zwar immer im falschen Moment. Jetzt zählt die gemessene Zeit: jede
+Minute, die wirklich lief, wird gutgeschrieben — nicht mehr und nicht weniger.
+
+**Ein Planungsfehler, der eine Garantie still sterben lassen konnte.** Ein
+nächtlicher Lade-Slot fürs Tagesziel hieß intern „Solar", wenn der Hausakku
+ihn deckte — und auf „Solar"-Slots greift die Nacht-Ausführung nicht. Dein
+„voll bis 06:00" wäre in dieser Konstellation nie ausgeführt worden. Gefunden
+im Feldtest, gefixt, mit Regressionstest.
+
 ## 1.4.3
 
 **Ein Hinweis, den ich nie geben konnte, funktioniert jetzt.**
