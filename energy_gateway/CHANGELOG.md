@@ -1,3 +1,17 @@
+## 1.6.1
+
+**Kleine Ehrlichkeits-Korrekturen an den Karten.**
+
+Stand auf einer Wallbox-Karte ein Ladeziel für bestimmte Wochentage, blieb es
+auch am Wochenende stehen — die Regeln hatten es längst abgeschaltet, nur die
+Anzeige wusste nichts davon. Dasselbe galt für eine Preisgrenze, die du bei
+einem Festpreistarif gar nicht mehr einstellen kannst: sie wurde weiter
+angezeigt, obwohl nichts mehr darauf hört. Beides verschwindet jetzt zum
+richtigen Zeitpunkt.
+
+Wechselst du deinen Tarif, stellt sich die App sofort darauf ein, statt bis
+zur nächsten Verbindung mit dem alten Bild weiterzulaufen.
+
 ## 1.6.0
 
 **Wenn du mir schreibst, komme ich jetzt auch an.**
