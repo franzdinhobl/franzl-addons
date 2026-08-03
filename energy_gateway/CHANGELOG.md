@@ -1,3 +1,44 @@
+## 1.6.0
+
+**Wenn du mir schreibst, komme ich jetzt auch an.**
+
+In der App gibt es unter **Mehr → Feedback** seit jeher einen Knopf. Was du
+dort geschrieben hast, landete allerdings in der Datenbank auf deiner eigenen
+Installation — du bekamst eine Bestätigung, und bei uns kam nie ein Wort an.
+Das ist repariert: Deine Rückmeldung erreicht uns wirklich.
+
+Damit ich aus „geht nicht" etwas machen kann, hänge ich automatisch an, was
+zum Nachvollziehen nötig ist — die Versionsstände, deine Gerätemarken und den
+technischen Störungszustand in dem Moment (ob Home Assistant erreichbar war,
+wie viele Sensor-Zuordnungen hängen, wie viele Fehler in der letzten Stunde).
+Keine Messwerte, kein Standort, keine Kontaktdaten. Was du schreibst,
+entscheidest du; unter dem Feld steht jetzt, was mitreist. Einzelheiten in der
+Datenschutzerklärung, Ziffer 6b.
+
+Außerdem zähle ich ab jetzt mit, wie oft ich eine kaputte Sensor-Zuordnung
+selbst repariert habe. Das mache ich längst — nur ließ sich hinterher nicht
+mehr feststellen, ob es funktioniert hat oder nie nötig war.
+
+## 1.5.1 – 1.5.5
+
+**Fünf Runden Feinschliff aus dem echten Betrieb.**
+
+- **Routinen & Alltag**: Der ⚡-Tab trennt „Jetzt" von „Routinen", Wünsche
+  haben einen sichtbaren Lebenslauf, Wochentage gelten überall, und für
+  Warmwasser gibt es Voreinstellungen.
+- **Dein Auto flackerte nachts**: Das VW-Portal lieferte zwei verschiedene
+  Ladestände in wechselnder Reihenfolge — die Mindestladung schaltete das
+  Schütz mehrfach pro Nacht. Ich erkenne jetzt, welcher Wert der lebende ist,
+  und steige erst drei Prozentpunkte über der Grenze wieder aus.
+- **Ladestart bricht nicht mehr ab**: Direkt nach dem Start meldet die Wallbox
+  noch null, während die Hausmesswerte den Zug längst sehen. Ich halte das
+  Ziel jetzt kurz, statt meine eigene Ladung als „kein Überschuss" abzuwürgen.
+- **Ein Aus wird nur gemeldet, wenn es gesendet wurde** — vorher konnte eine
+  veraltete Messung ein nie abgeschicktes Kommando als erledigt buchen.
+- **Tarifwechsel wirkt überall**: Preisgrenze und „günstig genug" steuerten bei
+  einem Fixtarif rund um die Uhr weiter, obwohl die Regler dafür ausgeblendet
+  waren. Verstecken ist kein Abschalten.
+
 ## 1.5.0
 
 **Deine Preisgrenze und dein Hausakku verstehen sich jetzt.**
