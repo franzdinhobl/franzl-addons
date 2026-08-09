@@ -1,3 +1,30 @@
+## 1.6.2
+
+**„Offen" heißt jetzt wirklich offen — und Vollgas ist wirklich Vollgas.**
+
+Der Modus „Offen" verspricht, dass Franzl sich nicht einmischt — und setzte auf
+manchen Wallboxen trotzdem alle 15 Minuten still ein eigenes Limit: 15 Ampere,
+eine Stufe unter dem, was Auto und Box wirklich können. Wer vorher gedrosselt
+hatte („Mit 6 A laden"), dessen Drossel blieb beim Wechsel auf „Offen" zudem
+einfach stehen. Beides ist repariert: Beim Antippen von „Offen" gibt Franzl
+die Box einmal ganz frei, danach schweigt er wirklich — was du an Wallbox oder
+Auto einstellst, bleibt stehen.
+
+Dahinter steckte ein tieferer Fehler, der auch andere Situationen betraf:
+Überall, wo Franzl „volle Leistung" wollte (Mindest-Ladung, „Jetzt laden",
+Sonnen-Vollgas), rechnete er mit einem geratenen Standardwert von 11 kW — und
+landete durch Abrunden bei 15 statt 16 Ampere. Jetzt fragt Franzl die Wallbox
+nach ihrer eigenen Obergrenze, statt zu raten; Box und Auto begrenzen sich
+selbst auf das, was sie wirklich können.
+
+**VW sagt dir nicht mehr fälschlich, dein Passwort sei falsch.**
+
+Volkswagen hat seinem Portal eine neue Einwilligungs-Seite vorgeschaltet.
+Franzl hielt das für ein falsches Passwort und meldete genau das — obwohl das
+Passwort stimmt. Jetzt sagt die Meldung, was wirklich zu tun ist: einmal im
+Browser bei VW einloggen und den Dialog beantworten; danach kommen die
+Fahrzeugdaten von selbst wieder.
+
 ## 1.6.1
 
 **Kleine Ehrlichkeits-Korrekturen an den Karten.**
