@@ -1,3 +1,79 @@
+## 1.6.3
+
+**Vier Ehrlichkeits-Reparaturen aus dem großen Zusagen-Audit.**
+
+Wir haben systematisch geprüft, ob jedes Versprechen der App auf jedem
+Gerätetyp und jeder Marke wirklich eingehalten wird. Vier Lücken sind zu:
+
+- **Dein Ampere-Limit gilt jetzt wirklich immer.** Der Regler „Mit X A laden"
+  deckelte bisher nicht jede Ladung — eine nächtliche Ziel-Ladung („voll bis
+  07:00") und bestimmte Wallboxen konnten dein Limit übergehen. Jetzt wird es
+  als letzter Schritt vor jedem Befehl erzwungen; nur Sonnen-Überschussladen
+  bleibt bewusst ungedrosselt (gedrosselte Sonne wäre verschenkte Sonne).
+- **Nächtliche Ziel- und Günstig-Ladungen werden richtig überwacht.** Zieht
+  das Auto dabei keinen Strom (schläft, ist voll), merkt Franzl das jetzt wie
+  bei jeder anderen Ladung — vorher erzählte die Karte notfalls die ganze
+  Nacht ein Laden, das nicht stattfand, und die Ziel-Ampere fehlten in der
+  Anzeige.
+- **Heizungs-Modus-Taps funktionieren auf jedem Gerät.** Manche Wärmepumpen
+  kennen nur den kombinierten Heiz-/Kühl-Modus; dein Tap auf „Heizen" wurde
+  dort bisher abgelehnt, während Franzls eigene Steuerung funktionierte.
+  Jetzt wird jeder Modus-Befehl an dem geerdet, was das Gerät wirklich kann.
+- **Interne Zustands-Notizen können nie mehr als Befehl rausgehen.** Ein
+  „Halte noch — Schaltschutz"-Zustand konnte als echtes Kommando auf dem
+  Draht landen (bei Batterien mit driftenden Werten). Solche Erzähl-Zustände
+  sind jetzt strukturell vom Senden ausgeschlossen — dieselbe Reparatur-Klasse
+  wie der „Offen"-Fix in 1.6.2, diesmal für alle Gerätetypen.
+
+Dazu: Warmwasser-/Pool-Solltemperaturen kommen jetzt auf allen Schreibwegen
+aus dem Zeitplan (falls einer existiert), nicht mehr aus einem veralteten
+Einzelwert.
+
+**„Aus" merkt sich deine Wunschtemperatur.** Wer einen Warmwasser-/Pool-Heizer
+auf „Aus" stellte, bekam intern die Frostschutz-Temperatur als Ziel gesetzt —
+und beim Zurückschalten auf „Auto" oder „Nur Sonne" blieb die kleben: Das
+Gerät heizte nie wieder, und „Jetzt heizen" zielte auf 5 °C statt auf deine
+Komforttemperatur. Jetzt merkt sich „Aus" den vorherigen Wert und stellt ihn
+beim Verlassen wieder her.
+
+**Aus dem restlosen Prüf-Durchgang (alle offenen Befunde adversarial
+verifiziert), vier weitere Reparaturen:**
+
+- **Der Legionellen-Zyklus schaltete viel zu oft.** Wer den optionalen
+  wöchentlichen Zyklus aktiviert hatte, bekam durch ein invertiertes
+  Prüf-Gatter alle 30 Minuten rund um die Uhr einen Einschalt-Befehl statt
+  einmal pro Woche — Schütz-Verschleiß ohne Nutzen. Gestoppt; die größere
+  Überarbeitung des Zyklus (echte 60 °C mit gemessenem Abschluss) folgt.
+- **Eine Wallbox-Pause gilt erst als erledigt, wenn sie bewiesen ist.**
+  Auf OCPP-Wallboxen konnte „pausiert ✓" gemeldet werden, ohne dass je ein
+  Stopp gesendet wurde (veraltete Messung direkt nach dem eigenen Start) —
+  die Ladesitzung blieb offen und das Auto konnte gegen die Pause wieder
+  anlaufen. Jetzt zählt nur der echte Schalter-Zustand; im Zweifel wird der
+  Stopp wirklich gesendet.
+- **„Jetzt heizen" hält jetzt wirklich, bis du stoppst.** Der Boost vom
+  Aktion-Tab wurde von der eigenen Neuplanung binnen Sekunden zurückgesetzt —
+  das Gerät heizte weiter, aber der Stopp-Knopf verschwand aus der App.
+- **VW-Ladelimit-Änderungen kommen sofort an.** Ein Poll, der nur das
+  im Auto gesetzte Ladelimit änderte (nicht den Akkustand), wurde verworfen —
+  Franzl rechnete bis zur nächsten Akkustand-Änderung mit dem alten Limit.
+
+**Der Legionellen-Zyklus ist jetzt ein echter Zyklus.** Bisher war er ein
+einzelner Einschalt-Befehl, der sofort „erledigt" meldete — ohne je zu prüfen,
+ob die 60 °C erreicht wurden (auf Geräten, deren eigene Abschaltung am
+Komfort-Band hängt, wurden sie nie erreicht). Jetzt gilt: einschalten →
+gemessene 60 °C erreichen → 60 Minuten halten → abschalten; erst dann zählt
+der Lauf. Franzls eigener Band-Abschalter pausiert währenddessen (harte
+Sicherheitsgrenze 63 °C bleibt), ein Gerät, dessen Temperaturband unter 60 °C
+liegt, lehnt den Zyklus ehrlich ab statt zu heizen und zu lügen, der
+Einschalt-Toggle prüft vorab, ob das Gerät überhaupt steuerbar ist, und der
+„zuletzt gelaufen"-Stempel übersteht jetzt Neustarts.
+
+**„Jetzt X Grad" wirkt jetzt auch mit Zeitplan.** Eine direkt gesetzte
+Wunschtemperatur landete bei Geräten mit Zeitplan in einem Feld, das die
+Regelung dort gar nicht liest. Jetzt hebt sie das gerade aktive
+Zeitplan-Band an — und „Aus" schreibt dir umgekehrt nie den Frostschutz in
+den Zeitplan.
+
 ## 1.6.2
 
 **„Offen" heißt jetzt wirklich offen — und Vollgas ist wirklich Vollgas.**
