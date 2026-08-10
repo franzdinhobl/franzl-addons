@@ -1,3 +1,13 @@
+## 1.6.4
+
+**Fahrzeug-Hinweise mit Handlungs-Klasse für die App.** Wenn die Verbindung
+zu deinem Fahrzeug-Konto hakt, unterscheidet Franzl jetzt sauber: Braucht es
+DICH (z. B. eine einmalige Bestätigung im VW-Konto, ein abgelaufener
+Tesla-Login), bekommt die App die Info samt Direkt-Link bzw. Knopf zum
+Neu-Verbinden. Ist es ein Problem auf unserer Strecke, kümmert sich Franzl
+selbst — dir wird nie eine Aufgabe für unser Problem gestellt. (Sichtbar ab
+App-Version 1.2.2.)
+
 ## 1.6.3
 
 **Vier Ehrlichkeits-Reparaturen aus dem großen Zusagen-Audit.**
