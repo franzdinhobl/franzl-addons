@@ -1,3 +1,28 @@
+## 1.6.5
+
+**Franzl hält jetzt das ganze System aktuell — nicht nur sich selbst.**
+
+Bisher aktualisierte sich nur das Franzl Gateway automatisch; Home-Assistant-
+Updates und fremde Add-ons blieben liegen und sammelten sich als Warteliste
+in der HA-Oberfläche. Jetzt gilt „Automatisch aktualisieren" wirklich für
+alles:
+
+- **Home Assistant Core und OS** werden automatisch freigegeben, sobald eine
+  neue Version rund 10 Tage stabil draußen ist (Frühausfälle bekommen ihre
+  Korrektur-Version innerhalb dieses Fensters). Installiert wird wie gehabt
+  nur nachts im Wartungsfenster, mit Gesundheitsprüfung und automatischem
+  Rollback, wenn etwas nicht rund läuft.
+- **Andere Add-ons** (z. B. File Editor) zieht Franzl jetzt ebenfalls im
+  Nachtfenster nach — höchstens eines pro Nacht-Durchlauf, jedes protokolliert
+  in der Update-Historie. Add-ons, die Home Assistant selbst verwaltet, bleiben
+  unangetastet.
+- **Geräte-Firmware bleibt bewusst Handarbeit** (mit Warnung in der App):
+  ein Stromausfall während eines Firmware-Flashs kann Geräte beschädigen,
+  dafür gibt es kein automatisches Zurück.
+
+Nichts davon braucht einen Klick — weder von dir noch von uns. Abschaltbar
+bleibt alles über den bekannten Schalter „Automatisch aktualisieren".
+
 ## 1.6.4
 
 **Fahrzeug-Hinweise mit Handlungs-Klasse für die App.** Wenn die Verbindung
