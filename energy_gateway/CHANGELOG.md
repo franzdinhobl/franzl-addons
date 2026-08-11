@@ -1,3 +1,16 @@
+## 1.6.7
+
+**Franzl erkennt jetzt, wenn die Wallbox selbst die Ladung sperrt.** Manche
+Wallboxen können eine Ladung von sich aus verweigern — etwa über eine in der
+Hersteller-App gesetzte Energiegrenze pro Steckvorgang (NRGkick). Bisher bot
+Franzl stundenlang Sonnenstrom an, das Auto nahm nichts, und die Karte konnte
+nur raten („dein Auto nimmt gerade nichts"). Jetzt liest Franzl das
+Freigabe-Signal der Wallbox: Statt sinnloser Startversuche steht ehrlich da,
+was los ist — z. B. „Die Wallbox hat ihre eigene Energiegrenze erreicht —
+einmal neu anstecken oder die Grenze in der Hersteller-App ändern." Kein
+Schütz-Verschleiß mehr für Ladungen, die die Box gar nicht zulässt. Gibt es
+kein solches Signal, bleibt alles wie bisher.
+
 ## 1.6.6
 
 **OS-Updates schließen jetzt wirklich ab.** Home Assistant hat das Verhalten
