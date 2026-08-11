@@ -1,3 +1,13 @@
+## 1.6.6
+
+**OS-Updates schließen jetzt wirklich ab.** Home Assistant hat das Verhalten
+geändert: Ein OS-Update wird nur noch vorbereitet, der nötige Neustart aber
+nicht mehr automatisch ausgelöst — das Update blieb damit auf halber Strecke
+liegen (so gesehen in der ersten Nacht: Core kam durch, das OS wartete
+vergeblich). Franzl löst den Aktivierungs-Neustart jetzt selbst aus, wie
+alles andere nur im nächtlichen Wartungsfenster. Ein bereits vorbereitetes
+Update wird erkannt und direkt abgeschlossen statt neu angestoßen.
+
 ## 1.6.5
 
 **Franzl hält jetzt das ganze System aktuell — nicht nur sich selbst.**
