@@ -1,3 +1,15 @@
+## 1.6.8
+
+**Kein Phantom-Ladeplan mehr für ein volles Auto.** Steht ein Auto an seinem
+Ladelimit (z. B. angezeigte 99 % bei 100-%-Limit — viele Autos runden und
+beenden knapp darunter), zeigte der Tagesplan trotzdem weiter „Ich lade dein
+Auto um 19 Uhr", wenn der Modus „Jetzt laden" gewählt war — obwohl Franzl
+live längst korrekt nichts mehr sendete. Der Plan nutzt jetzt dieselbe
+Fertig-Erkennung wie die Live-Steuerung und sagt stattdessen ehrlich „schon
+auf 99 %, Ladelimit (100 %) erreicht". Gilt auch für „Offen", das
+Günstig-Fenster und den Preisdeckel; ein Auto ohne lesbaren Ladestand ist
+davon unberührt (unbekannt heißt nie „voll").
+
 ## 1.6.7
 
 **Franzl erkennt jetzt, wenn die Wallbox selbst die Ladung sperrt.** Manche
