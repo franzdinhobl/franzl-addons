@@ -1,3 +1,18 @@
+## 1.6.9
+
+**Lademodus lässt sich jetzt vorwählen, auch wenn kein Auto angesteckt ist.**
+Bisher verschwanden die Modus-Kacheln (Solar, Jetzt laden, Offen, Stopp),
+sobald der Stecker leer war — man musste den Modus immer direkt nach dem
+Ankommen setzen. Jetzt bleibt die Wahl jederzeit möglich und gilt, sobald
+angesteckt wird (die iOS/Android-Seite kommt mit dem nächsten App-Update).
+Dabei drei Aufräumer: eine leere Box bekommt
+keine sinnlosen Sofort-Kommandos mehr (deren Schreibkanal ist ohne Stecker
+oft tot und meldete ein falsches „fehlgeschlagen"), ein vorgewähltes „Offen"
+liefert seine Freigabe beim Anstecken nach (sonst bremste eine alte Drossel
+die neue Session), und der Ladeschalter eines abwesenden Autos wird nicht
+mehr angefunkt (vorher weckte ein Modus-Tipp das schlafende Auto, egal wo es
+gerade stand).
+
 ## 1.6.8
 
 **Kein Phantom-Ladeplan mehr für ein volles Auto.** Steht ein Auto an seinem
