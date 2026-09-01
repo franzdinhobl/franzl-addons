@@ -1,3 +1,13 @@
+## 1.6.11
+
+**Behebt einen Startfehler von 1.6.10.** Auf 1.6.10 blieb das Add-on beim Start
+im Notfallmodus stehen: eine interne Kennung des letzten Datenbank-Schritts war
+zwei Zeichen zu lang für die Spalte, in der sie gespeichert wird. Die Umstellung
+wurde dadurch komplett zurückgerollt, das Gateway startete ohne Steuerung. Die
+Kennung ist jetzt kürzer, der Schritt läuft normal durch. An den Daten ist
+nichts kaputtgegangen, der fehlgeschlagene Schritt wird einfach nachgeholt.
+Alles aus 1.6.10 gilt unverändert, auch der neue Autopilot-Schalter.
+
 ## 1.6.10
 
 **Wichtig: Franzl schaltet nach diesem Update erst wieder, wenn du es
