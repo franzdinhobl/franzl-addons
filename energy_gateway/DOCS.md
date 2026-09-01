@@ -23,7 +23,10 @@ und keine DB-Konfiguration nötig.
 4. Dort wird ein **9-stelliger Aktivierungscode** angezeigt
 5. Lade die **Franzl App** aus dem App Store / Play Store
 6. Erstelle einen Account und gib den Aktivierungscode ein
-7. Die App erkennt automatisch deine Geräte — fertig!
+7. Die App erkennt automatisch deine Geräte
+8. Zum Schluss den **Autopilot einschalten** (Mehr → Optimierung). Bis dahin
+   misst und plant Franzl nur, geschaltet wird nichts — Entdecken ist ein
+   Inventar, kein Steuer-Auftrag.
 
 ## Konfiguration
 
@@ -46,7 +49,7 @@ Das Gateway erkennt automatisch alle Geräte, die in Home Assistant eingerichtet
 
 ## So funktioniert's
 
-Das Franzl Gateway läuft lokal auf deinem Home Assistant — keine Cloud für die Steuerung nötig. Es liest die Messwerte deiner Geräte, berechnet den optimalen Energiefluss und steuert Batterie, Wallbox und Wärmepumpe automatisch.
+Das Franzl Gateway läuft lokal auf deinem Home Assistant — keine Cloud für die Steuerung nötig. Es liest die Messwerte deiner Geräte, berechnet den optimalen Energiefluss und steuert Batterie, Wallbox und Wärmepumpe, sobald du den Autopilot eingeschaltet hast. Ohne diese Freigabe bleibt es beim Messen und Planen; deine eigenen Sofort-Befehle und die Sicherheitsfunktionen laufen immer.
 
 Die App zeigt dir in Echtzeit:
 - Aktuelle Erzeugung, Verbrauch und Netzeinspeisung

@@ -1,3 +1,69 @@
+## 1.6.10
+
+**Wichtig: Franzl schaltet nach diesem Update erst wieder, wenn du es
+einschaltest.** Der Autopilot ist ab sofort eine bewusste Entscheidung, und das
+Update stellt ihn bei allen bestehenden Installationen auf "aus". Anlass war ein
+Tester, bei dem Franzl ungefragt entdeckte Steckdosen geschaltet hat, an einer
+hing sein Server. Entdecken heißt ab jetzt nur noch "ich kenne das Gerät", nicht
+"ich darf es schalten". Einschalten kostet einen Tipp: Mehr, Optimierung,
+Autopilot. Bis dahin misst und plant Franzl weiter, führt aber nichts aus, und
+sagt das auch: der Tagesplan steht im Konjunktiv ("Ich würde ..."), oben liegt
+eine Karte mit dem Schalter, auf der Startseite steht "Ich beobachte nur".
+Deine Sofort-Befehle (Jetzt laden, Jetzt heizen, Stopp) funktionieren
+unverändert, ebenso Sicherheitsfunktionen.
+
+**Wärmepumpe: Anforderung für Raumwärme startete stattdessen eine
+Warmwasser-Ladung.** Betrifft direkt angebundene IDM- und Nibe-Wärmepumpen. Bei
+diesen Modellen liegt die SG-Ready-Anforderung auf Relais-Eingängen und lässt
+sich nicht über Modbus schreiben. Franzl hat den fehlgeschlagenen Versuch als
+"dann eben Warmwasser" gedeutet und alle 30 Minuten eine 60-minütige
+Speicherladung angestoßen: Speicher heiß, Haus kalt. Die Anforderung geht jetzt dorthin,
+wo sie hingehört, nämlich auf die SG-Ready-Relais.
+
+**Ehrlichere Zahlen im Energie-Tab und in den Berichten.** Bisher rechneten
+Tages- und Monatsansicht mit einem festen 5-Minuten-Raster, während die
+Langzeit-Werte über die tatsächliche Messzeit integriert wurden. Derselbe Tag
+konnte sich also ändern, sobald er älter wurde. Beide Seiten rechnen jetzt
+gleich. Dazu: fehlt ein Messwert, steht dort ein Strich statt einer Null.
+Vorher konnte ein ausgefallener Netzzähler zu 100 % Autarkie und 100 %
+Eigenverbrauch führen, inklusive PDF-Export.
+
+**Der Tagesplan verspricht nichts mehr, was die Wallbox gerade ablehnt.**
+Sperrt die Box selbst (Sessionlimit erreicht, Freigabe fehlt), stand im Plan
+weiter "Ich lade dein Auto", obwohl die Live-Steuerung das längst korrekt
+verweigert hat. Der Plan nennt jetzt die Wallbox als Grund. Ebenso: eine
+Wärmepumpe ohne eingestelltes Ziel wird nicht mehr als "auf Zieltemperatur"
+erzählt, und Zeitplan-Fenster gelten jetzt auch im Plan über Mitternacht hinweg
+(Freitagabend plante bisher den Freitags-Zeitplan in den Samstag hinein).
+
+**Wallbox "Offen": die an der Box eingestellte Stromstärke bleibt stehen.** Der
+Modus verspricht, dass du an der Wallbox selbst regelst. Auf nativ angebundenen
+Boxen hat der Mindestladung-Boden diesen Wert trotzdem überschrieben. Außerdem
+fragt Franzl bei Vollgas jetzt die Obergrenze der Box ab, statt aus einem
+angenommenen Maximum eine Ampere-Zahl zu rechnen, die eine Stufe zu niedrig lag.
+
+**Geräte heißen jetzt wie Geräte.** Neu gefundene Geräte bekommen einen echten
+Namen statt einer technischen Kennung, bei mehreren gleichen Geräten kommt der
+Raum dazu. Bestehende Geräte werden nicht heimlich umbenannt, du bekommst im
+Geräte-Detail einen Vorschlag zum Übernehmen. Beim Scan sind Thermik, Klima und
+Steckdosen nicht mehr vorausgewählt: die Liste ist ein Inventar, kein
+Schaltauftrag.
+
+**Und die Rolle "Gast" tut endlich, was die Einladung verspricht.** Sie durfte
+bisher trotz "darf nur zusehen" schalten. Jetzt weist der Gateway jeden
+Steuerbefehl eines Gasts ab, über beide Wege (App-Aufrufe und Live-Verbindung).
+
+Kleinere Korrekturen: der wöchentliche Legionellen-Lauf wird nicht mehr mitten
+im Zyklus abgeschaltet; eine reversible Wärmepumpe bekommt im Winter den
+Heiz-Sollwert statt des Kühl-Werts; eine nie zugewiesene Steckdose steht als
+"Nicht freigegeben" statt "Ausgeschaltet, von dir"; Wallboxen an der
+OCPP-Anbindung werden zuverlässiger erkannt, sodass die Ladeleistung sauber
+geregelt wird statt über ein Profil, das manche Boxen dauerhaft blockiert.
+
+Der Schalter zum Einschalten kommt mit der App-Version 1.2.4, die gerade zur
+Prüfung bei Apple und Google liegt. Bis sie da ist, beobachtet Franzl. Das ist
+Absicht: die sichere Richtung ist die, in der nichts ungefragt schaltet.
+
 ## 1.6.9
 
 **Lademodus lässt sich jetzt vorwählen, auch wenn kein Auto angesteckt ist.**
