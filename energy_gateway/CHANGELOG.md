@@ -1,3 +1,26 @@
+## 1.6.12
+
+**Automatische Updates sind jetzt zwei getrennte Fragen — und beide fragt
+Franzl, statt sie zu setzen.** Bisher hat sich das Add-on beim ersten Start
+selbst in die automatischen Updates von Home Assistant eingetragen, und der
+Schalter "Automatische Updates" in der App galt für Home Assistant, das
+Betriebssystem und andere Add-ons, aber nicht für Franzl selbst. Wer ihn
+ausschaltete, bekam das Gateway trotzdem weiter automatisch aktualisiert.
+Ab jetzt sind es zwei Einstellungen, weil es zwei verschiedene Dinge sind:
+ob sich Franzl selbst aktualisiert (das ist Home Assistants eigene Einstellung
+für dieses Add-on, wir reichen deine Wahl nur durch) und ob Franzl deine
+Home-Assistant-Installation aktualisiert (das ist unsere Arbeit, nachts im
+Wartungsfenster). Beides wird bei der Einrichtung gefragt und lässt sich unter
+Mehr, Software ändern. Was du in Home Assistant umlegst, steht sofort auch in
+der App: für das Selbst-Update speichern wir keinen eigenen Wert. Die passenden
+Schalter kommen mit dem nächsten App-Update.
+
+**Seltener Startfehler behoben.** Beim ersten Start nach einem Update konnten
+sich die Geräte-Überwachung und der Plan-Bau in der Datenbank gegenseitig
+blockieren; der Plan-Bau fiel dann einmal aus und lief beim nächsten Durchgang
+normal weiter. Ursache war die Reihenfolge, in der beide dieselben Zeilen
+gesperrt haben.
+
 ## 1.6.11
 
 **Behebt einen Startfehler von 1.6.10.** Auf 1.6.10 blieb das Add-on beim Start
