@@ -1,3 +1,113 @@
+## 1.7.0
+
+**Wichtig: Franzl fragt ab jetzt bei jedem Gerät, ob er es steuern darf.** Der
+Autopilot-Schalter aus 1.6.10 beantwortet nur "darf Franzl überhaupt" — welche
+Geräte damit gemeint sind, erfuhr man erst hinterher. Jede Wallbox, jede
+Heizung, jede Steckdose und auch der Hausspeicher hat jetzt eine eigene
+Freigabe, und beides muss ja sein, bevor der Optimierer eingreift. Für den
+Bestand ändert sich nichts: freigegeben wird, was heute schon einen Auftrag hat
+(eine Wallbox mit Lademodus, eine Heizung mit Zeitplan oder Band, eine
+Steckdose mit Laufzeit). Ein Gerät ohne Freigabe wird weiter gemessen und
+geplant, aber nicht geschaltet, und sagt das auch. Deine Sofort-Befehle (Jetzt
+laden, Jetzt heizen, Stopp) und alle Sicherheitsfunktionen laufen unverändert.
+
+**Keine ungefragten Annahmen mehr in der Datenbank.** Der Hausanschluss stand
+bei jeder Installation mit 25 kW drin, ohne dass ihn jemand genannt hat — und er
+ist keine Anzeige, sondern die Schranke, gegen die beide Planer rechnen und die
+Live-Drossel begrenzt. Ab jetzt ist er leer, bis jemand antwortet, und die Karte
+sagt offen "Noch nicht eingestellt, ich rechne mit 25 kW. Steht auf deiner
+Hauptsicherung im Zählerkasten." Dieselbe Regel gilt für die Wallbox-Absicherung,
+die Leistung nicht messbarer Geräte und die Reihenfolge, in der der Überschuss
+verteilt wird.
+
+**Der Scan sieht jetzt das Haus, nicht die Entity-Liste.** Der wichtigste Teil
+betrifft große Installationen: ab etwa 1600 Entities kam Home Assistants
+Geräteliste nicht mehr vollständig an, und der Scan fiel still auf ein
+Notverfahren zurück, das Kategorien aus Namen erriet — daher Vorschläge wie
+"Solaranlage 2" bis "Solaranlage 8" und hunderte nicht zugeordnete Werte.
+Genau die Haushalte, die nach etwas aussehen, waren betroffen. Dazu erkennt der
+Scan Geräte jetzt an Signalen und Physik statt an Markennamen, nennt zu jedem
+Vorschlag den Grund, markiert Doppelungen, fragt die Himmelsrichtung einer
+Klimaanlage als Feld ab und stellt die restlichen Fragen (SG-Ready-Relais,
+Wallbox-Absicherung, ungemessene Watt) direkt nach dem Hinzufügen.
+
+**Der Scan zweifelt nicht mehr an, was normal ist.** Nachgefahren an einem
+Haushalt ohne Photovoltaik zeigte sich, dass ausgerechnet dessen Netzzähler mit
+"passt nicht zusammen, bitte prüfen" markiert wurde: ein Hausanschluss, der nur
+bezieht und nie einspeist, ist dort der Regelfall und kein Widerspruch. Und
+umgekehrt wird der Rückfluss jetzt an den Ausschlägen innerhalb der Stunde
+gemessen statt am Stundenmittel: ein Haus mit Photovoltaik bezieht im Schnitt
+und speist trotzdem zwischendurch ein, wurde bisher aber als reiner Verbraucher
+gelesen. Dazu
+wird das Außengerät einer Multisplit-Klimaanlage nicht mehr als Netzzähler
+angeboten, ein Hilfssensor am selben Gerät (etwa "Boost läuft" am Heizstab)
+nicht mehr als zweites Gerät, und Carport, Autostrom oder Mähroboter sind keine
+Fahrzeuge mehr. Ein Vorschlag behauptet außerdem nicht mehr, Home Assistant habe
+keine Geräteliste geliefert, wenn sie sehr wohl gelesen wurde.
+
+**Neuer Router: Franzl erkennt den Umzug und räumt auf, so weit er darf.**
+Bekommen alle Geräte neue Adressen, hat Franzl bisher nur "Netzzähler liefert
+keine Daten" gemeldet und im alten Netz weitergesucht. Jetzt merkt er, dass die
+Box selbst in einem anderen Netz steht, sucht seine direkt angebundenen Geräte
+dort wieder (Seriennummer-geprüft), stellt Home-Assistant-Integrationen über
+deren eigenen "Neu konfigurieren"-Weg um, sobald er das Gerät auf dem neuen Netz
+eindeutig wiedererkennt, und sagt für den Rest, was zu tun ist: bei einer
+Wallbox, die sich selbst bei Home Assistant meldet, die neue Adresse zum
+Eintragen. Die Suche selbst hämmert nicht mehr, sondern wird bei Erfolglosigkeit
+seltener (5 Minuten bis 6 Stunden) und hinterlässt jedes Mal eine Logzeile.
+
+**Und wenn der Router den Namensdienst mitnimmt.** Nach einem Tausch steht in
+der Box oft noch die Adresse des alten Routers als Namensserver. Dann wartet
+jede Verbindung sekundenlang, bevor sie überhaupt beginnt: Home Assistant
+verliert Integrationen beim Start, der Fernzugriff wird zäh, Preis- und
+Wetterdaten kommen verspätet. Franzl prüft das jetzt mit einer echten Anfrage,
+statt nur die Adresse anzusehen, meldet es zusammen mit dem Netzwerk-Wechsel und
+räumt den toten Eintrag auf Wunsch mit einem Tipp weg. Entfernt wird er nur,
+wenn ein anderer eingetragener Namensserver antwortet, und ein bewusst gesetzter
+Filter-Server (Pi-hole, AdGuard) bleibt stehen.
+
+**Ein Messwert gehört genau einem Gerät.** Beim Reparieren einer echten Anlage
+kam heraus, dass "Geräte erneut suchen" bei zwei Wallboxen derselben Kategorie
+die Werte der Nachbarbox übernehmen konnte, samt Steuerkanal — danach fuhr das
+Ziel des einen Autos die Box des anderen, und keiner der beiden Karten sah man
+etwas an. Weder die automatische Reparatur noch das erneute Suchen greifen jetzt
+auf fremde Hardware zu, und wenn zwei Geräte doch auf denselben Wert zeigen,
+wird das gemeldet statt still umgehängt. Dazu prüft Franzl, ob ein Gerät
+überhaupt auf der Hardware steht, die sein Profil behauptet.
+
+**Was du in der App tippst, bleibt sofort stehen.** Ein Moduswechsel oder ein
+Zug am Ladestrom-Regler konnte bis zu einer Minute lang von der alten
+Live-Entscheidung überschrieben werden: der Chip sprang zurück, der Regler
+wanderte, und die Erklärzeile erzählte noch die Sonne, während schon geladen
+wurde. Jeder Schreibvorgang verwirft jetzt die Entscheidung, die vor ihm
+getroffen wurde.
+
+**Jetzt filtern, jetzt lüften.** Filterpumpe und Lüftungsanlage haben im
+Aktion-Tab einen Sofort-Lauf mit Dauer, danach gilt wieder der stehende Modus.
+Der Tagesplan zeigt ihn nur so lange, wie der Timer wirklich läuft, statt ihn
+über den Rest des Tages zu malen, und "Jetzt lüften" trifft auch Anlagen, deren
+Stufe "Intensiv" oder "Stoßlüften" heißt.
+
+**Kleinere Korrekturen.** Die Kennung eines OCPP-Ladepunkts gilt jetzt auf allen
+Wegen, auch bei der Erkennung, ob es überhaupt ein OCPP-Charger ist — vorher
+konnte eine von Hand gesetzte Kennung dort ignoriert werden und die Ladung auf
+einen Weg fallen, den manche Ladegeräte ablehnen. Übernehmen das erneute Suchen oder
+die automatische Selbstreparatur einen anderen Messwert, kommt jetzt auch dessen
+Einheit mit; vorher konnte ein Kilowatt-Faktor auf einem Watt-Sensor
+stehenbleiben und das Tausendfache melden. Eine Rollen-Zuweisung von Hand trägt
+die Einheit des gewählten Werts, statt sie zu erraten. Und ein Zug am
+Temperatur-Regler wirkt sofort, statt erst beim nächsten Planlauf.
+
+**Zwei Datenbank-Schritte laufen beim Update mit** (Freigabe pro Gerät,
+Hausanschluss darf leer sein). Beide sind verhaltensneutral und gegen eine echte
+Postgres-Datenbank vorwärts und rückwärts getestet.
+
+**Die Bildschirme zu einigen dieser Punkte kommen mit dem nächsten
+App-Update** — die Freigabe-Frage am Gerät, die Netzwerk-Wechsel-Karte im
+Geräte-Tab, die Begründungszeile im Scan und die Sofort-Lauf-Kacheln. Das
+Gateway bringt die Grundlage mit; bis dahin verhält es sich ehrlich, aber ohne
+die neuen Bedienelemente.
+
 ## 1.6.12
 
 **Automatische Updates sind jetzt zwei getrennte Fragen — und beide fragt
