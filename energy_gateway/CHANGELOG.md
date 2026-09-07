@@ -1,3 +1,70 @@
+## 1.8.0
+
+**Ladeziele gehören jetzt dem Auto, nicht der Wallbox.** Die meisten Wallboxen
+kennen den Ladestand des Autos nicht, und Franzl hat bisher so getan, als
+wüsste er ihn. Ab jetzt sagst du dem Auto, was es braucht: bis wann es voll sein
+soll, wie viele Kilowattstunden dazukommen sollen, welchen Boden es nie
+unterschreiten darf und bis zu welchem Preis es mitnehmen soll. Das gilt auch
+für Autos, die ihren Ladestand nicht verraten. Ein "Bis morgen voll" gibt es
+als Einmal-Auftrag direkt im Aktion-Tab. Jeder Ladepunkt hat immer ein Auto,
+notfalls einen Platzhalter, und wenn zwei Autos dieselbe Box teilen, fragt
+Franzl, welches gerade dran ist, statt zu raten. Eine Steckdose kann als
+Ladepunkt eingerichtet werden. Und ein Auto ohne Ladestand gilt als fertig,
+sobald es von selbst aufhört zu ziehen, statt alle paar Minuten neu geweckt zu
+werden.
+
+**Die Ladekarte und der Bordlader erkennen das Auto.** Eine RFID-Karte oder
+Autocharge-Kennung, die du einem Auto zuordnest, gilt als Beweis, wer an der
+Box hängt. Und was ein Auto beim Laden nachweislich zieht (3,7, 7,4, 11 oder
+22 Kilowatt), schließt die Autos aus, die das nicht können. Beides erkennt
+Franzl nur mit deiner Bestätigung, nie von allein. Der "Fertig"-Zustand eines
+Autos ohne Ladestand überlebt jetzt einen Neustart des Gateways, vorher kostete
+jeder Neustart auf Boxen ohne Stecker-Signal Dutzende Weckversuche pro Tag.
+
+**Wenn die Wallbox nicht mehr antwortet, hört Franzl auf das Auto.** Verliert
+eine OCPP-Wallbox ihre Verbindung, bleiben ihre Werte in Home Assistant
+eingefroren und sehen gesund aus. Genau so hat ein Tesla an einer nicht mehr
+erreichbaren Box eine halbe Stunde lang ungebremst geladen, während das Auto
+selbst die ganze Zeit "lädt, 4 Kilowatt, Kabel steckt" gemeldet hat. Franzl
+prüft die Verbindung zur Box jetzt aktiv, liest bei einem verknüpften Auto
+dessen eigene Meldungen (Kabel, Ladezustand, Ladeleistung) und stoppt oder
+drosselt das Laden notfalls über das Auto, wenn die Box es nicht mehr
+annimmt. Gestartet wird über das Auto nie. Meldet das Auto, dass es gar nicht
+angesteckt ist, schickt Franzl auch keine Startbefehle mehr an eine leere Box,
+weckt das Auto nicht und schreibt ihm keine Ampere. Dazu zählt ein übersprungener
+Befehl nicht mehr als Erfolg: vorher konnte eine Box stundenlang jeden Befehl
+ablehnen, ohne dass Franzl sie je als nicht erreichbar gemeldet hat. Jetzt
+kommt die Meldung, und der Netzwerk-Bericht erkennt, wenn sich die Box wieder
+verbunden hat.
+
+**Wort-Werte werden als Wörter gelesen.** Nach einer Reparatur der
+Geräte-Zuordnung konnte der Stecker-Status einer Wallbox ("Available",
+"charging") still als Zahl gelesen werden und war damit unbekannt. Die Folge
+war die Wallbox, die aus der App verschwand, und ein Solar-Follower, der einen
+leeren Stecker den ganzen Nachmittag für belegt hielt. Jetzt liest Franzl ein
+Wortfeld immer als Wort, egal wer die Zeile geschrieben hat. Auf der Startseite
+steht bei einer Wallbox, die nach einem Auto benannt ist, jetzt "Wallbox" dabei.
+
+**VW-Konto: die Marketing-Frage beantwortet Franzl selbst.** Fragt das
+VW-Portal nach dem Login nach einer Einwilligung in Werbung, drückt Franzl "Nicht
+jetzt" und macht weiter. Alles andere (AGB, Datenschutz) bleibt bei dir, und
+wenn so eine Frage offen ist, siehst du das jetzt auf der Startseite, in der
+Fahrzeugzeile und einmalig als Nachricht, statt drei Wochen lang einen alten
+Ladestand zu sehen. Ein Teil-Datensatz des Portals verdeckt den Ladestand nicht
+mehr.
+
+**Ein Messwert gehört genau einem Gerät, jetzt auch an den letzten drei Türen.** Das
+SG-Ready-Relais einer Wärmepumpe lässt sich nicht mehr an eine zweite binden, die
+automatische Status-Ergänzung einer Wallbox übernimmt keinen Wert, der schon einer
+anderen gehört, und beim Fühler bleibt Teilen erlaubt (ein Raumfühler darf Heizung
+und Klimagerät dienen), ein Leistungssensor als Fühler wird dagegen abgelehnt. Der
+Wächter dazu meldet jetzt auch Ausnahmen, die keine mehr sind.
+
+**Drei Datenbank-Schritte laufen beim Update mit** (Ziele am Fahrzeug,
+Ladekarten und Fertig-Zustand, Fahrzeug-Meldungen). Alle drei fügen nur hinzu,
+ändern keinen bestehenden Wert und sind gegen eine echte Postgres-Datenbank
+vorwärts und rückwärts getestet.
+
 ## 1.7.0
 
 **Wichtig: Franzl fragt ab jetzt bei jedem Gerät, ob er es steuern darf.** Der
