@@ -1,3 +1,14 @@
+## 1.8.4
+
+**Der Steckerstatus, den niemand liefern muss.** Die meisten Wallboxen melden
+nicht, ob ein Auto hängt, und viele Autos haben keinen Kabelsensor — ohne
+dieses Signal konnte der Rückfall bei einer toten Wallbox gar nichts tun.
+Der Hausverbrauch beantwortet die Frage aber selbst: Was hier lädt, steht in
+der eigenen Bilanz. Meldet das Auto 6 kW und das Haus zieht 6,9 kW, hängt es
+hier; meldet es 6 kW und das Haus zieht 0,3 kW, lädt es woanders — und das
+schlägt jeden Kabelsensor, denn der meldet an einer öffentlichen Säule genau
+dasselbe. Ohne Netzzähler ändert sich nichts.
+
 ## 1.8.3
 
 **Das Auto steht nicht immer an deiner Wallbox — und darf nur dann für sie
