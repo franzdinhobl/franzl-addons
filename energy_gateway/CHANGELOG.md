@@ -1,3 +1,17 @@
+## 1.8.1
+
+**Eine nicht erreichbare Wallbox darf nicht behaupten, das Auto sei weg.** Verliert
+eine OCPP-Wallbox ihre Verbindung, friert Home Assistant ihren letzten
+Steckerzustand ein. Stand dort "frei", galt das Auto überall als abgesteckt: die
+Karte zeigte "nicht angesteckt" über einem ladenden Auto, und "Jetzt laden"
+antwortete "Ich lade, sobald du anschließt", ohne den Ladeschalter des Autos
+auch nur anzufassen. Der Regler wusste es seit 1.8.0 besser, aber jede andere
+Stelle hat die Frage noch einmal selbst an die eingefrorene Box gestellt. Jetzt
+beantwortet sie eine einzige Stelle: solange die Wallbox spricht, gilt ihre
+Antwort, und sobald sie verstummt ist, entscheidet das Auto mit seinem eigenen
+Kabel-Signal. Betrifft Karte, Verlauf nach Neuverbinden, Tagesplanung und den
+Modus-Knopf. Eine wirklich leere Wallbox verhält sich unverändert.
+
 ## 1.8.0
 
 **Ladeziele gehören jetzt dem Auto, nicht der Wallbox.** Die meisten Wallboxen
