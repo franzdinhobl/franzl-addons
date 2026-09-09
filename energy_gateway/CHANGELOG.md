@@ -1,3 +1,58 @@
+## 1.10.0
+
+**Was du einstellst, wird dort gespeichert, wo du es einstellst.** Das
+Geräte-Detail ist über Monate Karte um Karte gewachsen, und zusammen ergab das
+Widersprüche: ein Speichern-Knopf stand frei zwischen zwei Karten, obwohl unter
+ihm noch fünf folgten, die sich alle sofort selbst speichern — man musste
+raten, wofür er gilt. „Fahrzeug" und „Standard-Auto" waren zwei Karten
+direkt untereinander, ohne dass jemand sagen konnte, worin sie sich
+unterscheiden. Jetzt sitzt Speichern in der Karte, die es speichert; das Auto
+hat eine Karte; Verknüpfung lösen und Fahrzeug entfernen liegen im Menü statt
+als rote Zeile neben dem Verknüpfen-Knopf. Lange Regler-Beschriftungen brechen
+nicht mehr mitten im Wort um, und die Korrekturen („Stimmt etwas nicht?")
+stehen als eigener Abschnitt unten, mitsamt dem Vorzeichen-Flip des Speichers.
+
+**Deine Klimaanlage sagt jetzt, worauf sie zielt.** Der Zielbereich stand nur
+klein im Zeitplan-Balken; ein frisch angelegtes Klimagerät hatte dafür gar kein
+Bedienelement, obwohl genau das der häufigste Fall ist. Neu ist die Karte
+„Zieltemperatur". Legst du Zeiten fest, tritt sie zurück und verweist nach
+unten — es bleibt bei einem Ort für Zeiten. Kenne ich den geltenden Bereich
+nicht, zeige ich keinen Regler, statt eine Vermutung hinzustellen, die dein
+erster Zug zur Antwort machen würde.
+
+**Die Filterpumpe läuft, wenn die Sonne da ist — nicht, wenn die Uhr es sagt.**
+Innerhalb der Sonnenstunden kosten alle Stunden dasselbe, und genau dort
+entschied bisher eine Hilfsregel nach der Uhrzeit: die Pumpe lief die
+aufsteigende Flanke des Vormittags, wo eine Wolke den Überschuss wegnimmt,
+während die dicken Mittagsstunden frei blieben. In einem Haushalt, der
+einspeist, war sie damit teurer als eine dumme Zeitschaltuhr. Jetzt entscheidet
+der erwartete Überschuss — bei identischer Energie und identisch gehaltener
+Laufzeit-Garantie, und in beiden Planern gleich.
+
+**Fährt deine sonnenBatterie ihre Batteriepflege, halte ich mich raus.** sonnen
+lädt den Speicher periodisch voll durch, um den Ladestand zu kalibrieren und
+die Zellen auszugleichen. Dagegen zu steuern verlängert das nur; ich erkenne es
+jetzt am Gerät und lasse ihm den Vortritt. Meldet dein Speicher das Feld nicht,
+ändert sich nichts.
+
+**Nach einem Neustart wartet nichts mehr ohne Grund.** Mehrere interne Sperren
+rechneten „zuletzt getan" ab dem Systemstart statt ab dem letzten Mal. Auf
+einer gerade gestarteten Box unterdrückte das die jeweils ERSTE Handlung, je
+nach Sperre bis zu sechs Stunden — betroffen waren unter anderem das Anstupsen
+eines schlafenden Autos, das Aufräumen eines blockierten Ladeprofils, das
+Stundenbudget der Wärmepumpen-Schaltungen und die Reparatur der
+VW-Datenabfrage.
+
+**Kleineres.** Der Installer fragt die Home-Assistant-Kontextfelder jetzt selbst
+(go-e-Ladename), und eine zweite Box macht die Frage für die erste sofort
+sichtbar statt erst beim nächsten Verbinden. Fehlen die Börsenpreise für morgen,
+trägt auch die Ersatz-Planung Wärme über das Rasterende hinaus, statt am
+letzten bekannten Preis abzubrechen. Ein Raum, der abends von selbst wärmer
+wird, verdirbt der Wärmepumpe nicht mehr die gelernte Auskühlrate. Und wer im
+Haushalt keine Verwaltungsrechte hat, sieht bei „Leistung", „Elektrischer
+Anschluss" und „Phasen" die Angabe als Text statt ausgegrauter Bedienelemente,
+die ohnehin nichts tun.
+
 ## 1.9.2
 
 **Beobachten heißt sehen, was ich getan hätte.** Auch ein Gerät, das du mir
