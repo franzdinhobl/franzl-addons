@@ -1,3 +1,64 @@
+## 1.9.2
+
+**Beobachten heißt sehen, was ich getan hätte.** Auch ein Gerät, das du mir
+nicht freigegeben hast, plane ich im Beobachtungsmodus als Schattenplan und
+sage es im Konjunktiv. Neu im Tagesplan: der Schatten-Rückblick. Für jeden der
+letzten sieben Tage siehst du je Gerät, was ich geladen oder geheizt hätte,
+was das gebracht hätte, und daneben, was gemessen wurde.
+
+**Der Plan reicht bis morgen Abend, und eine fehlende Börsenstunde ist keine
+Fixtarif-Stunde.** Ich plane den Rest von heute plus den ganzen morgigen Tag.
+Fehlt für eine Stunde noch der Börsenpreis, plane ich sie nicht mit einem
+erfundenen Preis. Liegt dein Ladeziel dann außerhalb der bekannten Stunden,
+sage ich das („Preise für morgen fehlen noch“) und lade nicht vorschnell heute
+Abend. Tibber ist als Preisquelle dabei (persönlicher Token von
+developer.tibber.com); Tibbers Preis ist schon der Haushaltspreis, ich rechne
+nichts obendrauf.
+
+**Wenn der Speicher noch hält, heize ich nicht gegen die Nachmittagssonne.**
+Hat dein Warmwasser oder deine Wärmepumpe gelernt, wie schnell sie auskühlt,
+und braucht der Plan im ganzen Horizont keine Wärme, bleibt das Gerät aus,
+auch bei Sonne. Der Live-Regler folgt dem. Warmwasser bekommt dazu einen
+Wochentag-Zeitplan, damit du sagen kannst, wann es warm sein muss.
+
+**Nichts schaltet ungefragt.** „Speicher halten, wenn du schnell lädst“ ist ein
+Schalter, der aus steht, bis du ihn stellst. Gefragt wirst du beim Hinzufügen
+des Autos, wenn dein Speicher das kann; danach im Speicher- und im
+Fahrzeug-Detail. Fährt dein Speicher ein eigenes Programm (sonnen Grid
+Rewards), wählst du die Entity aus einer Liste, und ich lasse ihn in Ruhe,
+solange sie „an“ ist. Zwei Netzzähler: die Frage „eigener Zählpunkt oder
+derselbe Anschluss“ steht jetzt auch im Geräte-Detail, und „derselbe
+Anschluss“ zählt in keine Summe. Und wenn ich neu starte, merke ich mir, in
+welchem Modus die sonnenBatterie vorher stand, statt sie auf Eigenverbrauch
+zurückzusetzen.
+
+**Statistik, die Rechenschaft gibt.** Neu: Jahres- und Gesamtbericht mit
+tatsächlichen Stromkosten, Ersparnis nach Speicher, Auto und Wärme,
+Eigenverbrauch, Einspeisung und entgangener Einspeisevergütung. Trägst du
+einen Vergleichstarif ein, siehst du, was derselbe Bezug bei einem Fixtarif
+gekostet hätte. „Wie ich rechne“ erklärt die Baseline je Kategorie. Am Auto
+trägst du Verbrenner-Verbrauch, Spritpreis und kWh/100 km ein und loggst
+öffentliche Ladebelege; ohne diese Zahlen steht dort nichts.
+
+**Ford über FordPass, EMH CASA am HAN.** Ladezustand, Ladeleistung und
+Standort eines Ford zählen jetzt als zweite Wahrheit, wenn die Wallbox
+verstummt. EMH CASA spricht HTTPS mit Benutzer und Passwort, nicht das
+DLMS-Zertifikat; das Profil bleibt unverifiziert, bis ein echtes Gerät die
+Momentanleistung bestätigt.
+
+## 1.9.1
+
+**Ein Cloud-Kontingent beschreibt einen Zugang, kein Gerät.** Manche
+Hersteller-Clouds erlauben nur eine feste Zahl Aufrufe pro Tag, und wer sie
+überzieht, sperrt sich aus seiner eigenen Hersteller-App aus. Ich deckle
+deshalb meine automatischen Kommandos für solche Geräte. Nur habe ich den
+Deckel am PROFIL festgemacht statt am Weg: dieselbe Klimaanlage kostet über die
+Hersteller-Cloud Aufrufe und über eine lokale Anbindung nichts, wurde von mir
+aber trotzdem auf 36 Kommandos am Tag gebremst. Jetzt gilt der Deckel nur, wenn
+das Gerät wirklich über den Cloud-Weg hängt. Weiß ich es nicht sicher, bleibt
+er stehen: sich aus der eigenen App auszusperren ist schlimmer als ein zu
+vorsichtig geregeltes Gerät.
+
 ## 1.8.4
 
 **Der Steckerstatus, den niemand liefern muss.** Die meisten Wallboxen melden
