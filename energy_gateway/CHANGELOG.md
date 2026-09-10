@@ -1,3 +1,23 @@
+## 1.10.1
+
+**Beim Schnellladen halte ich deinen Speicher jetzt überall, wo er es annimmt.**
+Der Schalter „Beim Schnellladen: Speicher halten" wirkte nur bei Speichern, die
+ich direkt anspreche. Nimmt dein Speicher das Halten über einen
+Home-Assistant-Dienst an — zum Beispiel ein E3DC —, dann stand der Schalter da,
+ließ sich einschalten, und ich habe trotzdem nichts gehalten, während die Karte
+„Solange ich halte, regelt dein Speicher nicht selbst" versprach. Jetzt frage
+ich an derselben Stelle nach, an der auch die Planung nachfragt, und halte dann
+wirklich. Wer den Schalter aus hat, merkt keinen Unterschied.
+
+**Kleineres.** Für Autos ohne eigenen Ladestand gab es einen halb gebauten
+Schätzwert: man konnte einen Startwert eintragen, und ich sollte ihn mit der
+geladenen Energie hochrechnen. Gerechnet habe ich nie — der Wert blieb stehen,
+wo er eingetragen wurde, während die Anzeige ihm mit der Zeit immer weniger
+Gewissheit zusprach. Diese halbe Funktion ist entfernt. Für ein Auto ohne
+Ladestand plane ich weiterhin in Kilowattstunden und nach Abfahrtszeit, und wenn
+ein vorhandener Sensor stehen bleibt, rechne ich den Stand aus der geladenen
+Energie hoch. Schon eingetragene Startwerte bleiben gespeichert.
+
 ## 1.10.0
 
 **Was du einstellst, wird dort gespeichert, wo du es einstellst.** Das
