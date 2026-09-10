@@ -1,3 +1,43 @@
+## 1.10.2
+
+**Ein Häkchen bedeutet wieder, dass etwas passiert ist.** Wenn du für deinen
+Heizstab oder deine Wärmepumpe Leistungsstufen eingetragen hast — also die
+Stufen, die das Gerät wirklich fahren kann —, dann habe ich manchmal weniger
+angefordert, als die kleinste Stufe hergibt. Das Gerät bleibt dann aus, richtig
+so, denn eine Stufe höher hätte Netzstrom gekauft. Nur habe ich die Stunde
+danach als erledigt abgehakt und dazu „Heizt auf Vorrat" geschrieben. Ab jetzt
+plane ich von vornherein nur Mengen, die dein Gerät liefern kann. Und falls es
+doch einmal nicht geht, sage ich es und nenne die Grenze: „Ich wollte deinen
+Warmwasserspeicher sanfter laufen lassen, als er kann — unter 1,0 kW geht bei
+ihm nichts, also blieb er aus." Wer keine Stufen eingetragen hat, merkt keinen
+Unterschied.
+
+**Deinen Hausanschluss halte ich jetzt wirklich ein — wenn du ihn mir gesagt
+hast.** Bei mehreren Klimageräten oder Splits an einem Anschluss habe ich zwar
+gerechnet und gedrosselt, aber ein Klimagerät nimmt eine halbe Leistung gar
+nicht an: es läuft oder es läuft nicht. Meine Drosselung stand also nur auf dem
+Papier, und meistens habe ich nicht einmal gemerkt, dass ich über der Grenze
+war. Jetzt rechne ich mit dem, was wirklich fließt, und schalte ein Gerät ganz
+ab statt es halb zu drosseln — und zwar das Zimmer mit dem meisten Puffer, das
+also am längsten warm bleibt. Das gilt nur, wenn du deinen Hausanschluss
+eingetragen hast; auf eine Zahl, die ich bloß annehme, greife ich nicht härter
+ein. Der Tagesplan sagt, welches Gerät es war und warum.
+
+**Wenn die Sonne nicht für die kleinste Stufe reicht, sage ich das.** Zieht
+eine Wolke durch, halte ich ein laufendes Gerät kurz weiter, statt es
+flattern zu lassen — bei einem Gerät mit Stufen habe ich dabei manchmal 0 W
+angefordert und trotzdem „Ich heize dein Wasser mit 1,0 kW Sonne" geschrieben.
+Jetzt halte ich es auf seiner kleinsten Stufe, also mit dem wenigsten Netz, das
+es kann, und die Zeile sagt es: „Die Sonne reicht nicht für die kleinste Stufe —
+ich halte 1,0 kW (teils Netz)."
+
+**Kleineres.** Mein Plan verspricht nichts mehr, was der Anschluss nicht
+trägt — vorher konnte der Tagesplan bei mehreren Klimageräten mehr zusagen, als
+gleichzeitig möglich ist. Ein abgeschaltetes Gerät heißt jetzt „abgeschaltet"
+statt „gedrosselt", und diese Zeile gibt es auch auf Englisch (vorher stand
+dort für englische Haushalte Deutsch). Hast du deinen Hausanschluss nicht
+eingetragen, sagt sie außerdem, dass ich mit einer Annahme rechne.
+
 ## 1.10.1
 
 **Beim Schnellladen halte ich deinen Speicher jetzt überall, wo er es annimmt.**
