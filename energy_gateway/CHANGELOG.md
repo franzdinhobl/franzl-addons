@@ -1,3 +1,24 @@
+## 1.10.3
+
+**Für deinen Komfort verlasse ich mich nicht mehr auf die Wettervorhersage.**
+Wenn dein Warmwasserspeicher oder deine Heizung eine Untergrenze hat, die ich
+halten soll, habe ich sonnige Stunden bisher schon als erledigt verbucht, bevor
+die Sonne überhaupt da war — und in der billigen Nacht davor entsprechend nichts
+eingekauft. Blieb die Sonne dann aus, war der Speicher zu kalt, und nachheizen
+musste ich zur teuersten Zeit. Ab jetzt kaufe ich die günstige Stunde, die deine
+Zusage braucht. Scheint die Sonne, kostet mich dieselbe Stunde ohnehin nichts —
+ich muss sie mir vorher nicht gutschreiben. Gemessen über sechs Tage und vier
+Wetterverläufe: nur noch gut ein Drittel der Minuten unter deiner
+Wunschtemperatur, und dabei rund drei Euro weniger auf der Rechnung, bei genau
+derselben gelieferten Wärme.
+
+**Und ein Nur-Sonne-Fenster bleibt wirklich eins.** Hast du für eine Zeit „nur
+Überschuss" eingestellt und direkt danach beginnt ein Fenster mit Untergrenze,
+habe ich diese Untergrenze eine Stunde zu früh angesetzt — mitten in dein
+Sonnen-Fenster hinein, in dem ich gar keinen Strom kaufen darf. Erfüllen konnte
+ich sie dort nicht, melden schon. Jetzt gilt sie ab der Stunde, in der ich sie
+auch einlösen darf.
+
 ## 1.10.2
 
 **Ein Häkchen bedeutet wieder, dass etwas passiert ist.** Wenn du für deinen
