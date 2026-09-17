@@ -1,3 +1,39 @@
+## 1.11.0
+
+**Der Legionellen-Lauf richtet sich nach deinem Speicher, nicht mehr nach dem
+Kalender.** Bisher lief er jeden Montag um drei Uhr früh aus dem Netz. Jetzt ist
+er fällig, wenn seit der letzten Desinfektion dein Intervall vergangen ist — und
+als Desinfektion zählt jede gemessene 60-°C-Phase, egal wer geheizt hat. In den
+Tagen davor nehme ich die Sonne: reicht der Überschuss und trägt die Prognose
+den ganzen Lauf, starte ich ihn am Nachmittag statt in der Nacht. Klappt das
+nicht, läuft er am Fälligkeitstag in der günstigsten Nachtstunde. In der
+Simulation hat das den Netzstrom für diese Läufe halbiert, ohne dass je mehr als
+dein Intervall dazwischen lag. Wie oft und ab wann ich die Sonne nutzen darf,
+stellst du mit dem nächsten App-Update selbst ein; bis dahin gelten sieben Tage
+und zwei Tage Vorlauf.
+
+**Wenn Tibber dein Auto lädt, zahlt dein Hausspeicher nicht mehr mit.** Hast du
+„Beim Schnellladen: Speicher halten" eingeschaltet, galt das bisher nur, wenn du
+selbst „Jetzt laden" getippt hast. Lud Tibber das Auto in einer
+Grid-Rewards-Session, hielt niemand den Speicher, und er hat sich ins Auto
+entladen. Derselbe Schalter gilt jetzt für beides. Ist er aus, bleibt alles wie
+bisher.
+
+**Ich merke mir, wann dein Speicher zuletzt voll war.** Das steht künftig auf
+der Speicher-Karte. Für Speicher, die ich aus dem Netz laden kann, gibt es dazu
+eine neue Einstellung: eine Vollladung spätestens alle paar Wochen. Ich warte
+dafür zuerst auf einen sonnigen Tag, der den Speicher von selbst füllt. Erst
+wenn der bis zur Frist ausbleibt, lade ich nachts zur günstigsten Stunde nach.
+Die Einstellung ist aus, bis du sie einschaltest, und kommt mit dem nächsten
+App-Update. Ob dein Speicher danach seine eigene Pflegeladung auslässt, weiß ich
+nicht — das hängt vom Hersteller ab.
+
+**Ein zweiter Fühler am Pufferspeicher.** Du kannst unter „Geräte-Zuordnung
+prüfen" einen zweiten Temperaturfühler zuordnen, etwa unten im Speicher. Ich
+zeige ihn an und beobachte, wie weit oben und unten auseinanderliegen. Meine
+Entscheidungen treffe ich weiter nach dem oberen Fühler, denn das ist das Wasser,
+das bei dir ankommt.
+
 ## 1.10.3
 
 **Für deinen Komfort verlasse ich mich nicht mehr auf die Wettervorhersage.**
