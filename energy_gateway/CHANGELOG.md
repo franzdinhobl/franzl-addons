@@ -1,3 +1,55 @@
+## 1.11.1
+
+**Wenn ich nur beobachte, fasse ich nichts an — wirklich nichts.** Das war
+nicht überall so, und das tut mir leid. Drei Dinge habe ich bisher auch dann
+getan, wenn ein Gerät auf „Nur beobachten" stand oder ich insgesamt nur
+zugeschaut habe: Hattest du bei einem Warmwasserspeicher den Legionellenschutz
+durch mich eingeschaltet, habe ich den 60-°C-Lauf trotzdem gefahren. Hattest du
+einen Temperaturbereich eingestellt, habe ich bei manchen Heizstäben die
+Abschaltgrenze am Gerät darauf nachgezogen. Und bei OCPP-Wallboxen habe ich das
+Mess-Intervall auf 30 Sekunden gesenkt. Alles drei passiert jetzt nur noch, wenn
+das Gerät freigegeben ist und ich steuern darf. Deine Einstellungen bleiben
+gespeichert und gelten, sobald du freigibst; die Karte sagt dir bis dahin, warum
+der Legionellen-Lauf nicht stattfindet.
+
+**Ich schalte nur noch ab, was ich selbst eingeschaltet habe.** Ein Heizstab an
+einem Relais mit Temperaturfühler wurde von mir abgeschaltet, sobald das Wasser
+über deinem „Höchstens" lag — auch wenn gar nicht ich ihn eingeschaltet hatte,
+sondern du von Hand oder eine eigene Automation, etwa für einen Hygienelauf auf
+60 °C. Das war falsch, egal in welchem Zustand. „Höchstens" heißt jetzt genau
+das, was auf der Karte steht: darüber heize ich nicht. Was jemand anderes
+einschaltet, gehört ihm.
+
+**Ein Legionellen-Lauf, den du mittendrin abbestellst, hört auch auf.** Bisher
+lief der Heizstab dann unter Umständen weiter, bis zur Sicherheitsgrenze bei
+63 °C. Jetzt schalte ich ihn beim nächsten Durchgang ab, und wenn das Abschalten
+nicht ankommt, versuche ich es weiter, bis es bestätigt ist.
+
+**sonnen: ich lese den Zähler, an dem die Batteriepflege hängt.** Deine
+sonnenBatterie zählt selbst, wie lange ihre letzte Vollladung her ist, und gibt
+das über ihre lokale Schnittstelle heraus. Diesen Wert zeige ich jetzt als
+„Zuletzt voll" und richte die regelmäßige Vollladung danach — statt nach meiner
+eigenen Beobachtung des Ladestands. Hast du deine sonnen zusätzlich über Home
+Assistant eingebunden, habe ich ihre laufende Batteriepflege bisher nicht
+mitbekommen und hätte dagegen arbeiten können; das ist behoben. Und fällt die
+Batterie nachts von selbst aus dem Modus, in dem sie meine Ladevorgabe annimmt,
+merke ich das jetzt und gebe die Vorgabe erneut.
+
+**Zwei Fühler am Pufferspeicher: du entscheidest, welcher zählt.** Wenn du
+oben und unten einen Fühler zugeordnet hast, gibt es dafür jetzt einen Regler.
+Warum das etwas ändert: Ein geschichteter Speicher ist oben heiß und unten
+kalt. Der obere Fühler sagt dir, wie heiß das Wasser ist, das gerade ankommt —
+der untere, wie viel überhaupt noch da ist. Sitzt dein Heizstab oben, merkt der
+obere Fühler zu spät, dass es gleich ausgeht: In der Simulation lag ein solcher
+Haushalt gut anderthalb Stunden am Tag unter seiner Wunschtemperatur, und den
+Wert höher zu stellen half kaum. Mit beiden Fühlern zusammen war derselbe
+Haushalt billiger dran und fast nie zu kalt. Sitzt dein Heizstab unten, mischt
+sich der Speicher beim Heizen von selbst durch — dann bringt der zweite Fühler
+nichts, und du lässt den Regler einfach, wo er ist. Die Karte zeigt dir beide
+Messwerte und die Zahl, gegen die ich danach regle; auf diese Zahl stellst du
+dein Band ein.
+
+
 ## 1.11.0
 
 **Der Legionellen-Lauf richtet sich nach deinem Speicher, nicht mehr nach dem
