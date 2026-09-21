@@ -1,3 +1,13 @@
+## 1.11.3
+
+**Keine „Laden unterbrochen"-Meldung mehr nach dem Anstecken.** Pausiere ich
+eine Ladung, stoppe ich zuerst das Auto und erst danach die Wallbox, damit die
+App deines Autos keinen Abbruch meldet. Direkt nach dem Anstecken hat das nicht
+geklappt: Manche Auto-Integrationen fragen das Auto nur alle paar Minuten ab,
+und in diesem Moment stand dort noch „lädt nicht" von vor dem Anstecken. Ich
+habe das geglaubt und nur die Wallbox gestoppt. Jetzt frage ich zusätzlich die
+Wallbox. Meldet sie eine laufende Ladung, stoppe ich das Auto trotzdem zuerst.
+
 ## 1.11.2
 
 **Meine Solarprognose war mit Korrektur schlechter als ohne.** Die Korrektur,
