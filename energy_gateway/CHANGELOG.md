@@ -1,3 +1,46 @@
+## 1.11.2
+
+**Meine Solarprognose war mit Korrektur schlechter als ohne.** Die Korrektur,
+die ich jede Nacht aus deinen gemessenen Werten lerne, hat bei einer echten
+Anlage die Tagesprognose von 20 % auf 33 % Abweichung verschlechtert. Ich habe
+sie neu gebaut: Sie gewichtet jetzt die Stunden, in denen wirklich Strom
+entsteht, lernt aus allen Tagen statt nur aus den älteren, und rechnet keinen
+Jahreszeiten-Trend mehr in die Zukunft weiter, den zwei Monate Daten gar nicht
+hergeben. Auf derselben Anlage liegt sie jetzt bei 19,6 % am Tag. Liegt sie
+über zwei Wochen gerechnet doch einmal mehr als 10 % schlechter als die rohe
+Prognose, schalte ich sie von selbst ab, bis sie wieder besser ist. Nach dem
+Update plane ich bis zur nächsten Nacht mit der rohen Prognose; ab 02:00 gilt
+die neue Korrektur.
+
+**Die nächsten drei Stunden plane ich mit dem, was deine Module gerade tun.**
+Wann die Wolken kommen, weiß keine Prognose genau. Was deine Anlage in der
+letzten Stunde geliefert hat, weiß ich aber. Lag sie deutlich unter oder über
+der Prognose, passe ich die nächste Stunde fast ganz, die übernächste zur
+Hälfte und die dritte ein wenig daran an. An echten Tagen liegt die Prognose
+für die nächste Stunde damit rund ein Viertel näher an der Wirklichkeit.
+Weiter voraus hilft das nicht mehr, dort bleibt die Prognose wie sie ist.
+
+**Wallboxen, die beim Anstecken selbst losladen.** Manche Wallboxen (zum
+Beispiel die ABB Terra AC) starten eine Ladung von sich aus, sobald das Auto
+steckt. Im Modus „Nur Sonne" habe ich diesen Ladestrom bisher als normalen
+Hausverbrauch gezählt, sah darum keinen Überschuss und habe die Ladung kurz
+darauf gestoppt, um sie Minuten später selbst neu zu starten. Jetzt übernehme
+ich eine solche Ladung. Reicht die Sonne nicht einmal für den kleinsten
+Ladestrom deines Autos, pausiere ich sie sofort, statt sie erst aus Akku oder
+Netz weiterlaufen zu lassen.
+
+**Kleine Ladeströme über das Auto: ich prüfe am Zähler, ob sie ankommen.**
+Unter 6 A kann nur das Auto selbst drosseln, die Wallbox nicht. Ein Tesla hat
+bei uns den geschriebenen Wert zurückgemeldet und trotzdem mit 5 A statt 2 A
+geladen, 17 Minuten lang. Jetzt vergleiche ich mit dem, was die Wallbox
+wirklich misst, und schreibe den Wert neu, wenn das Auto deutlich mehr zieht.
+Nach drei vergeblichen Versuchen höre ich auf und melde es. Außerdem rechne ich
+mit dem kleinsten Ladestrom, den dein Auto wirklich annimmt, statt mit jedem
+Wert über null.
+
+**Der Ziel-Ladestrom auf der Karte** wird jetzt so gerundet, wie ich ihn auch
+an die Wallbox schicke.
+
 ## 1.11.1
 
 **Wenn ich nur beobachte, fasse ich nichts an — wirklich nichts.** Das war
