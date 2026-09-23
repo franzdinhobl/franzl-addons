@@ -1,3 +1,72 @@
+## 1.11.4
+
+**Ein Ladeziel ohne Menge ist jetzt eine Zusage, die ich planen kann.** „Bereit
+bis 07:00, so viel wie geht" ging bisher als Bedarf über die ganze Akkugröße in
+meinen Plan — 45 kWh an einer 3,7-kW-Wallbox passen in keine Nacht, und dabei
+haben sie das bezifferte Ziel des zweiten Autos verdrängt. Jetzt rechne ich die
+Menge selbst: aus dem Ladestand bis zum Ladelimit, sonst aus deinen letzten
+Ladungen, sonst aus der Akkugröße wie bisher. Die Zeile sagt dir, womit ich
+rechne („etwa 12 kWh bis zum Ladelimit"). Ein Ziel mit Zahl bediene ich zuerst;
+ein „so viel wie geht" bekommt, was übrig bleibt. Mit zwei Autos an zwei
+Wallboxen verfehlt das bezifferte Ziel seine 80 % in der Simulation nur noch um
+drei Punkte statt um elf.
+
+**Der Preisdeckel nimmt die günstigsten Stunden, nicht die ersten.** Im
+Rückfall-Planer war der Deckel eine Schwelle ohne Rang: er hat jede Stunde unter
+deiner Grenze genommen, egal wie günstig, und dabei mehr zugesagt, als in dein
+Auto passt. Jetzt ordne ich nach Preis, höre an deiner Abfahrt auf und nie über
+das Ladelimit hinaus. Und ohne „Voll bis" kenne ich keine Abfahrt — dann
+schreibe ich die Bedingung dazu: „Wenn dein Auto dann angesteckt ist, lade ich
+unter deiner Grenze". Vorher stand dort „ich lade" über einer Stunde, in der
+niemand ein Auto wusste.
+
+**Dein Warmwasser wird auch mit Festpreis nicht mehr zu früh abgeschaltet.** Ich
+habe die Zieltemperatur einer Stunde mit dem Wert nach der erwarteten Entnahme
+verglichen, dein Fühler misst aber davor. So habe ich bis zu drei Grad zu früh
+aufgehört, und fast alle Minuten unter deiner Untergrenze lagen in der Stunde,
+in der bei euch geduscht wird. Jetzt vergleiche ich, was der Fühler wirklich
+sehen kann. In der Simulation: 13 statt 125 Minuten unter der Untergrenze.
+
+**Zwei Autos, zwei Wallboxen, ein Umstecken.** Merkte ich mir an einer Wallbox
+„das Auto ist fertig", galt das nach einem Umstecken für das nächste Auto mit —
+es blieb bei fünf Prozent stehen. Ein bekannter Ladestand räumt diese Notiz
+jetzt weg. Und was ich über eine laufende Ladung schon gesehen habe, überlebt
+einen Neustart des Gateways.
+
+**Zeitumstellung und Negativpreise.** In der Nacht der Umstellung auf Winterzeit
+spannen zwei Tage 49 Stunden; mein Preisraster endete bei 48 und meldete sich
+als unvollständig. Eine Abfahrt in der nicht existierenden Frühjahrs-02:00 war
+bisher „nicht im Raster" und damit keine Grenze — ich habe die Ladung zehn
+Stunden nach dem Versprechen gelegt. Beides ist behoben. Bei negativen
+Strompreisen drehten meine Schwellen für „günstig" die Seite um; jetzt nicht mehr.
+Und Eigenverbrauch ist nicht gratis: eine aus Sonne gedeckte Stunde kostet die
+entgangene Einspeisung, auch in meiner Entscheidung.
+
+**Aus dem Gesamt-Review des Projekts, 96 Funde behoben.** Die wichtigsten:
+- Über den Kommandopfad der App konnte ein Haushaltsmitglied beliebige
+  Home-Assistant-Dienste aufrufen; jetzt nur noch die Geräte-Aktionen, die
+  Franzl selbst kennt. Ein Haushalt lässt sich nur noch als Besitzer oder
+  Verwalter anlegen, jeder Geräte-Schreibpfad prüft die Rolle, und ein
+  entferntes Mitglied verliert seine Verbindung sofort.
+- Der 63-°C-Verbrühschutz liest den oberen Fühler immer, auch bei gewichteten
+  Fühlern. Ein Hygienelauf überlebt einen Neustart, statt den Heizstab dauerhaft
+  anzulassen.
+- Ein An-Aus-An innerhalb von 30 Minuten wurde als „schon erledigt" verschluckt;
+  der Phasen-Schaltschutz der Wallbox war nach jedem Tick vergessen. Beides
+  behoben.
+- Kleine Reste eines Tagesziels unter einer Ladestunde wurden ersatzlos
+  verworfen; jetzt plane ich sie als eine Stunde. Preisdeckel und Session-Boden
+  prüfen Stecker, Sperre und Freigabe in beiden Planern.
+- Energie-Berichte: alle drei Datenstufen fließen additiv ein, ein leerer
+  Zeitraum ist „unbekannt" statt 0, unlesbare Solar-Samples werden verworfen.
+- „Fahrzeug entfernen" entfernt das Fahrzeug; die Stecker-Evidenz eines Autos
+  gilt nur an seiner Wallbox; die Fahrzeugliste pollt keine Hersteller-Cloud mehr.
+- Die Ersatzsuche für Entities schließt aus, was dasselbe Gerät schon nutzt; der
+  DNS-Fix nach einem Router-Tausch leert bei DHCP die Liste immer und sagt es.
+- Ohne Aktivierungs-Marker startet das Gateway immer im Setup-Modus, statt in
+  eine Neustart-Schleife zu laufen; fehlgeschlagene Core-/OS-Updates werden nicht
+  jede Nacht wiederholt.
+
 ## 1.11.3
 
 **Keine „Laden unterbrochen"-Meldung mehr nach dem Anstecken.** Pausiere ich

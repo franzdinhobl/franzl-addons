@@ -2,7 +2,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration
 name: "Franzl Gateway"
 description: "Franzl Energie-Management — Optimiert PV, Batterie, Wallbox, Wärmepumpe"
-version: "1.11.3"
+version: "1.11.4"
 slug: "energy_gateway"
 url: "https://github.com/franzdinhobl/franzl-addons"
 # Prebuilt image: Home Assistant PULLS this from ghcr.io instead of building the
@@ -49,10 +49,20 @@ options:
   # Set a full SQLAlchemy/asyncpg URL only to use an external database instead.
   db_url: ""
   activation_url: "https://europe-west1-franzl-energy.cloudfunctions.net"
+  # Tesla command-signing proxy (Route 2, cloud Teslas). Empty = no car
+  # commands for cloud Teslas, which is the honest default: without a proxy
+  # Tesla's Fleet API rejects unsigned commands.
+  tesla_command_proxy_url: ""
 schema:
   log_level: "list(debug|info|warning|error)"
   db_url: "str?"
   activation_url: "url?"
+  # MUST be declared here: the Supervisor drops options the schema does not
+  # know, so init-config read this key out of an options.json that could never
+  # contain it — the CHANGELOG called it configurable while it was inert on
+  # every real box (review 2026-09-22 K3). `str?` (not `url?`) because a local
+  # proxy is routinely given as host:port.
+  tesla_command_proxy_url: "str?"
 environment:
   GATEWAY_PORT: "8099"
   # Mathematischer Optimierer (MILP/HiGHS, spec 28 §3) aktiv. Fällt bei
