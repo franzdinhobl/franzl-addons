@@ -1,3 +1,28 @@
+## 1.11.5
+
+**Push-Nachrichten gehen nur noch an das Handy, dem sie gehören.** Bisher habe
+ich geprüft, ob der Empfänger zu deinem Zuhause gehört, aber nicht, ob das
+Gerät, an das ich sende, noch seins ist. Ein Handy, das inzwischen mit einem
+anderen Konto angemeldet ist, hätte weiter deine Meldungen bekommen. Mit dem
+App-Update meldet sich jedes Handy unter seinem eigenen Konto an, und ich
+schicke nichts mehr an ein Gerät, das einem anderen Konto gehört.
+
+**Mein Verlust-Lerner war zu pessimistisch.** Wie schnell dein Warmwasser
+abkühlt, lerne ich aus den Stunden, in denen nichts heizt. Der Rest einer
+Entnahme, der zu klein war, um als Entnahme zu zählen, landete bisher in genau
+diesen Stunden und wurde als Wärmeverlust verbucht. Darum lag die gelernte Rate
+in der Simulation dauerhaft etwa 14 Prozent zu hoch. Jetzt lasse ich die Stunde
+direkt nach einer Entnahme aus. Nach zehn Tagen liegt die Rate innerhalb von
+drei bis vier Prozent, mit Störungen innerhalb eines Viertels; an deinem
+Komfort und deiner Rechnung ändert sich dadurch nichts Messbares.
+
+**Zwei Befehle ohne Wert schreiben nichts mehr.** Ein Aufruf „Temperatur
+setzen" ohne Temperatur schrieb bisher 20 °C an das Gerät, ein „Modus setzen"
+ohne Modus schaltete auf Heizen. Beide werden jetzt abgewiesen. Dazu: ob ein
+Gerät seine Leistung messen kann, gilt ohne Beleg als „nein" statt „ja", und
+ein Kommando, dessen Antwort keinen Erfolg enthält, gilt nicht mehr als
+gelungen.
+
 ## 1.11.4
 
 **Ein Ladeziel ohne Menge ist jetzt eine Zusage, die ich planen kann.** „Bereit
