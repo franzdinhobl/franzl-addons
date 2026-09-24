@@ -1,3 +1,34 @@
+## 1.11.6
+
+**Wenn deine Anlage nicht alles einspeisen darf, weiß ich das jetzt.** Viele
+Anlagen sind vom Netzbetreiber begrenzt: Nulleinspeisung, 70 Prozent oder ein
+fester Wert. Dann regelt der Wechselrichter ab, sobald nichts mehr ins Haus oder
+in den Speicher passt, und ich habe das bisher für eine Wolke gehalten. Meine
+Prognose rechnete danach zu wenig Sonne, und bei Nulleinspeisung mit vollem
+Speicher sah ich nie einen Überschuss. Die Grenze lese ich jetzt vom
+Wechselrichter, wo er sie meldet, sonst frage ich dich in der App danach. Mit
+bekannter Grenze lasse ich abgeregelte Messungen aus meiner Prognose heraus,
+plane Sonne über der Grenze nicht mehr als Einspeisung, und bei
+Nulleinspeisung schalte ich probeweise einen Verbraucher zu. Holt sich die
+Anlage die Sonne dafür, bleibt er an. Entsteht Netzbezug, schalte ich sofort ab
+und versuche es später wieder.
+
+**Speicher halten erreicht jetzt auch ein E3DC.** Ich habe die Befehle unter
+einem Namen geschickt, den die E3DC-Integration nicht kennt. Home Assistant hat
+sie deshalb abgelehnt, und das Halten deines Speichers kam nie an.
+
+**Eine wartende Wallbox bekommt ihr Aus nur noch einmal.** Wartete deine
+Wallbox im Modus „Nur Sonne", schickte ich das Aus alle zwei Minuten erneut an
+manche Boxen. Jetzt geht es einmal raus, und erst wieder, wenn die Box
+tatsächlich Strom zieht.
+
+**Push-Nachrichten: der letzte Schritt ist vorbereitet.** Ich melde der Cloud,
+ob die Handys in deinem Zuhause schon eine App haben, die sich unter ihrem Konto
+angemeldet hat (nur als Prüfsumme, nie das Handy selbst). Sobald das überall
+so ist, nimmt die Cloud keine alten Anmeldungen mehr an. Ein Handy mit einer
+App älter als 1.4.3 bekommt dann keine Push-Nachrichten mehr, bis die App
+aktualisiert ist. In der App selbst stehen deine Meldungen weiter.
+
 ## 1.11.5
 
 **Push-Nachrichten gehen nur noch an das Handy, dem sie gehören.** Bisher habe
