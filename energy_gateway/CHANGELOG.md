@@ -1,3 +1,34 @@
+## 1.11.7
+
+**Die Wallbox-Karte sagt jetzt, was wirklich passiert.** Tippst du auf
+„Laden", steht da „Ich starte das Laden …", bis Strom fließt, und danach der
+gemessene Ladestrom. Nimmt dein Auto weniger, als du eingestellt hast, steht
+da, wie viel und warum. Nimmt es nichts, nenne ich den Grund: Ladelimit
+erreicht, Auto fertig oder die Wallbox gibt nicht frei. Unter „Solar" siehst du
+Ladestrom und Ziel. Lade ich aus dem Netz, damit dein Ladeziel oder deine
+Mindestladung erreicht wird, schreibe ich das dazu. In „Günstig" steht das
+nächste Ladefenster mit Preis, und neben deinem Ladeziel steht, ob es reicht
+oder knapp wird.
+
+**Ich drossle dein Auto nicht mehr aus Versehen.** Manche Auto-Integrationen
+melden als „Maximum" nur, was die Wallbox zuletzt angeboten hat. Ich habe das
+für die Grenze des Autos gehalten und dein Auto darauf heruntergestellt, obwohl
+du mehr eingestellt hattest. Jetzt stelle ich ein Auto nur noch hinauf, nie
+unter das, was du willst.
+
+**„Laden" und „Offen" gleichzeitig bringen die Planung nicht mehr aus dem
+Takt.** Übersteigen beide zusammen deinen Hausanschluss, plane ich trotzdem
+normal weiter und kürze nur, was nicht mehr hineinpasst.
+
+**„Günstig" ohne Auftrag sagt das jetzt.** Ohne Ladeziel oder Preisgrenze lade
+ich in „Günstig" nicht, und statt „ich warte auf günstige Stunden" steht das
+jetzt auch da. Gilt dein Ladeziel heute nicht, zum Beispiel am Wochenende,
+sage ich das ebenfalls.
+
+**Befehle, die nicht ankommen, melde ich einmal und verständlich.** Scheitert
+ein Befehl und ich versuche es noch einmal, blinkt keine Fehlermeldung mehr
+zwischendurch auf. Erst wenn der letzte Versuch scheitert, sage ich es.
+
 ## 1.11.6
 
 **Wenn deine Anlage nicht alles einspeisen darf, weiß ich das jetzt.** Viele
