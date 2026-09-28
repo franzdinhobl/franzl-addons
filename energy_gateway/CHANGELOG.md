@@ -1,3 +1,47 @@
+## 1.11.8
+
+**Ich verwechsle deine Autos nicht mehr.** An einer Wallbox mit zwei Autos im
+Haushalt habe ich aus der Ladeleistung geschlossen, welches Auto dranhängt.
+Ein Auto, das ich selbst gedrosselt hatte, galt deshalb als „kann nicht so
+schnell laden", und bei voller Leistung habe ich es für das andere gehalten.
+Dann habe ich mit dessen Ladeziel gerechnet und nachts aus dem Netz geladen,
+obwohl „Nur Sonne" eingestellt war. Jetzt entscheidet die Ladeleistung nie
+mehr, welches Auto dranhängt. Was du sagst, gilt vor jedem Signal, und hat
+eine Ladung einmal ein Auto, bleibt es dabei, bis du absteckst.
+
+**Welches Auto wo lädt, stellst du an der Wallbox ein, alles andere am Auto.**
+In der Wallbox steht jetzt eine Frage „Wer lädt hier?" (immer dasselbe Auto
+oder wechselnd). Ladeziele, Akkugröße und Kosten stehen beim Fahrzeug, in
+einem einzigen Editor. Auf der ⚡-Karte bleiben nur Sofort-Eingriffe. Kenne
+ich das Auto nicht sicher, rechne ich nicht mit seinen Zielen und schicke ihm
+keine Befehle.
+
+**Die Mindestladung hört bei deiner Zahl auf.** Stellst du 30 Prozent ein,
+lade ich bis 30 Prozent und nicht bis 33. Neu gestartet wird erst, wenn das
+Auto wieder deutlich darunter ist. Meldet dein Auto seinen Ladestand nur
+selten, zähle ich die geladene Energie dazwischen mit.
+
+**Deine Hausbilanz schlägt die Heimzone in Home Assistant.** Stand die
+Heimzone falsch, galt dein Auto als unterwegs, während es zu Hause lud, und
+ich habe alles verworfen, was es gemeldet hat. Jetzt sehe ich an deinem
+eigenen Stromverbrauch, ob die Ladung in deinem Haus stattfindet, und zeige
+den Widerspruch an.
+
+**Die laufende Stunde plane ich als das, was von ihr übrig ist.** Um 03:15
+bleiben von der Stunde 45 Minuten. Ich habe sie bisher wie eine ganze Stunde
+verplant, und was nicht hineinpasste, fiel in spätere, oft teurere Stunden.
+
+**Weitere Korrekturen.** Ein Auto, das nicht zu Hause ist, wecke ich nicht
+mehr. Ein einzelner Messausreißer hebt die Leistung eines Geräts nicht mehr
+dauerhaft an. Bei der Sicherung rechne ich mit der gemessenen Leistung, nicht
+mit einem gelernten Wert. Ein Status, der sich seit über zwölf Stunden nicht
+bewegt hat, zählt nicht mehr als „läuft gerade". Eine unlesbare PV-Leistung
+ist für mich unbekannt, nicht null. Bei „Nur beobachten" zeige ich „Jetzt
+heizen" nicht mehr an, denn der Knopf hätte dort nichts getan; stattdessen
+sage ich, was dafür fehlt. Klimageräte haben eine aufgeräumte Detailseite, die
+Geräteliste ist nach Erzeugung, Netz und Verbrauchern geordnet, und beim Scan
+bekommen Geräte mit bloßer Seriennummer einen lesbaren Namen.
+
 ## 1.11.7
 
 **Die Wallbox-Karte sagt jetzt, was wirklich passiert.** Tippst du auf
