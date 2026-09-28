@@ -1,3 +1,13 @@
+## 1.11.10
+
+**Ich sage jetzt, worauf „Günstig" wartet.** Hast du „günstiger als üblich"
+gewählt und ich kenne deine Preise noch keine sieben Tage, stand auf der Karte
+„Ohne Ladeziel oder Preisgrenze lade ich nicht". Das stimmte nicht, du hattest
+ja eine Grenze eingeschaltet. Jetzt steht dort, seit wie vielen Tagen ich deine
+Preise kenne und ab wann ich lade. Und liegt gerade keine bekannte Stunde unter
+deiner Grenze, nenne ich die Grenze, statt nur „Warte auf die günstigen
+Stunden" zu schreiben. Im Tagesplan stehen Preise jetzt mit Komma.
+
 ## 1.11.9
 
 **„Günstig mitnehmen" richtet sich jetzt nach deinen eigenen Preisen.** Bisher
