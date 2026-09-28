@@ -1,3 +1,17 @@
+## 1.11.11
+
+**Was „günstig" heißt, stellst du jetzt an einer Stelle ein.** Unter Mehr →
+Stromtarif steht „Was ist für dich günstig?". Normalerweise rechne ich es
+selbst aus: günstiger als drei von vier Stunden der letzten 30 Tage. Im
+Expertenmodus kannst du stattdessen eine feste Grenze in Cent setzen. Diese
+eine Zahl gilt für alles, was günstigen Strom nutzt: der Modus „Günstig" an
+der Wallbox lädt, sobald der Strom darunter liegt, auch ohne Ladeziel. Am
+Auto gibt es den Schalter „Auch bei günstigem Strom laden" (im Modus Solar),
+bei Heizstab, Wärmepumpe und Steckdosen „Auch bei günstigem Strom laufen".
+Vorher hatte jedes Auto und jedes Gerät seine eigene Grenze. Wer schon eine
+Grenze eingestellt hatte, behält sie: sie wird zur festen Grenze des
+Haushalts. Das Wort „üblich" ist raus.
+
 ## 1.11.10
 
 **Ich sage jetzt, worauf „Günstig" wartet.** Hast du „günstiger als üblich"
