@@ -1,3 +1,16 @@
+## 1.11.9
+
+**„Günstig mitnehmen" richtet sich jetzt nach deinen eigenen Preisen.** Bisher
+hast du eine feste Grenze in Cent eingestellt. Die passt aber nie lange: im
+Winter fällt der Preis kaum darunter, im Sommer fast jede Nacht. Jetzt lade ich
+zusätzlich, wenn Strom bei dir günstiger ist als in drei von vier Stunden der
+letzten 30 Tage. Die Grenze wandert mit deinen Preisen mit, und die App zeigt
+dir, was das gerade heißt, zum Beispiel „unter 11,5 ct". In den ersten sieben
+Tagen kenne ich deine Preise noch nicht gut genug und sage das auch, statt eine
+Zahl zu raten. Bei einem Tarif mit Hoch- und Niedertarif sind es einfach die
+Niedertarif-Stunden. Eine feste Grenze kannst du im Expertenmodus weiter
+einstellen, und eine schon gespeicherte bleibt, wie sie ist.
+
 ## 1.11.8
 
 **Ich verwechsle deine Autos nicht mehr.** An einer Wallbox mit zwei Autos im
