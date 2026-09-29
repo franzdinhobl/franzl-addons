@@ -1,3 +1,13 @@
+## 1.11.12
+
+**Ich halte ein ladendes Auto nicht mehr für voll.** Manche Autos melden ihren
+Ladestand nur beim Anstecken und am Ladeende, und der Bericht beim Anstecken
+kommt manchmal erst nach einer Weile. Bis dahin stand bei mir noch der Wert
+vom letzten Laden, zum Beispiel 94 % bei 90 % Limit. Dann stand auf der Karte
+„Ladelimit erreicht", obwohl das Auto gerade mit fast 7 kW lud, und in „Solar"
+oder „Günstig" hätte ich gar nicht geladen. Misst die Wallbox echtes Laden,
+gilt ein solcher Wert jetzt als unbekannt, bis das Auto einen neuen meldet.
+
 ## 1.11.11
 
 **Was „günstig" heißt, stellst du jetzt an einer Stelle ein.** Unter Mehr →
