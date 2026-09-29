@@ -1,3 +1,20 @@
+## 1.11.13
+
+**Ein Heizstab läuft nicht mehr aus dem Akku weiter.** Wenn die Sonne kurz
+nachlässt, lasse ich einen Heizstab, eine Steckdose oder eine Pumpe ein paar
+Minuten weiterlaufen, damit sie nicht bei jeder Wolke schalten. Das galt bisher
+auch dann, wenn gar kein Überschuss mehr da war und der Hausakku oder das Netz
+für sie eingesprungen ist. Jetzt schalte ich in diesem Fall sofort ab, so wie
+es die Wallbox schon länger macht. Nur wenn noch ein Teil der Sonne übrig ist,
+warte ich die Wolke ab. Wärmepumpe, Klimaanlage und Poolheizung warten weiter
+ab, weil jedes Aus- und Einschalten dort den Kompressor belastet.
+
+**Das Ladelimit eines VW springt nicht mehr hin und her.** Das VW-Portal
+liefert manchmal mehrere alte Werte für das Ladeziel in wechselnder
+Reihenfolge. Ich habe dann bei jedem Abruf einen anderen genommen, und das
+Ladelimit wechselte zwischen 90 und 100 %. Jetzt übernehme ich nur einen Wert,
+der sich wirklich geändert hat.
+
 ## 1.11.12
 
 **Ich halte ein ladendes Auto nicht mehr für voll.** Manche Autos melden ihren
