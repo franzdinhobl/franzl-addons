@@ -1,3 +1,16 @@
+## 1.11.14
+
+**Den Ladestand eines VW lese ich jetzt aus dem richtigen Wert.** Das VW-Portal
+liefert den Ladestand mehrfach. Laut VWs eigenem Datenwörterbuch ist nur einer
+davon der aktuelle Stand, die anderen sind der Stand zu Beginn einer Ladung. Ich
+habe bisher manchmal den Startwert genommen. Daher kamen Zahlen wie „94 % bei
+90 % Limit" oder ein Ladestand, der zwischen zwei Werten sprang.
+
+**Beim Ladelimit eines VW rate ich nicht mehr.** Auch das Ladelimit steht mehrfach
+in den Daten, und hier sagt VW nicht, welcher Wert der eingestellte ist. Stimmen
+die Werte nicht überein, zeige ich „—", bis sich einer ändert. Stellst du das
+Limit in der VW-App um, weiß ich danach, welcher Wert der richtige ist.
+
 ## 1.11.13
 
 **Ein Heizstab läuft nicht mehr aus dem Akku weiter.** Wenn die Sonne kurz
