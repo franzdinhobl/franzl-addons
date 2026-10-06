@@ -1,3 +1,24 @@
+## 1.11.15
+
+**Ein Befehl geht nicht mehr mehrfach raus.** Wenn ein Gerät einen Befehl
+ablehnt, habe ich ihn bisher mehrmals wiederholt, und zwar an drei Stellen
+gleichzeitig. Bei einem Tesla wurden so aus einem Tipp auf „Laden" bis zu 18
+Befehle, auch wenn das Auto längst lud oder schon voll war. Jetzt frage ich
+zuerst die Wallbox und das Auto, ob überhaupt etwas zu tun ist. Lehnt ein Gerät
+ab, ist das die Antwort. Nur wenn ein Auto noch nicht reagiert hat, etwa weil es
+gerade aufwacht, frage ich mit Abstand noch ein- bis zweimal nach.
+
+**Ein Netzwerk-Wechsel wird nicht mehr wochenlang gemeldet.** Nach einem
+Router-Tausch habe ich den Umzug im Protokoll immer wieder als neu gemeldet.
+Zwei Wochen nach dem Wiederfinden eines Geräts ist das Thema jetzt erledigt.
+
+**Im Protokoll steht, warum ich eine Störung melde.** Die Gründe waren bisher
+nur in der App sichtbar. Jetzt stehen sie bei jeder Änderung auch im Protokoll
+des Add-ons.
+
+**Sicherheits-Updates.** Zwei mitgelieferte Bibliotheken (urllib3, Mako) sind auf
+die Versionen angehoben, die kürzlich gemeldete Schwachstellen beheben.
+
 ## 1.11.14
 
 **Den Ladestand eines VW lese ich jetzt aus dem richtigen Wert.** Das VW-Portal
