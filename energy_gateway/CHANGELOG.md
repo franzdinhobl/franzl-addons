@@ -1,3 +1,37 @@
+## 1.11.16
+
+**Nimmt dein Auto eine Ampere-Vorgabe nicht an, ziehe ich daraus die
+Konsequenz.** Unter 6 A kann nur das Auto selbst den Ladestrom begrenzen, und
+diese Vorgabe läuft über die Cloud des Herstellers. Fällt die aus, zum Beispiel
+weil zu Hause das Internet weg ist, lädt das Auto mit dem zuletzt eingestellten
+Strom weiter. Das habe ich bisher bemerkt und trotzdem weitergeladen, auch wenn
+die Sonne dafür nicht mehr gereicht hat und der Hausakku den Rest geliefert hat.
+Jetzt gilt der gemessene Strom als das, was das Auto gerade mindestens zieht:
+Reicht der Überschuss dafür, lade ich weiter. Reicht er nicht, pausiere ich über
+die Wallbox.
+
+**Ohne Internet läuft alles Lokale weiter, und das Protokoll bleibt lesbar.**
+Wechselrichter, Zähler und Wallbox im Heimnetz brauchen kein Internet. Während
+eines Ausfalls habe ich aber tausende gleiche Zeilen ins Protokoll geschrieben.
+Jetzt steht dort einmal, dass das Internet weg ist, und einmal, dass es wieder
+da ist.
+
+**Eine verspätete Benachrichtigung sagt, von wann sie ist.** Konnte ich eine
+Meldung nicht zustellen, kommt sie später an und beginnt dann mit ihrem
+Zeitpunkt, zum Beispiel „Von gestern 17:09 Uhr". Die Meldung „Ladestand meldet
+sich nicht" schicke ich nicht, solange ich selbst kein Internet habe. Dann liegt
+es am Ausfall und nicht am Auto.
+
+**Ein Gateway ohne Zuhause wartet still.** Ein noch nicht eingerichtetes Gateway
+hat alle zehn Sekunden in der Cloud nachgefragt, auch wenn niemand den Code
+angesehen hat. Jetzt fragt es nur, solange die Einrichtungsseite offen ist oder
+der Code gerade gezeigt wurde. Wurde ein Zuhause in der App gelöscht, fragt das
+zugehörige Gateway nur noch selten nach und beendet den Fernzugriff. Die
+Statusseite sagt dann, dass es mit keinem Zuhause mehr verbunden ist.
+
+**Aktualisierte Bibliotheken.** Die mitgelieferten Bibliotheken sind auf dem
+aktuellen Stand.
+
 ## 1.11.15
 
 **Ein Befehl geht nicht mehr mehrfach raus.** Wenn ein Gerät einen Befehl
