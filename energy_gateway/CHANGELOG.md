@@ -1,3 +1,34 @@
+## 1.11.18
+
+**Deinen Fronius Wattpilot spreche ich jetzt direkt an.** Home Assistant kennt
+den Wattpilot nicht von Haus aus, bisher brauchte es dafür eine Zusatz-
+Integration aus HACS. Jetzt reichen seine IP-Adresse und das Passwort aus der
+Solar.wattpilot-App: Ich lese Leistung, Ladestatus und geladene Energie, setze
+den Ladestrom, pausiere und schalte zwischen ein- und dreiphasig um. Steht der
+Wattpilot in seiner App auf Eco oder Next Trip, entscheidet er selbst, wann er
+lädt; das sage ich dir, statt seinen Modus umzustellen. Dieser Weg ist neu und
+noch an keinem echten Wattpilot gelaufen.
+
+**Deinen BMW oder MINI verbinde ich über BMW CarData.** Das ist BMWs offizieller,
+kostenloser Datenzugang. Du legst im BMW-Portal einmal einen Zugang an,
+bestätigst einen Code in deinem BMW-Login, und ich bekomme Ladestand, Ladeziel,
+Steckerzustand und Reichweite direkt vom Auto. Ein BMW-Passwort speichere ich
+dabei nicht. BMW erlaubt nur eine solche Verbindung pro Konto, eine andere App,
+die sie schon nutzt, muss sie abgeben. Auch dieser Weg ist neu und noch an
+keinem echten Auto gelaufen.
+
+**Ich melde mich bei VW so an, wie VW es von allen Apps verlangt.** VWs
+Datenteam hat am 6. Oktober gebeten, die Anmeldung am Data-Act-Portal
+umzustellen, weil Millionen unnötiger Anfragen dort ankommen. Ich frage die
+Startseite des Portals nicht mehr vorab ab und lade nach der Anmeldung keine
+Seite mehr, die ich nicht brauche. An einem echten ID.4 geprüft.
+
+**Ein Auto ist kein Hausspeicher, auch wenn ich seine App nicht kenne.** Ein
+Auto mit Ladestand und Ladeleistung sah für die Gerätesuche aus wie ein
+Batteriespeicher, sobald seine Home-Assistant-Integration neu war (so bei Ford
+und jetzt bei BMW CarData). Meldet ein Gerät zusätzlich eine Reichweite oder
+einen Kilometerstand, ist es ein Fahrzeug, denn ein Speicher fährt nicht.
+
 ## 1.11.17
 
 **Ein fremdes Auto an deiner Wallbox ist ein Gast, nicht dein Auto.** Steht
