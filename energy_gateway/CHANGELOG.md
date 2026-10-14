@@ -1,3 +1,46 @@
+## 1.11.17
+
+**Ein fremdes Auto an deiner Wallbox ist ein Gast, nicht dein Auto.** Steht
+deine Wallbox fest auf einem Auto und lädt dort jemand anderes, habe ich bisher
+trotzdem dein Auto angesprochen: Befehle an dessen Hersteller-Cloud, seine
+Ladeziele, und sogar die Meldung, sein Ladestand bewege sich nicht. Jetzt
+vergleiche ich, was die Wallbox liefert, mit dem, was dein Auto selbst meldet.
+Ist es unterwegs, hat es das Kabel ab oder lädt es nicht, obwohl die Wallbox
+mehr als 1 kW liefert, und bleibt das eine Viertelstunde so, dann lädt hier ein
+fremdes Auto. Die Wallbox steuere ich weiter wie gewohnt, dein Auto lasse ich in
+Ruhe, bis abgesteckt wird. Auf ein anderes deiner Autos wechsle ich dabei nie.
+Mit der nächsten App-Version kannst du es auch selbst sagen („Ein Gast") oder
+korrigieren („Doch Tessi").
+
+**Ein Tipp auf den Lademodus hält nichts mehr auf.** Nach einem Moduswechsel hat
+ein Hintergrund-Schritt eine Datenbank-Sperre bis zu vier Stunden lang
+festgehalten. In dieser Zeit liefen keine Regelschritte. Der Schritt arbeitet
+jetzt mit einer eigenen Verbindung, und die Datenbank beendet eine liegengebliebene
+Sperre spätestens nach zehn Minuten.
+
+**Die Daten deines VW kommen wieder an.** Das Data-Act-Portal von VW hat seit
+dem 10. Oktober Anfragen abgewiesen, die sich als eine bestimmte Chrome-Version
+ausgaben. Ich melde mich dort jetzt unter meinem eigenen Namen an, und Ladestand
+und Ladeziel kommen wieder.
+
+**Ein Router ist kein Zwischenstecker.** Die Suche hat eine FRITZ!Box und ihre
+Repeater als schaltbare Steckdosen angeboten, weil sie WLAN-Schalter haben. Das
+passiert nicht mehr.
+
+**Ein Heizstab zeigt seine Temperaturgrenzen auch nach dem Umstellen.** Wurde
+ein Heizstab über „Geräte-Zuordnung prüfen" oder über einen Wechsel der
+Geräteart eingerichtet, fehlte die Karte mit Mindest- und Höchsttemperatur. Sie
+folgt jetzt den zugeordneten Sensoren, auch bei schon eingerichteten Geräten.
+
+**Pufferspeicher bis 85 °C, ohne Legionellenschutz.** Ein Pufferspeicher hält
+Heizungswasser, kein Trinkwasser. Sagst du mir in der nächsten App-Version, dass
+dein Speicher einer ist, darfst du ihn bis 85 °C einstellen, und der
+Legionellenschutz entfällt dort. Für Warmwasserspeicher bleiben 65 °C die Grenze,
+und die gilt jetzt auch, wenn ein Wert auf anderem Weg als über den Regler kommt.
+
+**Aktualisierte Bibliotheken.** Die mitgelieferten Bibliotheken und die
+Fernzugriffs-Komponente sind auf dem aktuellen Stand.
+
 ## 1.11.16
 
 **Nimmt dein Auto eine Ampere-Vorgabe nicht an, ziehe ich daraus die
