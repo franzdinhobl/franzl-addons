@@ -1,3 +1,20 @@
+## 1.11.20
+
+**Ein Auto, das gestoppt wurde, ist nicht voll.** Steckt dein Auto kurz vor
+seinem Ladelimit an der Wallbox und nimmt keinen Strom, habe ich das bisher als
+„fertig“ gelesen. Das stimmt meistens, aber nicht, wenn das Laden vorher
+unterbrochen wurde. Bei euch hatte ich Tessi beim Anstecken pausiert, weil die
+Sonne noch in den Akku ging. Danach blieb sie bei 78 % von 80 % stehen, und
+einen Startbefehl hat sie nie bekommen. Meldet das Auto selbst „gestoppt“ statt
+„fertig“, schicke ich ihm jetzt den Startbefehl wie bei jedem anderen Auto, das
+nicht lädt. Ohne diese Meldung ändert sich nichts.
+
+**Das Ladeziel des ID.4 springt nicht mehr.** VW liefert das Ladeziel in mehreren
+Einträgen, die sich bei euch widersprechen (80 und 90 %). Fehlte in einer Datei
+einer davon, habe ich den anderen genommen, und beim nächsten Abruf war das
+Ziel wieder unbekannt. Jetzt bleibt es unbekannt, bis eine Änderung in der
+VW-App zeigt, welcher Eintrag zu deinem Auto gehört.
+
 ## 1.11.19
 
 **Was ich über ein Gerät lerne, gehört zu dem Gerät, von dem ich es gelernt
