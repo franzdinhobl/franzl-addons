@@ -1,3 +1,44 @@
+## 1.11.19
+
+**Was ich über ein Gerät lerne, gehört zu dem Gerät, von dem ich es gelernt
+habe.** Aus den Messwerten eines Geräts merke ich mir einiges: wie viel Leistung
+ein Heizstab zieht, wann ein Speicher zuletzt 60 °C hatte, wann ein Akku zuletzt
+voll war, welche Ladungen an einer Wallbox liefen, unter welchen Adressen ein
+Gerät im Netz zu finden war. Bisher habe ich mir nicht gemerkt, woher ich das
+weiß. Bekam ein Gerät andere Sensoren zugeordnet, etwa weil zwei Wallboxen
+vertauscht und danach wieder richtiggestellt wurden, blieb das Gelernte der
+falschen Hardware stehen. Jetzt prüfe ich bei jedem Regelschritt, ob ein Gerät
+noch dieselben Sensoren liest, und vergesse genau das, was ich über die
+geänderten gelernt habe. Ein paar Tage Neulernen sind besser als eine falsche
+Zahl, die sich nie von selbst korrigiert.
+
+**Eine Adresse gehört der Quelle, die sie gemeldet hat.** Der Adress-Verlauf
+eines Geräts beginnt neu, sobald die Adresse aus einer anderen Quelle kommt. So
+stand bei euch unter der ABB-Wallbox noch die Adresse der NRGkick, sechs Wochen
+nachdem die Zuordnung repariert war.
+
+**Zwei gleiche Geräte verwechsle ich nicht mehr beim Suchen.** Ändert ein direkt
+angebundenes Gerät seine IP-Adresse, suche ich es im Netzwerk. Ohne gespeicherte
+Seriennummer und mit einem zweiten Gerät desselben Typs im Haushalt suche ich
+nicht mehr, denn ich könnte nicht sagen, welches von beiden ich gefunden habe.
+Finde ich es, merke ich mir seine Seriennummer.
+
+**Ein Hersteller-Profil, das ich selbst zugeordnet habe, nehme ich zurück, wenn
+sein Grund weg ist.** Die Gerätesuche ordnet Geräten ohne Profil eines zu, wenn
+sie dieselben Sensoren wie ein erkanntes Gerät lesen. Liest das Gerät keinen
+dieser Sensoren mehr, entferne ich das Profil wieder, außer jemand hat es
+inzwischen selbst geändert. Dabei habe ich einen Fehler behoben: Geräte mit
+falschem Basis-Profil (etwa ein GEN24 Plus als einfacher GEN24) bekamen das
+passendere Profil nie, weil die Suche sie gar nicht prüfte.
+
+**Kabel, Ladestatus, Ladeleistung und Standort deines Autos müssen zu deinem
+Auto gehören.** Steht einer dieser Sensoren nicht mehr beim Ladestand des Autos
+in Home Assistant, lösche ich ihn und suche neu.
+
+**Die Gerätestatistik zählt unter der Marke, die das Gerät beim Senden hatte.**
+Bekommt ein Gerät später ein anderes Profil, wandern seine bisherigen Erfolge
+und Fehlschläge nicht mehr mit zur neuen Marke.
+
 ## 1.11.18
 
 **Deinen Fronius Wattpilot spreche ich jetzt direkt an.** Home Assistant kennt
