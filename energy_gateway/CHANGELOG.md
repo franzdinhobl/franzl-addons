@@ -1,3 +1,22 @@
+## 1.11.22
+
+**Die Sonne zählt den Akku nicht mehr mit.** Bei einem Hybrid-Wechselrichter
+mit Speicher, zum Beispiel einem Fronius GEN24 mit BYD, habe ich die Erzeugung
+aus der Ausgangsleistung des Wechselrichters gelesen. Durch den Wechselrichter
+fließt aber auch, was der Akku abgibt. Abends stand deshalb Sonne auf der
+Startseite, und dein Hausverbrauch war um die Akku-Leistung zu hoch. Ich lese
+jetzt die PV-Leistung, die die Anlage selbst ausweist. Bestehende Anlagen
+stelle ich beim Start um.
+
+**Deine Wallbox heißt nicht mehr „charger“.** Über OCPP angebundene Wallboxen
+haben in Home Assistant oft den Standardnamen „charger“. Ich biete sie jetzt mit
+Hersteller und Gerät an, etwa „Fronius Wallbox“. Bereits angelegte Geräte
+benenne ich nicht um.
+
+**Akku-Leistung bei einer übrig gebliebenen zweiten Batterie.** Hatte ein
+früherer Scan neben dem Speicher eine leere zweite Batterie angelegt, bekam der
+echte Speicher seine Leistung beim Start nicht. Das passiert jetzt auch dann.
+
 ## 1.11.21
 
 **Meine eigene Netzwerksuche funktioniert wieder.** „Selbst im Netzwerk suchen“
