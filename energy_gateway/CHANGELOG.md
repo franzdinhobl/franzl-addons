@@ -1,3 +1,41 @@
+## 1.11.21
+
+**Meine eigene Netzwerksuche funktioniert wieder.** „Selbst im Netzwerk suchen“
+ist seit Ende Juli bei jedem Aufruf an einem Programmfehler gescheitert. Ich
+finde jetzt wieder Fronius-Wechselrichter über Modbus, Wattpilot, Ohmpilot und
+Kostal. Die Fronius Solar API biete ich zum Einrichten in Home Assistant an, mit
+schon eingetragener Adresse. Was in Home Assistant schon eingerichtet ist, biete
+ich nicht ein zweites Mal an.
+
+**Fronius mit BYD-Speicher über Home Assistant.**
+- **Akku-Leistung:** Home Assistant liefert seit 2026.10 die Akku-Leistung mit
+  Vorzeichen nur noch abgeschaltet. Ohne sie konnte ich deinen Hausverbrauch
+  nicht ausrechnen. Ich nehme jetzt Ladeleistung minus Entladeleistung. Ein schon
+  angelegter Speicher bekommt das beim Start, ohne neuen Scan.
+- **Keine zweite Batterie mehr:** Wechselrichter und BYD hängen in Home
+  Assistant nebeneinander. Daraus habe ich bisher eine zweite, leere Batterie
+  gemacht. Das passiert nicht mehr.
+- **Tagesertrag:** Er zeigte teils den Zählerstand seit Inbetriebnahme. Das
+  korrigiere ich auch bei bestehenden Anlagen.
+- **Smart Meter:** Er bekommt seine Einspeisung, und seine Rolle nehme ich aus
+  seiner eigenen Ortsangabe.
+- **Wattpilot über OCPP:** Er wird erkannt und bekommt den richtigen
+  Energiezähler.
+
+**Wenn mir ein Messwert fehlt, sage ich welcher.** Konnte ich deinen
+Hausverbrauch nicht berechnen, stand auf der Startseite „kein Zähler“, auch wenn
+dein Zähler einwandfrei lief. Jetzt nenne ich den Grund, etwa „mir fehlt, wie
+viel dein Akku gerade lädt“, und führe dich mit einem Tipp zum Gerät. Dafür
+braucht es die App ab 1.4.10.
+
+**Steuerbar heißt: es gibt einen Weg dorthin.** Ein Speicher mit einem
+Steuerungs-Profil, aber ohne eingetragene Adresse, galt bisher als steuerbar,
+obwohl kein Befehl ihn erreichen konnte. Er ist jetzt nur lesbar, bis du ihn
+über „Steuerbar machen“ verbindest. Deine Freigabe bleibt dabei erhalten.
+
+**Diagnose-Abzug ohne Seriennummern.** Seriennummern, MAC-Adressen und
+Ladekarten-Nummern werden im Abzug ersetzt.
+
 ## 1.11.20
 
 **Ein Auto, das gestoppt wurde, ist nicht voll.** Steckt dein Auto kurz vor
