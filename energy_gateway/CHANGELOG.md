@@ -1,3 +1,19 @@
+## 1.11.23
+
+**Ein Tesla kommt nach einer Wolke wieder schnell auf vollen Strom.** Reicht
+die Sonne für 6 A nicht, stelle ich den Ladestrom im Auto selbst niedriger.
+Danach durfte ich ihn über Home Assistant nur bis zu dem Wert anheben, den die
+Tesla-Integration bei ihrer letzten Abfrage gesehen hatte, und die fragt nur
+alle zehn Minuten. So blieb das Auto bei 6 A, während die Wallbox schon 11 A
+anbot. Jetzt lasse ich die Daten einmal neu holen, sobald die Wallbox mehr
+anbietet, und stelle das Auto gleich hoch.
+
+**Neue Geräte ohne Home Assistant (noch ungeprüft).** Ich kann Sungrow SH,
+Huawei SUN2000, SolarEdge, Shelly EM und die Fronius Solar API jetzt direkt im
+Netzwerk lesen und finde sie bei der Suche selbst. An einer echten Anlage habe
+ich diese Treiber noch nicht gesehen. Den Speicher von Sungrow, Huawei und
+SolarEdge steuere ich erst, wenn du am Gerät „Experimentell“ einschaltest.
+
 ## 1.11.22
 
 **Die Sonne zählt den Akku nicht mehr mit.** Bei einem Hybrid-Wechselrichter
