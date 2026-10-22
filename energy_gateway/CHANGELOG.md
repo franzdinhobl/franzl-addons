@@ -1,3 +1,18 @@
+## 1.11.24
+
+**Was du am Gerät selbst änderst, lasse ich so.** Wer eine Klimaanlage mit der
+Fernbedienung umstellt, eine Steckdose an der Taste ausschaltet oder in der
+App des Herstellers etwas ändert, bekam von mir bisher beim nächsten Durchgang
+wieder meinen eigenen Wert zurück. Jetzt merke ich mir, was ich selbst
+eingestellt habe. Steht am Gerät etwas anderes, war das jemand von euch, und
+ich halte mich bis zum nächsten Tag heraus, mindestens aber vier Stunden. Die
+Karte sagt dann „Von Hand geändert — ich lasse es bis morgen so“. Sobald du in
+der App für dieses Gerät etwas einstellst, übernehme ich wieder. Das gilt für
+alles, was ich über Home Assistant steuere: Klimaanlagen, Wärmepumpen,
+Warmwasser, Pool, Lüftung und Steckdosen. Wallbox und Hausspeicher sind
+ausgenommen: Dort stelle ich bewusst wieder her, was ein Gerät nach einem
+Neustart vergessen hat.
+
 ## 1.11.23
 
 **Ein Tesla kommt nach einer Wolke wieder schnell auf vollen Strom.** Reicht
