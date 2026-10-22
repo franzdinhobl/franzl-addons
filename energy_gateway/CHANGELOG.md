@@ -1,3 +1,16 @@
+## 1.11.26
+
+**Eine Klimaanlage auf „Heizen und Kühlen“ heize ich nicht mehr auf die obere
+Grenze.** Hattest du für eine Klimaanlage „beides“ gewählt und einen Bereich
+eingestellt, etwa 20 bis 28 °C, habe ich das als Heizen gelesen und die obere
+Grenze als Zieltemperatur geschrieben, notfalls mit Strom aus dem Netz. Jetzt
+gilt: Ist es draußen kälter als die untere Grenze, heize ich nur; ist es
+wärmer als die obere, kühle ich nur. Mit Netzstrom halte ich den Raum nur an
+der Grenze, also im Winter nicht unter 20 °C und im Sommer nicht über 28 °C.
+Mit Sonnenstrom darf es in den Bereich hinein gehen, im Winter wärmer und im
+Sommer kühler. Liegt die Außentemperatur dazwischen oder kenne ich sie nicht,
+lasse ich die Anlage so, wie ihr sie eingestellt habt.
+
 ## 1.11.25
 
 **Auch eine Änderung von kurz vor dem Update zählt.** In 1.11.24 fing mein
