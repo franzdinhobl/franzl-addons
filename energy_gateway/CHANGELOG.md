@@ -1,3 +1,12 @@
+## 1.11.25
+
+**Auch eine Änderung von kurz vor dem Update zählt.** In 1.11.24 fing mein
+Gedächtnis dafür, was ich selbst eingestellt habe, nach dem Update leer an.
+Hatte jemand ein Gerät kurz davor von Hand umgestellt, hätte ich das beim
+nächsten Mal noch einmal überschrieben. Jetzt lese ich beim ersten Mal nach,
+was ich in den letzten 24 Stunden selbst geschickt und am Gerät bestätigt
+gesehen habe.
+
 ## 1.11.24
 
 **Was du am Gerät selbst änderst, lasse ich so.** Wer eine Klimaanlage mit der
