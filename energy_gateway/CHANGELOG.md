@@ -1,3 +1,21 @@
+## 1.11.27
+
+**Mit Netzstrom halte ich nur noch die Untergrenze, wenn dein Strompreis fix
+ist.** Habe ich ein Gerät noch nicht kennengelernt, habe ich bisher den ganzen
+Bereich bis zur oberen Grenze aus dem Netz geheizt, etwa Warmwasser von 47 auf
+55 °C mitten in der Nacht. Bei einem Fixpreis spart das nichts. Jetzt heize ich
+aus dem Netz nur, wenn die Untergrenze unterschritten ist, und dann ein Stück
+darüber hinaus, damit das Gerät nicht dauernd an der Grenze klebt: Warmwasser
+5 °C, Heizung und Klima 1,5 °C, Pool 1 °C. Den Rest bis zur oberen Grenze
+fülle ich mit Sonnenstrom oder in Stunden unter deiner Günstig-Grenze. Kenne
+ich ein Gerät schon, rechne ich weiter selbst aus, wann sich Vorheizen lohnt.
+Hast du einen Strompreis, der sich über den Tag ändert, bleibt alles wie
+bisher: dann heize ich in den günstigen Stunden vor.
+
+**Eine Hauptheizung auf „Nur Sonne“ hält ihre Untergrenze auch im Plan.**
+Ich habe sie schon bisher nicht unter die Untergrenze fallen lassen, der
+Tagesplan hat das aber nicht gezeigt. Jetzt stehen beide gleich da.
+
 ## 1.11.26
 
 **Eine Klimaanlage auf „Heizen und Kühlen“ heize ich nicht mehr auf die obere
