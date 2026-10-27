@@ -1,3 +1,18 @@
+## 1.11.28
+
+**Sicherheitsupdate für den Fernzugriff.** Über eine verschlüsselte
+Verbindung zu Cloudflare erreicht dich die App, wenn du nicht zu Hause bist.
+Cloudflare hat gemeldet, dass ältere Versionen dieser Verbindung Zertifikaten
+einer Zertifizierungsstelle vertrauen, deren Schlüssel nicht mehr als sicher
+gelten. Ich bringe jetzt die korrigierte Version mit, die diesen Zertifikaten
+nicht mehr vertraut. Beim Update ist der Fernzugriff etwa eine Minute weg,
+danach verbinde ich mich von selbst wieder. Zu Hause im WLAN ändert sich
+nichts.
+
+Dazu habe ich meine übrigen Bausteine auf den neuesten Stand gebracht,
+darunter die Liste der vertrauenswürdigen Zertifizierungsstellen für meine
+eigenen Verbindungen ins Internet.
+
 ## 1.11.27
 
 **Mit Netzstrom halte ich nur noch die Untergrenze, wenn dein Strompreis fix
