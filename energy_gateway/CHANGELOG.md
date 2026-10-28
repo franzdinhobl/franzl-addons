@@ -1,3 +1,31 @@
+## 1.12.0
+
+**Die neue Franzl-App braucht diese Version.** Sie bringt alles mit, was die
+neu gestaltete App anzeigt: woher der Strom eines laufenden Geräts gerade
+kommt, wie viele Stunden ein Gerät heute mit Sonne gelaufen ist, und den
+Verlauf von Speicher- und Raumtemperaturen, Ladeständen und meinen Eingriffen.
+
+**Verbrauch auch ohne Leistungsmessung.** Hat ein Gerät nur einen
+Energiezähler, rechne ich seinen Verbrauch aus den Änderungen des Zählers und
+zeige eine durchschnittliche Leistung daneben. Meldet ein Zähler bei laufender
+Anlage nie etwas, sage ich das, statt „0 kWh“ zu schreiben. Bei Klimaanlagen
+ohne jede Verbrauchsmeldung messe ich die Leistung beim Ein- und Ausschalten
+an deinem Hausanschluss und zähle die Stunden, die sie heute lief.
+
+**Hauptsicherung.** Hast du sie noch nicht bestätigt, plane ich jetzt mit
+3 × 35 A (80 % davon, 19 kW) statt mit 22 kW — dieselbe Zahl, die die App dir
+zeigt.
+
+**Ehrlichere Sätze.** Ein volles Auto nenne ich beim Namen („Tessi ist bei
+80 % — am Ladelimit"), eine Temperatur steht nur noch einmal da, und Home
+Assistant nenne ich bei einer Störung überall mit denselben Worten.
+
+**Mitglieder.** Die E-Mail-Adressen der anderen Mitglieder sehen jetzt nur
+noch Besitzer und Verwalter.
+
+Dazu habe ich meine Bausteine auf den neuesten Stand gebracht, darunter die
+Verbindung für den Fernzugriff (cloudflared 2026.10.3).
+
 ## 1.11.28
 
 **Sicherheitsupdate für den Fernzugriff.** Über eine verschlüsselte

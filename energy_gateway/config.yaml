@@ -2,7 +2,7 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration
 name: "Franzl Gateway"
 description: "Franzl Energie-Management — Optimiert PV, Batterie, Wallbox, Wärmepumpe"
-version: "1.11.28"
+version: "1.12.0"
 slug: "energy_gateway"
 url: "https://github.com/franzdinhobl/franzl-addons"
 # Prebuilt image: Home Assistant PULLS this from ghcr.io instead of building the
@@ -76,12 +76,12 @@ startup: "application"
 # Local daily rotation dumps (/data/backups) are excluded too (redundant).
 #
 # token_secret is the Fernet key that decrypts stored vendor credentials
-# (VW portal password, Tesla refresh tokens in vehicles.api_credentials_enc /
-# api_*_token_enc). It is EXCLUDED so a backup archive carries only ciphertext —
-# a leaked/copied backup cannot decrypt anyone's car passwords. Consequence: a
-# backup restored onto a *fresh* box regenerates the key, so the encrypted blobs
-# no longer decrypt and the affected cars must be re-linked once (handled
-# gracefully: crypto callers treat an undecryptable blob as "needs re-link").
+# (VW portal password, Tesla refresh tokens, SMGW/Wattpilot passwords). Since
+# E27-B1 (Owner 2026-10-27) it travels IN the backup: Home Assistant encrypts
+# its backups itself, and excluding the key meant every restore onto a new box
+# lost every car and native device credential (re-link everything once). A
+# box replace with a backup now keeps them. Crypto callers still treat an
+# undecryptable blob as "needs re-link" (a backup from before this change).
 #
 # firebase-credentials.json is the LEGACY fleet-wide Admin service account
 # (removed from boxes 2026-07-27; migrated boxes delete the file). Excluded so
@@ -94,7 +94,6 @@ backup_post: /usr/local/bin/backup-post.sh
 backup_exclude:
   - "postgres/**"
   - "backups/**"
-  - "token_secret"
   - "firebase-credentials.json"
 ingress: true
 ingress_port: 8099
