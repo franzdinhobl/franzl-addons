@@ -1,3 +1,20 @@
+## 1.12.1
+
+**„Laden“ startet dein Auto beim ersten Tipp.** Hatte ich dein Auto kurz
+vorher selbst gestoppt, habe ich seiner letzten Meldung „lädt“ geglaubt,
+obwohl sie älter war als mein eigener Stopp, und keinen Startbefehl geschickt.
+Jetzt zählt eine Meldung deines Autos nur, wenn sie nach meinem letzten Befehl
+kam.
+
+**Ich sage, was mit dem Startbefehl passiert ist.** Fließt nach „Laden“ noch
+kein Strom, steht auf der Karte, ob ich deinem Auto den Startbefehl geschickt
+habe, ob es ihn abgelehnt hat oder ob es nicht antwortet.
+
+**Ein zweiter Tipp auf „Laden“ behält deinen Ladestrom.** Bisher hat er deinen
+eingestellten Wert gelöscht, und dein Auto lud mit voller Leistung.
+
+Dazu habe ich meine Bausteine auf den neuesten Stand gebracht.
+
 ## 1.12.0
 
 **Die neue Franzl-App braucht diese Version.** Sie bringt alles mit, was die
